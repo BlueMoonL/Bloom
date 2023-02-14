@@ -1,0 +1,81 @@
+@charset "UTF-8";
+        div{
+            display: block;
+            width: auto;
+            max-width: 768px;
+        }
+        #header {
+            position: relative;
+            overflow: hidden;
+            padding: 60px 0 54px;
+            box-sizing: border-box
+        }
+        body {
+            margin: 0;
+            padding-top: 200px;
+            font-family: 'Black Han Sans', sans-serif;
+            font-weight: bold;
+
+            background: #f5f6f7
+        }
+        #container {
+            display: flex;
+            flex-direction: row;
+            font-size:  14px;
+            text-align: left;
+            margin: auto;
+        }
+        #join_content {
+            width: auto;
+            margin: auto;
+        }
+        input {
+            width: 250px;
+            height: 30px;
+            background-color: #ffffff;
+            border-width: 1.25px;
+            border-color: #dadada;
+            border-style: solid;
+            font-size: 12px;
+            padding: 10px, 110px, 10px, 14px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"]:hover { /* 마우스 올렸을 때 */
+            background-color: #0000;
+        }
+        button {
+            font-weight: bold;
+            margin-top: 15px;
+            width: 250px;
+            height: 30px;
+            border-width: 1.25px;
+            border-color: #dadada;
+            border-style: solid;
+            font-size: 12px;
+        }
+        #emailchoice {
+            font-size: 12px;
+            color: red;
+        }
+		.iconCheck  {
+			color: #fffff;
+		}
+		.iconCheck.valid {
+			color: red;
+		}
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

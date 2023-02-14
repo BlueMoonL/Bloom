@@ -3,78 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join</title>
-    <style>
-        div{
-            display: block;
-            width: auto;
-            max-width: 768px;
-        }
-        #header {
-            position: relative;
-            overflow: hidden;
-            padding: 60px 0 54px;
-            box-sizing: border-box
-        }
-        body {
-            margin: 0;
-            padding-top: 200px;
-            font-family: 'Black Han Sans', sans-serif;
-            font-weight: bold;
+    <link rel="stylesheet" href="./css/join.css">
 
-            background: #f5f6f7
-        }
-        #container {
-            display: flex;
-            flex-direction: row;
-            font-size:  14px;
-            text-align: left;
-            margin: auto;
-        }
-        #join_content {
-            width: auto;
-            margin: auto;
-        }
-        input {
-            width: 250px;
-            height: 30px;
-            background-color: #ffffff;
-            border-width: 1.25px;
-            border-color: #dadada;
-            border-style: solid;
-            font-size: 12px;
-            padding: 10px, 110px, 10px, 14px;
-            margin-top: 15px;
-            margin-bottom: 20px;
-        }
-        input[type="submit"]:hover { /* 마우스 올렸을 때 */
-            background-color: #0000;
-        }
-        button {
-            font-weight: bold;
-            margin-top: 15px;
-            width: 250px;
-            height: 30px;
-            border-width: 1.25px;
-            border-color: #dadada;
-            border-style: solid;
-            font-size: 12px;
-        }
-        #emailchoice {
-            font-size: 12px;
-            color: red;
-        }
-    </style>
 </head>
 <body>
+	<form action="./addUser.jsp" method="post">
     <div id="container">
         <div id="join_content">
             <label for="id">아이디</label><br>
             <input type="text" id="id" name="id" class="int" title="ID" maxlength="20" placeholder="아이디를 입력하세요" required><br>
-            <label for="pw1">비밀번호</label><br>
-            <input type="password" id="pswd1" name="pswd1"maxlength="20"placeholder="비밀번호를 입력하세요" required><br>
-            <label for="pw2">비밀번호 재확인</label><br>
-            <input type="password" id="pswd2" name="pswd2"maxlength="20"placeholder="비밀번호를 입력하세요" required><br>
+            <label for="pw1">비밀번호</label>
+            <i class="iconCheck fa-sharp fa-solid fa-check"></i><br>
+            <input type="password" id="pw1" name="pw1"maxlength="20"placeholder="비밀번호를 입력하세요" required><br>
+            <label for="pw2">비밀번호 재확인</label>
+            <i class="iconCheck fa-sharp fa-solid fa-check" id="iconCheck"></i><br>
+            <input type="password" id="pw2" name="pw2"maxlength="20"placeholder="비밀번호를 입력하세요" required><br>
             <label for="name">이름</label><br>
             <input type="text" id="name" name="name"maxlength="10"placeholder="이름을 입력하세요" required><br>
             <label for="email">본인 확인 이메일</label>
@@ -83,5 +30,41 @@
             <input type="submit" value="가입하기"></button>
         </div>
     </div>
+    </form>
 </body>
 </html>
+<script>
+	var id = document.getElementById("id");
+	id.addEventListener("change", function (e) {
+		fetch("http://localhost:8080/bloom/checkId.jsp?userid=id")
+			.then((response) => console.log("응답바디텍스트:", response.text()))	
+			
+		});
+	
+	var pw1 = document.getElementById("pw1");	
+	var pw2 = document.getElementById("pw2");
+    let elems = document.querySelectorAll(".iconCheck");
+    
+    pw1.addEventListener("change", function (e) {
+        console.log(pw1.value);
+        if (pw1.value == "" || pw2.value == "") {
+        	elems.forEach((e) => e.classList.remove("valid"));
+        } else if (pw1.value == pw2.value) {
+        	elems.forEach((e) => e.classList.toggle("valid"));
+        } else {
+        	elems.forEach((e) => e.classList.remove("valid"));
+        } 
+    })
+    
+	pw2.addEventListener("change", function (e) {
+        console.log(pw1.value);
+        if (pw1.value == "" || pw2.value == "") {
+        	elems.forEach((e) => e.classList.remove("valid"));
+        } else if (pw1.value == pw2.value) {
+        	elems.forEach((e) => e.classList.toggle("valid"));
+        } else {
+        	elems.forEach((e) => e.classList.remove("valid"));
+        }
+    })
+	
+</script>
