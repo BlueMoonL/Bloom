@@ -1,0 +1,42 @@
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    padding: 0 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c2a29;
+    transition: 0.4s;
+}
+
+footer .footer_logo {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 30px;
+}
+
+footer .footer_logo a {
+    display: block;
+}
+
+footer .footer_logo img {
+    min-width: 150px;
+}
+
+footer .address {
+    display: flex;
+    justify-content: flex-end;
+    margin:  0 30px;
+}
+
+footer .address li {
+    display: block;
+    color: white;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    transition: 0.4s;
+    width: max-content;
+}
