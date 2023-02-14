@@ -29,7 +29,7 @@ function handleScrollEvent() {
   }
 }
 
-window.addEventListener('scroll', handleScrollEvent);
+/*window.addEventListener('scroll', handleScrollEvent);*/
 
 // 클릭 했을 때 이벤트
 
@@ -47,6 +47,17 @@ function handleClickEvent(index) {
 $(document).ready(function($) {
 
         $(".left ul li > a").click(function(event){         
+
+                event.preventDefault();
+				let yPos = $(this.hash).offset().top;
+				console.log("y좌표값:", yPos);
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        });
+})
+
+$(document).ready(function($) {
+
+        $(".left ul li > a").scroll(function(event){         
 
                 event.preventDefault();
 				let yPos = $(this.hash).offset().top;
@@ -118,7 +129,7 @@ function ClickEvent(index) {
     }
   });
 }
-   
+
 clickmenu.forEach((item, index) => {
   item.addEventListener("click", function (e) {
     ClickEvent(index);
