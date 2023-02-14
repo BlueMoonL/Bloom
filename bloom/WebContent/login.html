@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Login</title>
+    
+    <style>
+         div{
+            display: block;
+            width: auto;
+            max-width: 768px;
+        }
+        /* #header {
+            position: relative;
+            overflow: hidden;
+            padding: 60px 0 54px;
+            box-sizing: border-box
+        } */
+        body {
+            margin: 0;
+            padding-top: 250px;
+            font-family: 'Black Han Sans', sans-serif;
+            font-weight: bold;
+            position: relative;
+            background: #f5f6f7
+            
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            font-size:  14px;
+            text-align: left;
+            margin: auto;
+        }
+        #join_content {
+            width: auto;
+            margin: auto;
+        }
+        input {
+            width: 250px;
+            height: 30px;
+            background-color: #ffffff;
+            border-width: 1.25px;
+            border-color: #dadada;
+            border-style: solid;
+            font-size: 12px;
+            padding: 10px, 110px, 10px, 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"]:hover { /* 마우스 올렸을 때 */
+            background-color: #0000;
+        }
+
+        input[type="submit"]{
+            width: 125px;
+        }
+
+        img {
+            height: 100px;
+            
+        }
+        header {
+            text-align: center;
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <img src="./img/logo.png"/>
+    </header>
+    <div id="container">
+        <div id="join_content">
+        <label>아이디</label> <br>
+        <input type="text" id="id" placeholder="아이디 입력" required><br>
+        <label>비밀번호</label> <br>
+        <input type="password" id="pw" placeholder="비밀번호 입력" required><br>
+        <input type="submit" value="로그인">
+        <input type="submit" value="회원가입">
+    </div>
+    </div>
+</body>
+</html>
