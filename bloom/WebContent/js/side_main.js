@@ -1,5 +1,5 @@
 const scrollmenu = document.querySelectorAll(".left ul li > a");
- 
+
 
 // 스크롤 내릴때 이벤트
 
@@ -44,12 +44,29 @@ function handleClickEvent(index) {
   });
 }
 
+$(document).ready(function($) {
 
-scrollmenu.forEach((item, index) => {
+        $(".left ul li > a").click(function(event){         
+
+                event.preventDefault();
+				let yPos = $(this.hash).offset().top;
+				console.log("y좌표값:", yPos);
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        });
+})
+
+/*scrollmenu.forEach((item, index) => {
   item.addEventListener("click", function (e) {
     handleClickEvent(index);
   });
-});
+});*/
+
+/*scrollmenu.forEach(function (menu, index) {
+  menu.onclick = function () {
+    clickToSection(index);
+  };
+});*/
+
 
 function clickToSection(index) {
   switch (index) {
@@ -86,11 +103,6 @@ function clickToSection(index) {
   }
 }
 
-scrollmenu.forEach(function (menu, index) {
-  menu.onclick = function () {
-    clickToSection(index);
-  };
-});
 
 
 // 글자 클릭 이벤트
@@ -106,16 +118,30 @@ function ClickEvent(index) {
     }
   });
 }
-
+   
 clickmenu.forEach((item, index) => {
   item.addEventListener("click", function (e) {
     ClickEvent(index);
   });
 });
 
-
+/*
 clickmenu.forEach(function (menu, index) {
   menu.onclick = function () {
     clickToSection(index);
   };
 });
+*/
+
+$(document).ready(function($) {
+
+        $(".left ul li div a").click(function(event){         
+
+                event.preventDefault();
+				let yPos = $(this.hash).offset().top;
+				console.log("y좌표값:", yPos);
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        });
+})
+
+
