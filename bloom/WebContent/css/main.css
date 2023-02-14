@@ -99,7 +99,7 @@
     margin-top: 100px;
     border: none;
 }
-
+ 
 #section04 .team-member {
     width: 100%;
     height: 200px;
@@ -126,18 +126,4 @@
     font-size: 20px;
     font-weight: 700;
     text-align: center;
-}
-
-.main_side_nav {
-    position: fixed;
-    top: 50%;
-    left: 70px;
-    transform: translate(0, -50%);
-    z-index: 999;
-}
-
-.main_side_nav .page_nav li {
-    position: relative;
-    margin: 0 0 50px 0;
-    cursor: pointer;
 }
