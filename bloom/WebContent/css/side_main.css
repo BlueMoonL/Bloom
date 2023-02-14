@@ -1,113 +1,158 @@
- /* 메뉴 active 전 */
-
- #menu ul li div a {
-     left: 20px;
-     margin-left: 3px;
-     /* position: absolute; */
-     /* top: -2px; */
-     color: #000;
-     font-size: 14px;
-     /* font-family: arial, helvetica, sans-serif; */
-     white-space: nowrap;
-     max-width: 220px;
-     /* overflow: hidden; */
-     display: block;
-     /* opacity: 0; */
-     /* width: 0; */
-     cursor: pointer;
-     /* font-family: SourceHanSansK; */
-     font-size: 13px;
-     line-height: 1.43;
-     letter-spacing: -0.42px;
-     text-align: left;
-     color: #b4b4b4;
-     min-width: 60px;
- }
-
- 
-
- #menu span {
-     margin: 0;
-     padding: 0;
-     border: 0;
-     font: inherit;
-     font-size: 100%;
-     vertical-align: middle;
- }
+const scrollmenu = document.querySelectorAll(".left ul li > a");
 
 
- #menu {
-     position: fixed;
-     z-index: 100;
-     margin-top: -32px;
-     top: 50%;
-     opacity: 1;
- }
+// 스크롤 내릴때 이벤트
 
- #menu ul li a.active span {
-     height: 3px;
-     width: 26px;
-     background: #00b564;
-     margin-right: -12px;
- }
+function handleScrollEvent() {
+  console.log(scrollmenu);
+  console.log(window.scrollX, window.scrollY);
+  if (window.scrollY < 869 || window.scrollY == 0) {
+    scrollmenu[0].classList.add('active');
+    scrollmenu[1].classList.remove('active');
+    scrollmenu[2].classList.remove('active');
+    scrollmenu[3].classList.remove('active');
+  } else if (window.scrollY >= 869 && window.scrollY < 1800) {
+    scrollmenu[0].classList.remove('active');
+    scrollmenu[1].classList.add('active')
+    scrollmenu[2].classList.remove('active')
+    scrollmenu[3].classList.remove('active')
+  } else if (window.scrollY >= 1800 && window.scrollY < 2700) {
+    scrollmenu[0].classList.remove('active');
+    scrollmenu[1].classList.remove('active')
+    scrollmenu[2].classList.add('active')
+    scrollmenu[3].classList.remove('active')
+  } else if (window.scrollY >= 2700 && window.scrollY < 3600) {
+    scrollmenu[0].classList.remove('active');
+    scrollmenu[1].classList.remove('active')
+    scrollmenu[2].classList.remove('active')
+    scrollmenu[3].classList.add('active')
+  }
+}
 
- #menu ul li a.active+div a {
-     /* font-family: SourceHanSansK; */
-     font-size: 15px;
-     font-weight: bold;
-     line-height: 1.43;
-     letter-spacing: -0.42px;
-     text-align: left;
-     color: #00b564;
- }
+/*window.addEventListener('scroll', handleScrollEvent);*/
 
- #menu ul li.active {
-     /* font-family: SourceHanSansK; */
-     font-size: 15px;
-     font-weight: bold;
-     line-height: 1.43;
-     letter-spacing: -0.42px;
-     text-align: left;
-     color: #00b564;
- }
+// 클릭 했을 때 이벤트
 
- #menu.left {
-     left: 8.92857vw;
- }
+function handleClickEvent(index) {
+  console.log(scrollmenu[index]);
+  scrollmenu.forEach((item, i) => {
+    if (i === index) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
 
- #menu a {
-     text-decoration: none;
- }
+$(document).ready(function($) {
 
- li {
-     display: list-item;
-     <!-- text-align: -webkit-match-parent; -->
- }
+        $(".left ul li > a").click(function(event){         
 
- ul {
-     list-style: none;
- }
+                event.preventDefault();
+				let yPos = $(this.hash).offset().top;
+				console.log("y좌표값:", yPos);
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        });
+})
 
- #menu ul li a span {
-     /* border-radius: 50%; */
-     /* position: absolute; */
-     display: block;
-     z-index: 1;
-     height: 2px;
-     width: 14px;
-     border: 0;
-     background: #ebebeb;
-     /* left: 50%; */
-     /* top: 50%; */
-     /* margin: -2px 0 0 -2px; */
-     transition: all 0.1s ease-in-out;
+$(document).ready(function($) {
 
- }
+        $(".left ul li > a").scroll(function(event){         
 
- .left ul li {
-     display: flex;
-     align-items: center;
-     margin: 14px 0;
-     position: relative;
-     gap: 40px;
- }
+                event.preventDefault();
+				let yPos = $(this.hash).offset().top;
+				console.log("y좌표값:", yPos);
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        });
+})
+
+/*scrollmenu.forEach((item, index) => {
+  item.addEventListener("click", function (e) {
+    handleClickEvent(index);
+  });
+});*/
+
+/*scrollmenu.forEach(function (menu, index) {
+  menu.onclick = function () {
+    clickToSection(index);
+  };
+});*/
+
+
+function clickToSection(index) {
+  switch (index) {
+    case 0:
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+      break;
+    case 1:
+      window.scrollTo({
+        top: 969,
+        left: 0,
+        behavior: 'smooth'
+      });
+      break;
+    case 2:
+      window.scrollTo({
+        top: 1938,
+        left: 0,
+        behavior: 'smooth'
+      });
+      break;
+    case 3:
+      window.scrollTo({
+        top: 2907,
+        left: 0,
+        behavior: 'smooth'
+      });
+      break;
+    default:
+      break;
+  }
+}
+
+
+
+// 글자 클릭 이벤트
+const clickmenu = document.querySelectorAll(".left ul li div a");
+
+function ClickEvent(index) {
+  console.log(clickmenu[index]);
+  clickmenu.forEach((item, i) => {
+    if (i === index) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
+
+clickmenu.forEach((item, index) => {
+  item.addEventListener("click", function (e) {
+    ClickEvent(index);
+  });
+});
+
+/*
+clickmenu.forEach(function (menu, index) {
+  menu.onclick = function () {
+    clickToSection(index);
+  };
+});
+*/
+
+$(document).ready(function($) {
+
+        $(".left ul li div a").click(function(event){         
+
+                event.preventDefault();
+				let yPos = $(this.hash).offset().top;
+				console.log("y좌표값:", yPos);
+                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        });
+})
+
+
