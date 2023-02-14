@@ -29,7 +29,7 @@ function handleScrollEvent() {
   }
 }
 
-/*window.addEventListener('scroll', handleScrollEvent);*/
+window.addEventListener('scroll', handleScrollEvent);
 
 // 클릭 했을 때 이벤트
 
