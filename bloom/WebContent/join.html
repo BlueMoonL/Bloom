@@ -14,7 +14,8 @@
 	<form action="./addUser.jsp" method="post">
     <div id="container">
         <div id="join_content">
-            <label for="id">아이디</label><br>
+            <label for="id">아이디</label>
+             <i class="idCheck fa-sharp fa-solid fa-check"></i><br>
             <input type="text" id="id" name="id" class="int" title="ID" maxlength="20" placeholder="아이디를 입력하세요" required><br>
             <label for="pw1">비밀번호</label>
             <i class="iconCheck fa-sharp fa-solid fa-check"></i><br>
@@ -35,10 +36,19 @@
 </html>
 <script>
 	var id = document.getElementById("id");
+	console.log(id);
+	let idElems = document.querySelectorAll(".idCheck");
 	id.addEventListener("change", function (e) {
-		fetch("http://localhost:8080/bloom/checkId.jsp?userid=id")
-			.then((response) => console.log("응답바디텍스트:", response.text()))	
-			
+		fetch("http://localhost:8080/bloom/checkId.jsp?userid=" + id.value)
+			.then((response) => response.text())	
+			.then((result) => {
+				console.log("바디 텍스트:", result + "end");
+				if ( result != 1) {
+					idElems.forEach((e) => e.classList.toggle("valid"));
+				} else {
+					idElems.forEach((e) => e.classList.remove("valid"));
+				}
+			})
 		});
 	
 	var pw1 = document.getElementById("pw1");	
