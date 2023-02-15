@@ -6,7 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bloom</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 	<link rel="stylesheet" href="./css/common.css">
@@ -35,12 +37,12 @@
 				<nav class="gnb">
 					<ul class="gnb_menu">
 						<li><a href="#!">Home</a></li>
-						<li><a href="#!">Hospital</a></li>
+						<li><a href="#!">Introduce</a></li>
 					</ul>
 				</nav>
 			</div>
 			<div class="login">
-				<li><a href="#!"id="btnLogin">Login</a></li>
+				<li><a href="#!" id="btnLogin">Login</a></li>
 				<li><a href="join.html">Sign Up</a></li>
 			</div>
 		</header>
@@ -142,25 +144,24 @@
 			</nav>
 		</main>
 
-	<footer id="footer" class="footer">
-		<div class="footer_logo">
-			<a href="#!"> <img src="./img/logo_test.png" alt="">
-			</a>
-		</div>
-		<div class="address">
-			<ul>
-				<li>서울시 강남구 삼성동 1234 우 : 123-1234</li>
-				<li>TEL : 031-123-4567 </li>
-				<li>Email : email@domain.com</li>
-			</ul>
-			<div class="copy">
-				&copy;COPYRIGHT 블룸 ALL RIGHTS RESERVED
+		<footer id="footer" class="footer">
+			<div class="footer_logo">
+				<a href="#!"> <img src="./img/logo_test.png" alt="">
+				</a>
 			</div>
-		</div>
-	</footer>
+			<div class="address">
+				<ul>
+					<li>서울시 강남구 삼성동 1234 우 : 123-1234</li>
+					<li>TEL : 031-123-4567 </li>
+					<li>Email : email@domain.com</li>
+				</ul>
+				<div class="copy">
+					&copy;COPYRIGHT 블룸 ALL RIGHTS RESERVED
+				</div>
+			</div>
+		</footer>
 
-	<div class="background">
-		<div class="window">
+		<div class="background">
 			<div class="login-box">
 				<div class="login-header">
 					<div class="close">
@@ -169,10 +170,49 @@
 				</div>
 				<div class="login-title">
 					<img src="./img/logo_test.png" />
+					<h2>우리들의 마음속 꽃 한송이</h2>
 				</div>
 
 				<div class="inputs">
-					<div class="login-subtitle">이메일</div>
+					<div class="login-subtitle">아이디</div>
+					<div class="input-wrapper">
+						<input name="login_id" type="text">
+					</div>
+					<div class="login-subtitle">비밀번호</div>
+					<div class="input-wrapper">
+						<input name="login_pwd" type="password">
+					</div>
+				</div>
+
+				<div class="footer">
+					<div class="login-action">
+						<button type="button">로그인</button>
+					</div>
+					<div class="register-action">
+						<div class="flex">
+							<div class="register"> 회원가입</div>
+							<span class="bar">|</span>
+							<div class="desc">비밀번호 찾기</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="background">
+			<div class="join-box">
+				<div class="login-header">
+					<div class="close">
+						<i class="fa-solid fa-xmark" id="btnClose"></i>
+					</div>
+				</div>
+				<div class="login-title">
+					<img src="./img/logo_test.png" />
+					<h2>우리들의 마음속 꽃 한송이</h2>
+				</div>
+
+				<div class="inputs">
+					<div class="login-subtitle">아이디</div>
 					<div class="input-wrapper">
 						<input name="login_id" type="text">
 					</div>
@@ -197,8 +237,6 @@
 			</div>
 		</div>
 	</div>
-
-</div>
 </body>
 
 </html>
