@@ -12,7 +12,7 @@
     background: #fff;
     align-items: center;
     border-bottom: 15px solid #35AD64;
-    z-index: 999;
+    z-index: 300;
     transition: 0.4s;
 }
 

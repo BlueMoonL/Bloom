@@ -33,7 +33,7 @@ window.addEventListener('scroll', handleScrollEvent);
 
 // 클릭 했을 때 이벤트
 
-function handleClickEvent(index) {
+function handleClickEvent(index) {z
   console.log(scrollmenu[index]);
   scrollmenu.forEach((item, i) => {
     if (i === index) {
