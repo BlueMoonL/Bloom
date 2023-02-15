@@ -15,14 +15,12 @@
             padding-top: 200px;
             font-family: 'Black Han Sans', sans-serif;
             font-weight: bold;
-
-            background: #f5f6f7
+			
+            background: #f5f6f7;
         }
         #container {
             display: flex;
             flex-direction: row;
-            font-size:  14px;
-            text-align: left;
             margin: auto;
         }
         #join_content {
@@ -39,11 +37,12 @@
             font-size: 12px;
             padding: 10px, 110px, 10px, 14px;
             margin-top: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         input[type="submit"]:hover { /* 마우스 올렸을 때 */
             background-color: #0000;
         }
+
         button {
             font-weight: bold;
             margin-top: 15px;
@@ -58,20 +57,106 @@
             font-size: 12px;
             color: red;
         }
-		.iconCheck  {
-			color: #ffffff;
+		.iconCheck1 {
+			color: fffff;
 		}
-		.iconCheck.valid {
+		.iconCheck1.valid {
+			color: red;
+		}
+		.iconCheck2 {
+			color: fffff;
+		}
+		.iconCheck2.valid {
+			color: red;
+		}
+		.idCheck {
+			color: #fffff;
+		}
+		.idCheck.valid {
 			color: red;
 		}
 		
-
-        
-        
-        
-        
-        
-        
+		.idCheckResult {
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+		.idCheckResult.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+			padding-bottom: 10px
+		}
+		.idCheckResult {
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+		.idCheckExpression.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+		}
+		.idCheckExpression{
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+        .pw1Expression.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+		}
+        .pw2Check{
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+        .pw2Check.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+		}
+        .pw2Check{
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+        .pw2Check.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+		}
+        .pw2Check{
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+        .pw2Check.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+		}
+        .nameCheck{
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+        .nameCheck.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+		}
+		.emailCheck{
+			display : none;
+			margin: 0;
+			padding: 0;
+		}
+        .emailCheck.unValid {
+			display : block;
+			text-align: left;
+			font-size: 12px;
+		}
         
         
         

@@ -6,15 +6,15 @@
 <%@ page import="userinfo.UserService"%>
 <%@ page import="userinfo.IUserService"%>
 <%
-	request.setCharacterEncoding("UTF-8");
-	response.setCharacterEncoding("UTF-8");
+// 	request.setCharacterEncoding("UTF-8");
+// 	response.setCharacterEncoding("UTF-8");
 	
- 	UserRepository repo = new UserRepository();
- 	IUserService service = new UserService(repo);
+//  	UserRepository repo = new UserRepository();
+//  	IUserService service = new UserService(repo);
 	
- 	String userid = request.getParameter("userid");
- 	System.out.println(userid);
-	int result = repo.idDuplicateCheck(userid);
-	PrintWriter pw = response.getWriter();
-	pw.print(result);
+//  	String userid = request.getParameter("userid");
+//  	System.out.println(userid);
+// 	int result = repo.idDuplicateCheck(userid);
+// 	PrintWriter pw = response.getWriter();
+// 	pw.print(result);
 %>
