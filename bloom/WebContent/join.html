@@ -14,20 +14,31 @@
 	<form action="./addUser.jsp" method="post">
     <div id="container">
         <div id="join_content">
-            <label for="id">아이디</label>
-             <i class="idCheck fa-sharp fa-solid fa-check"></i><br>
-            <input type="text" id="id" name="id" class="int" title="ID" maxlength="20" placeholder="아이디를 입력하세요" required><br>
-            <label for="pw1">비밀번호</label>
-            <i class="iconCheck fa-sharp fa-solid fa-check"></i><br>
-            <input type="password" id="pw1" name="pw1"maxlength="20"placeholder="비밀번호를 입력하세요" required><br>
-            <label for="pw2">비밀번호 재확인</label>
-            <i class="iconCheck fa-sharp fa-solid fa-check" id="iconCheck"></i><br>
-            <input type="password" id="pw2" name="pw2"maxlength="20"placeholder="비밀번호를 입력하세요" required><br>
-            <label for="name">이름</label><br>
-            <input type="text" id="name" name="name"maxlength="10"placeholder="이름을 입력하세요" required><br>
-            <label for="email">본인 확인 이메일</label>
+            <label>아이디</label>
+            <i class="idCheck fa-sharp fa-solid fa-check"></i><br>
+            <input type="text" id="id" maxlength="20" placeholder="아이디를 입력하세요" required><br>
+            <span class="idCheckResult">중복된 아이디입니다.</span>
+            <span class="idCheckExpression">5~10자 영문 소문자, 숫자를 사용하세요.</span><br>
+            
+            <label>비밀번호</label>
+            <i class="iconCheck1 fa-sharp fa-solid fa-check"></i><br>
+            <input type="password" id="pw1" maxlength="20" placeholder="비밀번호를 입력하세요" required><br>
+            <span class="pw1Expression" hidden="">8~16자의 영문 대 소문자, 숫자를 사용하세요</span><br>
+            
+            <label>비밀번호 재확인</label>
+            <i class="iconCheck2 fa-sharp fa-solid fa-check" id="iconCheck"></i><br>
+            <input type="password" id="pw2" maxlength="20"placeholder="비밀번호를 입력하세요" required><br>
+            <span class="pw2Check" hidden="">비밀번호가 일치하지 않습니다.</span><br>
+            
+            <label>이름</label><br>
+            <input type="text" id="userName" maxlength="10"placeholder="이름을 입력하세요" required><br>
+            <span class="nameCheck" hidden="">2~6자의 한글을 사용하세요.</span><br>
+            
+            <label>본인 확인 이메일</label>
             <label id="emailchoice">(선택)</label><br>
-            <input type="email" name="email"maxlength="20"><br>
+            <input type="email" id="userEmail" maxlength="20"><br>
+            <span class="emailCheck" hidden="">올바른 이메일을 사용하세요.</span><br>
+            
             <input type="submit" value="가입하기"></button>
         </div>
     </div>
@@ -38,43 +49,137 @@
 	var id = document.getElementById("id");
 	console.log(id);
 	let idElems = document.querySelectorAll(".idCheck");
-	id.addEventListener("change", function (e) {
-		fetch("http://localhost:8080/bloom/checkId.jsp?userid=" + id.value)
+	let idCheckResult = document.querySelectorAll(".idCheckResult");
+	let idCheckExpression = document.querySelectorAll(".idCheckExpression");
+	var idReg = /^[a-zA-Z0-9]{5,10}$/; 
+	function removeAll (e) {
+		console.log("클릭하면 지우기");
+		idCheckResult.forEach((e) => e.classList.remove("unValid"));
+		idElems.forEach((e) => e.classList.remove("valid"));
+		idCheckExpression.forEach((e) => e.classList.remove("unValid"));
+	}
+	id.addEventListener("click", removeAll);
+	id.addEventListener("select", removeAll);
+	
+	id.addEventListener("blur", function (e) {
+		fetch("http://localhost:8080/bloom/signUp?userid=" + id.value)
 			.then((response) => response.text())	
 			.then((result) => {
-				console.log("바디 텍스트:", result + "end");
-				if ( result != 1) {
-					idElems.forEach((e) => e.classList.toggle("valid"));
+				console.log("바디 텍스트:", result);
+				console.log(result);
+				console.log(idReg.test(id.value));
+				
+				if (result == 0) {
+						console.log("중복아님");
+					if (idReg.test(id.value)) {
+						console.log(idReg.test(id.value));
+						idElems.forEach((e) => e.classList.add("valid"));
+						idCheckResult.forEach((e) => e.classList.remove("unValid"));
+						idCheckExpression.forEach((e) => e.classList.remove("unValid"));
+					} else {
+						console.log(idReg.test(id.value));
+						idCheckExpression.forEach((e) => e.classList.add("unValid"));
+					}
 				} else {
+					console.log("중복");
 					idElems.forEach((e) => e.classList.remove("valid"));
+					idCheckResult.forEach((e) => e.classList.add("unValid"));
 				}
 			})
 		});
 	
+	
 	var pw1 = document.getElementById("pw1");	
 	var pw2 = document.getElementById("pw2");
-    let elems = document.querySelectorAll(".iconCheck");
+    let elems1 = document.querySelectorAll(".iconCheck1");
+    let elems2 = document.querySelectorAll(".iconCheck2");
+    let pwElems = document.querySelectorAll(".pw1Expression");
+    let pw2Check = document.querySelectorAll(".pw2Check");
     
-    pw1.addEventListener("change", function (e) {
-        console.log(pw1.value);
-        if (pw1.value == "" || pw2.value == "") {
-        	elems.forEach((e) => e.classList.remove("valid"));
-        } else if (pw1.value == pw2.value) {
-        	elems.forEach((e) => e.classList.toggle("valid"));
-        } else {
-        	elems.forEach((e) => e.classList.remove("valid"));
-        } 
+	function removePwExpression (e) {
+		console.log("비밀번호안내문구지우기");
+		pwElems.forEach((e) => e.classList.remove("unValid"));
+	}
+	pw1.addEventListener("click", removePwExpression);
+	pw1.addEventListener("select", removePwExpression);
+    
+    var pwReg = /^[a-zA-Z0-9]{8,16}$/; 
+
+    
+    pw1.addEventListener("blur", function (e) {
+    	console.log("첫번째 비밀번호" + pw1.value);
+    	 if (pwReg.test(pw1.value)) {
+    		 console.log(pwReg.test(pw1.value));
+    		 elems1.forEach((e) => e.classList.add("valid")); 
+    		 pwElems.forEach((e) => e.classList.remove("unValid"));
+    	 } else {
+    		 console.log(pwReg.test(pw1.value));
+    		 elems1.forEach((e) => e.classList.remove("valid"));
+    		 pwElems.forEach((e) => e.classList.add("unValid"));
+    	 }
     })
     
-	pw2.addEventListener("change", function (e) {
-        console.log(pw1.value);
-        if (pw1.value == "" || pw2.value == "") {
-        	elems.forEach((e) => e.classList.remove("valid"));
-        } else if (pw1.value == pw2.value) {
-        	elems.forEach((e) => e.classList.toggle("valid"));
+    function secondPwResult (e) {
+        console.log("두번째 비밀번호" + pw2.value);
+        if (pw1.value == pw2.value) {
+        	elems2.forEach((e) => e.classList.add("valid"));
+        	pw2Check.forEach((e) => e.classList.remove("unValid"));
         } else {
-        	elems.forEach((e) => e.classList.remove("valid"));
+        	elems2.forEach((e) => e.classList.remove("valid"));
+        	if(pw2.value != "") {
+        		pw2Check.forEach((e) => e.classList.add("unValid"));
+        	}
         }
+    }
+    
+    pw1.addEventListener("blur", secondPwResult);
+	pw2.addEventListener("blur", secondPwResult);
+	
+	var nameReg = /^[가-힣]{2,6}$/;
+	var userName = document.getElementById("userName");
+	let nameCheck = document.querySelectorAll(".nameCheck");
+	
+	userName.addEventListener("blur", function (e) {
+    	console.log("이름" + name.value);
+    	 if (nameReg.test(userName.value)) {
+    		 console.log(nameReg.test(userName.value));
+    		 nameCheck.forEach((e) => e.classList.remove("unValid"));
+    	 } else {
+    		 console.log(nameReg.test(userName.value));
+    		 nameCheck.forEach((e) => e.classList.add("unValid"));
+    	 }
     })
+    	
+    var userEmail = document.getElementById("userEmail");
+	let emailReg =  /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+	let emailCheck = document.querySelectorAll(".emailCheck");
+	userEmail.addEventListener("blur", function (e) {
+    	console.log("이메일" + userEmail.value);
+    	 if (emailReg.test(userEmail.value)) {
+    		 console.log(emailReg.test(userEmail.value));
+    		 emailCheck.forEach((e) => e.classList.remove("unValid"));
+    	 } else {
+    		 console.log(emailReg.test(userEmail.value));
+    		 emailCheck.forEach((e) => e.classList.add("unValid"));
+    	 }
+    	 if (userEmail.value == "") {
+    	 	emailCheck.forEach((e) => e.classList.remove("unValid"));
+    	 }
+    })
+    function removeEmailExpression (e) {
+		console.log("이메일안내문구지우기");
+		emailCheck.forEach((e) => e.classList.remove("unValid"));
+	}
+	userEmail.addEventListener("click", removeEmailExpression);
+	userEmail.addEventListener("select", removeEmailExpression);
 	
 </script>
+
+
+
+
+
+
+
+
+
