@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.w3c.dom.Document;
 
 @WebServlet("/signUp")
-public class ChekId extends HttpServlet {
+public class ChekIdServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
