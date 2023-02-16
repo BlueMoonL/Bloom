@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<link rel="stylesheet" href="./css/footer.css">
 	<link rel="stylesheet" href="./css/login.css">
+	<link rel="stylesheet" href="./css/join.css">
 
 	<script type="text/javascript" src="./js/side_main.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -42,8 +43,8 @@
 				</nav>
 			</div>
 			<div class="login">
-				<li><a href="#!" id="btnLogin">Login</a></li>
-				<li><a href="join.html">Sign Up</a></li>
+				<li><a href="#!" id="btn-login">Login</a></li>
+				<li><a href="#!" id="btn-signup">Sign Up</a></li>
 			</div>
 		</header>
 
@@ -84,26 +85,36 @@
 					<fieldset>
 						<div class="team-member">
 							<div class="members">
-								<img src="./img/wh.png" alt="">
-								<legend>완희</legend>
-							</div>
-							<div class="members">
-								<img src="./img/jy.jpg" alt="">
-								<legend>주용</legend>
-							</div>
-							<div class="members">
-								<img src="./img/cw.jpg" alt="">
-								<legend>창우</legend>
-							</div>
-							<div class="members">
-								<img src="./img/gy.png" alt="">
-								<legend>가영</legend>
-							</div>
-							<div class="members">
-								<img src="./img/hi.png" alt="">
-								<legend>혜인</legend>
-							</div>
+								<figure>
+									<img src="./img/wh.png" alt="">
+									<legend>완희</legend>
+								</figure>
 
+							</div>
+							<div class="members">
+								<figure>
+									<img src="./img/jy.jpg" alt="">
+									<legend>주용</legend>
+								</figure>
+							</div>
+							<div class="members">
+								<figure>
+									<img src="./img/cw.jpg" alt="">
+									<legend>창우</legend>
+								</figure>
+							</div>
+							<div class="members">
+								<figure>
+									<img src="./img/gy.png" alt="">
+									<legend>가영</legend>
+								</figure>
+							</div>
+							<div class="members">
+								<figure>
+									<img src="./img/hi.png" alt="">
+									<legend>혜인</legend>
+								</figure>
+							</div>
 						</div>
 					</fieldset>
 				</div>
@@ -161,11 +172,11 @@
 			</div>
 		</footer>
 
-		<div class="background">
+		<div class="background-login">
 			<div class="login-box">
 				<div class="login-header">
 					<div class="close">
-						<i class="fa-solid fa-xmark" id="btnClose"></i>
+						<i class="fa-solid fa-xmark" id="login-close"></i>
 					</div>
 				</div>
 				<div class="login-title">
@@ -199,60 +210,85 @@
 			</div>
 		</div>
 
-		<div class="background">
+		<div class="background-signup">
 			<div class="join-box">
-				<div class="login-header">
+				<div class="join-header">
 					<div class="close">
-						<i class="fa-solid fa-xmark" id="btnClose"></i>
+						<i class="fa-solid fa-xmark" id="singup-close"></i>
 					</div>
 				</div>
-				<div class="login-title">
-					<img src="./img/logo_test.png" />
-					<h2>우리들의 마음속 꽃 한송이</h2>
-				</div>
-
+				<div class="join-title">회원가입</div>
 				<div class="inputs">
-					<div class="login-subtitle">아이디</div>
+					<div class="join-subtitle">아이디</div>
 					<div class="input-wrapper">
-						<input name="login_id" type="text">
+						<div class="horizontal">
+							<input type="text" id="id" maxlength="20" placeholder="아이디를 입력하세요" required>
+							<i class="idCheck fa-sharp fa-solid fa-check"></i>
+						</div>
+						<span class="idCheckResult">중복된 아이디입니다.</span>
+						<span class="idCheckExpression">5~10자 영문 소문자, 숫자를 사용하세요.</span>
 					</div>
-					<div class="login-subtitle">비밀번호</div>
+					<div class="join-subtitle">비밀번호</div>
 					<div class="input-wrapper">
-						<input name="login_pwd" type="password">
+						<div class="horizontal">
+							<input type="password" id="pw1" maxlength="20" placeholder="비밀번호를 입력하세요" required>
+							<i class="iconCheck1 fa-sharp fa-solid fa-check"></i>
+						</div>
+						<span class="pw1Expression" hidden="">8~16자의 영문 대 소문자, 숫자를 사용하세요</span>
+					</div>
+					<div class="join-subtitle">비밀번호 재확인</div>
+					<div class="input-wrapper">
+						<div class="horizontal">
+							<input type="password" id="pw2" maxlength="20" placeholder="비밀번호를 입력하세요" required>
+							<i class="iconCheck1 fa-sharp fa-solid fa-check"></i>
+						</div>
+						<span class="pw2Check" hidden="">비밀번호가 일치하지 않습니다.</span>
+					</div>
+					<div class="join-subtitle">이름</div>
+					<div class="input-wrapper">
+						<div class="horizontal">
+							<input type="text" id="userName" maxlength="10" placeholder="이름을 입력하세요" required>
+							<i class="iconCheck1 fa-sharp fa-solid fa-check"></i>
+						</div>
+						<span class="nameCheck" hidden="">2~6자의 한글을 사용하세요.</span>
+					</div>
+					<div class="email-horizontal">
+						<div class="join-subtitle">이메일</div>
+						<div class="emailchoice">(선택)</div>
+					</div>
+					<div class="input-wrapper">
+						<div class="horizontal">
+							<input type="email" id="userEmail" maxlength="20">
+							<i class="iconCheck1 fa-sharp fa-solid fa-check"></i>
+						</div>
+						<span class="emailCheck" hidden="">올바른 이메일을 사용하세요.</span>
 					</div>
 				</div>
-
 				<div class="footer">
-					<div class="login-action">
-						<button type="button">로그인</button>
-					</div>
-					<div class="register-action">
-						<div class="flex">
-							<div class="register"> 회원가입</div>
-							<span class="bar">|</span>
-							<div class="desc">비밀번호 찾기</div>
-						</div>
+					<div class="join-action">
+						<button type="button">가입하기</button>
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
 </body>
 
 </html>
 
 <script>
-	function show() {
-		document.querySelector(".background").className = "background show";
-		// document.body.style.overflow = 'hidden';
-		console.log("gg");
-	}
+	document.querySelector("#btn-login").addEventListener("click", e => {
+		document.querySelector(".background-login").className = "background-login login-show";
+	});
+	document.querySelector("#login-close").addEventListener("click", e => {
+		document.querySelector(".background-login").className = "background-login";
+	});
 
-	function close() {
-		document.querySelector(".background").className = "background";
-		// document.body.style.overflow = 'visible';
-	}
-
-	document.querySelector("#btnLogin").addEventListener("click", show);
-	document.querySelector("#btnClose").addEventListener("click", close);
+	document.querySelector("#btn-signup").addEventListener("click", e => {
+		document.querySelector(".background-signup").className = "background-signup join-show";
+	});
+	document.querySelector("#singup-close").addEventListener("click", e => {
+		document.querySelector(".background-signup").className = "background-signup";
+	});
 </script>
