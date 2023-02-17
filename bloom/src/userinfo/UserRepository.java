@@ -33,5 +33,37 @@ public class UserRepository implements IUserRepository {
 			}
 		}
 		return 0;
+	}
+	@Override
+	public int loginUser(String id, String pw) throws SQLException {
+		String query = "SELECT count(*) FROM bloom.user WHERE id = ? and pw = ?";
+		try (Connection conn = ConnectionProvider.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(query);) {
+			stmt.setString(1, id);
+			stmt.setString(2, pw);
+			try (ResultSet rs = stmt.executeQuery()) {
+				if (rs.next()) {
+					int result  = rs.getInt("count(*)");
+					return result;
+				}
+			}
+		}
+		return 0;
 	} 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
