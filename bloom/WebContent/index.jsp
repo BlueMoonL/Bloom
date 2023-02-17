@@ -1,3 +1,6 @@
+<%@page import="userinfo.loginCheckServlet"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -32,6 +35,7 @@
 </head>
 
 <body>
+
 	<div class="Wrap">
 		<header id="header" class="">
 			<h1>
@@ -46,10 +50,26 @@
 					</ul>
 				</nav>
 			</div>
+		
+			<%
+			String userID = (String) session.getAttribute("login");
+			if (userID == null) {
+			%>	
 			<div class="login">
 				<li><a href="javascript:void(0)" id="btn-login">Login</a></li>
 				<li><a href="javascript:void(0)" id="btn-signup">Sign Up</a></li>
 			</div>
+			<%	
+			} else {
+			%>
+			<div class="login">
+				<li><a href="javascript:void(0)" id="btn-login">Logout</a></li>
+				<li><a href="javascript:void(0)" id="btn-signup">MyPage</a></li>
+			</div>
+			<%	
+			}
+			%>
+
 		</header>
 
 		<main>

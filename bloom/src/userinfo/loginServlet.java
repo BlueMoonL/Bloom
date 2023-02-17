@@ -56,9 +56,8 @@ public class loginServlet extends HttpServlet{
 			session.setAttribute("login", userID);
 			pw.print(userID);
 			System.out.println("세션 생성, 로그인 완료");
-		} else {
-			pw.print("");
-		}
+			resp.sendRedirect("./index.jsp");
+		} 
 		
 	}	
 	

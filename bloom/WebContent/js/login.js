@@ -30,6 +30,7 @@ loginBtn.addEventListener("click", function(e) {
 		console.log(result);
 			if (result != "") {
 				close();
+				location.reload();
 			}
 		})
 	})
