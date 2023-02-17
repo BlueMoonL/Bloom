@@ -233,3 +233,5 @@ userEmail.addEventListener("keyup", function (e) {
 		emailCheck.forEach((e) => e.classList.remove("unValid"));
 	}
 })
+
+
