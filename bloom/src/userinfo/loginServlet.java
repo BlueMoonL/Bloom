@@ -38,13 +38,8 @@ public class loginServlet extends HttpServlet{
 		String userPW = nood.get("userPW").asText();
 		System.out.println(userID);
 		System.out.println(userPW);
-		
-		
-		
-
-		
+	
 	 	UserRepository repo = new UserRepository();
-	 	
 	 	
 	 	int result = -1;
 	 	try {
