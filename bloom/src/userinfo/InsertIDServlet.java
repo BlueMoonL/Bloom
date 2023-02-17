@@ -14,6 +14,10 @@ public class InsertIDServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		resp.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+//		resp.setHeader("Access-Control-Allow-Methods", "POST");
+//		resp.setHeader("Access-Control-Allow-Headers", "*");
+		
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
