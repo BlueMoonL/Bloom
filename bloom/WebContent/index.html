@@ -21,13 +21,11 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<link rel="stylesheet" href="./css/footer.css">
 	<link rel="stylesheet" href="./css/login.css">
-	<!-- <link rel="stylesheet" href="./css/join.css"> -->
-	<link rel="stylesheet" href="./css/confirm.css">
+	<link rel="stylesheet" href="./css/join.css">
 
 	<script type="text/javascript" src="./js/side_main.js" defer></script>
 	<script type="text/javascript" src="./js/login.js" defer></script>
-	<!-- <script type="text/javascript" src="./js/join.js" defer></script> -->
-	<script type="text/javascript" src="./js/confirm.js" defer></script>
+	<script type="text/javascript" src="./js/join.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
@@ -49,7 +47,7 @@
 			</div>
 			<div class="login">
 				<li><a href="javascript:void(0)" id="btn-login">Login</a></li>
-				<li><a href="javascript:void(0)" id="btn-confirm">Sign Up</a></li>
+				<li><a href="javascript:void(0)" id="btn-signup">Sign Up</a></li>
 			</div>
 		</header>
 
@@ -280,46 +278,12 @@
 				</div>
 			</div>
 		</form>
-
-		<div class="background-confirm">
-			<div class="confirm-box">
-				<div class="confirm-title">
-					<h2>OOO</h2>
-					<span>님, 환영해요!</span>
-				</div>
-				<div class="confirm-subtitle">
-					<span>회원가입이 완료되었습니다.</span>
-				</div>
-				<div class="confirm-action">
-					<button type="button" id="confirm-close" disabled>닫기</button>
-				</div>
-			</div>
-		</div>
 	</div>
 </body>
 
 </html>
 
-<script>
-	function show() {
-		document.querySelector(".background").className = "background show";
-		// document.body.style.overflow = 'hidden';
-		console.log("로그인 창 열림");
-	}
-
-	function close() {
-		document.querySelector(".background").className = "background";
-		// document.body.style.overflow = 'visible';
-		console.log("로그인 창 닫힘");
-	}
-
-	document.querySelector("#btnClose").addEventListener("click", close);
-	document.querySelector("#btnLogin").addEventListener("click", show);
-	
-	
-	
-	
-	
+<script>	
 	var loginBtn = document.getElementById("loginBtn"); //로그인 창안에서 로그인 버튼
 	var userID = document.getElementById("userID");
 	var userPW = document.getElementById("userPW");
@@ -345,7 +309,4 @@
 			})
 
 		})
-	
-
-	
 </script>
