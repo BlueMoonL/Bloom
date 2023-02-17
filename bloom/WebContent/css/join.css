@@ -1,0 +1,206 @@
+.background-signup {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: -1;
+	opacity: 0;
+}
+
+.join-show {
+	z-index: 1000;
+	opacity: 1;
+	transition: all 0.5s;
+}
+
+.join-box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color: rgb(255, 255, 255);
+	width: 376px;
+	border-radius: 6px;
+	padding: 32px 32px 32px;
+	box-shadow: rgb(0, 0, 0/ 20%) 0px 3px 3px 3px;
+	transform: translate(-50%, -20%);
+}
+
+.join-show .join-box {
+	transform: translate(-50%, -50%);
+	transition: all 0.5s;
+}
+
+.join-header {
+	display: flex;
+	height: 48px;
+	justify-content: flex-end;
+}
+
+.join-title {
+	font-size: 30px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+.join-subtitle {
+	margin-top: 24px;
+	color: rgb(102, 102, 102);
+	font-size: 13px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+}
+
+.horizontal {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.email-horizontal {
+	display: flex;
+	gap: 3px;
+}
+
+.join-action {
+	margin-bottom: 20px;
+}
+
+.join-action button {
+	width: 100%;
+	height: 48px;
+	margin-top: 24px;
+	border: none;
+	background-color: #a9a9a9;
+	/* color: rgb(255, 255, 255); */
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	outline: none;
+	border-radius: 12px;
+	
+}
+
+.emailchoice {
+	margin-top: 26px;
+	font-size: 10px;
+	color: red;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+}
+
+.idCheck {
+	color: rgb(102, 102, 102);
+}
+
+.idCheck.valid {
+	color: #00b564;
+}
+
+.idCheckResult {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.idCheckResult.unValid {
+	visibility: visible;
+}
+
+.idCheckExpression {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.idCheckExpression.unValid {
+	visibility: visible;
+}
+
+.iconCheck1 {
+	color: rgb(102, 102, 102);
+}
+
+.iconCheck1.valid {
+	color: #00b564;
+}
+
+.pw1Expression {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.pw1Expression.unValid {
+	visibility: visible;
+}
+
+.iconCheck2 {
+	color: rgb(102, 102, 102);
+}
+
+.iconCheck2.valid {
+	color: #00b564;
+}
+
+.pw2Check {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.pw2Check.unValid {
+	visibility: visible;
+}
+
+.iconCheck3 {
+	color: rgb(102, 102, 102);
+}
+
+.iconCheck3.valid {
+	color: #00b564;
+}
+
+.nameCheck {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.nameCheck.unValid {
+	visibility: visible;
+}
+
+.iconCheck4 {
+	color: rgb(102, 102, 102);
+}
+
+.iconCheck4.valid {
+	color: #00b564;
+}
+
+.emailCheck {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.emailCheck.unValid {
+	visibility: visible;
+}

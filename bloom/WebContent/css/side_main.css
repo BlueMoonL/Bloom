@@ -1,0 +1,113 @@
+ /* 메뉴 active 전 */
+
+ #menu ul li div a {
+     left: 20px;
+     margin-left: 3px;
+     /* position: absolute; */
+     /* top: -2px; */
+     color: #000;
+     font-size: 14px;
+     /* font-family: arial, helvetica, sans-serif; */
+     white-space: nowrap;
+     max-width: 220px;
+     /* overflow: hidden; */
+     display: block;
+     /* opacity: 0; */
+     /* width: 0; */
+     cursor: pointer;
+     /* font-family: SourceHanSansK; */
+     font-size: 13px;
+     line-height: 1.43;
+     letter-spacing: -0.42px;
+     text-align: left;
+     color: #b4b4b4;
+     min-width: 60px;
+ }
+
+ 
+
+ #menu span {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font: inherit;
+     font-size: 100%;
+     vertical-align: middle;
+ }
+
+
+ #menu {
+     position: fixed;
+     z-index: 100;
+     margin-top: -32px;
+     top: 50%;
+     opacity: 1;
+ }
+
+ #menu ul li a.active span {
+     height: 3px;
+     width: 26px;
+     background: #00b564;
+     margin-right: -12px;
+ }
+
+ #menu ul li a.active+div a {
+     /* font-family: SourceHanSansK; */
+     font-size: 15px;
+     font-weight: bold;
+     line-height: 1.43;
+     letter-spacing: -0.42px;
+     text-align: left;
+     color: #00b564;
+ }
+
+ #menu ul li.active {
+     /* font-family: SourceHanSansK; */
+     font-size: 15px;
+     font-weight: bold;
+     line-height: 1.43;
+     letter-spacing: -0.42px;
+     text-align: left;
+     color: #00b564;
+ }
+
+ #menu.left {
+     left: 8.92857vw;
+ }
+
+ #menu a {
+     text-decoration: none;
+ }
+
+ li {
+     display: list-item;
+     text-align: -webkit-match-parent;
+ }
+
+ ul {
+     list-style: none;
+ }
+
+ #menu ul li a span {
+     /* border-radius: 50%; */
+     /* position: absolute; */
+     display: block;
+     z-index: 1;
+     height: 2px;
+     width: 14px;
+     border: 0;
+     background: #ebebeb;
+     /* left: 50%; */
+     /* top: 50%; */
+     /* margin: -2px 0 0 -2px; */
+     transition: all 0.1s ease-in-out;
+
+ }
+
+ .left ul li {
+     display: flex;
+     align-items: center;
+     margin: 14px 0;
+     position: relative;
+     gap: 40px;
+ }

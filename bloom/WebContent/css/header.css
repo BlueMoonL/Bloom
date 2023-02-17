@@ -1,0 +1,62 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    padding: 0 100px;
+
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    background: #fff;
+    align-items: center;
+    border-bottom: 15px solid #35AD64;
+    z-index: 300;
+    transition: 0.4s;
+}
+
+#header h1 a {
+    display: block;
+}
+
+#header h1 img {
+    min-width: 150px;
+}
+
+#header .inner .gnb {
+    height: 90px;
+}
+
+#header .inner .gnb .gnb_menu {
+    display: flex;
+    gap: 60px;
+    justify-content: flex-start;
+}
+
+#header .login {
+    display: flex;
+    gap: 60px;
+    justify-content: flex-end;
+    height: 90px;
+}
+
+#header li>a {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: 0.4s;
+    line-height: 90px;
+
+    width: max-content;
+}
+
+#header li>a:hover {
+    color: #28a745;
+}
+
+#header hr {
+    height: 10px;
+    background-color: #35AD64;
+}
