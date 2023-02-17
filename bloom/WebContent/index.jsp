@@ -127,13 +127,13 @@
 							<div class="members">
 								<figure>
 									<img src="./img/jy.jpg" alt="">
-									<legend>주용</legend>
+									<legend>창우</legend>
 								</figure>
 							</div>
 							<div class="members">
 								<figure>
 									<img src="./img/cw.jpg" alt="">
-									<legend>창우</legend>
+									<legend>창우주용</legend>
 								</figure>
 							</div>
 							<div class="members">
