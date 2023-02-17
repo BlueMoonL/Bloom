@@ -175,38 +175,40 @@
 			</div>
 		</footer>
 
-		<div class="background-login">
-			<div class="login-box">
-				<div class="login-header">
-					<div class="close">
-						<i class="fa-solid fa-xmark" id="login-close"></i>
+		<div class="bahttp://localhost:8080/bloom/index.html">
+			<div class="background-login">
+				<div class="login-box">
+					<div class="login-header">
+						<div class="close">
+							<i class="fa-solid fa-xmark" id="login-close"></i>
+						</div>
 					</div>
-				</div>
-				<div class="login-title">
-					<img src="./img/logo_test.png" />
-					<h2>우리들의 마음속 꽃 한송이</h2>
-				</div>
-
-				<div class="inputs">
-					<div class="login-subtitle">아이디</div>
-					<div class="input-wrapper">
-						<input name="login_id" type="text" id="userID">
+					<div class="login-title">
+						<img src="./img/logo_test.png" />
+						<h2>우리들의 마음속 꽃 한송이</h2>
 					</div>
-					<div class="login-subtitle">비밀번호</div>
-					<div class="input-wrapper">
-						<input name="login_pwd" type="password" id="userPW">
+	
+					<div class="inputs">
+						<div class="login-subtitle">아이디</div>
+						<div class="input-wrapper">
+							<input name="login_id" type="text" id="userID">
+						</div>
+						<div class="login-subtitle">비밀번호</div>
+						<div class="input-wrapper">
+							<input name="login_pwd" type="password" id="userPW">
+						</div>
 					</div>
-				</div>
-
-				<div class="footer">
-					<div class="login-action">
-						<button type="button" id="loginBtn">로그인</button>
-					</div>
-					<div class="register-action">
-						<div class="flex">
-							<div class="register"> 회원가입</div>
-							<span class="bar">|</span>
-							<div class="desc">비밀번호 찾기</div>
+	
+					<div class="footer">
+						<div class="login-action">
+							<button type="button" id="loginBtn">로그인</button>
+						</div>
+						<div class="register-action">
+							<div class="flex">
+								<div class="register"> 회원가입</div>
+								<span class="bar">|</span>
+								<div class="desc">비밀번호 찾기</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -283,30 +285,3 @@
 
 </html>
 
-<script>	
-	var loginBtn = document.getElementById("loginBtn"); //로그인 창안에서 로그인 버튼
-	var userID = document.getElementById("userID");
-	var userPW = document.getElementById("userPW");
-
-	//로그인 창에서 로그인 버튼을 눌렀을 때
-	loginBtn.addEventListener("click", function(e) {
-		fetch("http://localhost:8080/bloom/login", {
-		  method: "POST",
-		  headers: {
-			    "Content-Type": "application/json",
-			  },
-		  body: JSON.stringify({
-		           "userID" : userID.value,
-		           "userPW" : userPW.value
-			})
-		})
-		.then(response => response.text())
-		.then((result) => {
-			console.log(result);
-				if (result != "") {
-					close();
-				}
-			})
-
-		})
-</script>
