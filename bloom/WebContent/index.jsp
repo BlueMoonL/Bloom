@@ -133,7 +133,7 @@
 							<div class="members">
 								<figure>
 									<img src="./img/cw.jpg" alt="">
-									<legend>창우주용</legend>
+									<legend>주용</legend>
 								</figure>
 							</div>
 							<div class="members">
