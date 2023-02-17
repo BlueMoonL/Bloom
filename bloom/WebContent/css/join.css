@@ -78,12 +78,15 @@
 	height: 48px;
 	margin-top: 24px;
 	border: none;
-	background-color: #00b564;
-	color: rgb(255, 255, 255);
+	background-color: #a9a9a9;
+	/* color: rgb(255, 255, 255); */
+	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
+	font-weight: bold;
 	outline: none;
 	border-radius: 12px;
+	
 }
 
 .emailchoice {
@@ -96,12 +99,53 @@
 	line-height: normal;
 }
 
+.idCheck {
+	color: rgb(102, 102, 102);
+}
+
+.idCheck.valid {
+	color: #00b564;
+}
+
+.idCheckResult {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.idCheckResult.unValid {
+	visibility: visible;
+}
+
+.idCheckExpression {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.idCheckExpression.unValid {
+	visibility: visible;
+}
+
 .iconCheck1 {
 	color: rgb(102, 102, 102);
 }
 
 .iconCheck1.valid {
-	color: red;
+	color: #00b564;
+}
+
+.pw1Expression {
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
+}
+
+.pw1Expression.unValid {
+	visibility: visible;
 }
 
 .iconCheck2 {
@@ -109,110 +153,54 @@
 }
 
 .iconCheck2.valid {
-	color: red;
+	color: #00b564;
 }
 
-.idCheck {
-	color: rgb(102, 102, 102);
-}
-
-.idCheck.valid {
-	color: red;
-}
-
-.idCheckResult {
-	display: none;
-	margin: 0;
-	padding: 0;
-}
-
-.idCheckResult.unValid {
-	display: block;
+.pw2Check {
+	visibility: hidden;
 	text-align: left;
 	font-size: 12px;
 	padding-bottom: 10px
 }
 
-.idCheckResult {
-	display: none;
-	margin: 0;
-	padding: 0;
-}
-
-.idCheckExpression.unValid {
-	display: block;
-	text-align: left;
-	font-size: 12px;
-}
-
-.idCheckExpression {
-	display: none;
-	margin: 0;
-	padding: 0;
-}
-
-.pw1Expression.unValid {
-	display: block;
-	text-align: left;
-	font-size: 12px;
-}
-
-.pw2Check {
-	display: none;
-	margin: 0;
-	padding: 0;
-}
-
 .pw2Check.unValid {
-	display: block;
-	text-align: left;
-	font-size: 12px;
+	visibility: visible;
 }
 
-.pw2Check {
-	display: none;
-	margin: 0;
-	padding: 0;
+.iconCheck3 {
+	color: rgb(102, 102, 102);
 }
 
-.pw2Check.unValid {
-	display: block;
-	text-align: left;
-	font-size: 12px;
-}
-
-.pw2Check {
-	display: none;
-	margin: 0;
-	padding: 0;
-}
-
-.pw2Check.unValid {
-	display: block;
-	text-align: left;
-	font-size: 12px;
+.iconCheck3.valid {
+	color: #00b564;
 }
 
 .nameCheck {
-	display: none;
-	margin: 0;
-	padding: 0;
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
 }
 
 .nameCheck.unValid {
-	display: block;
-	text-align: left;
-	font-size: 12px;
+	visibility: visible;
+}
+
+.iconCheck4 {
+	color: rgb(102, 102, 102);
+}
+
+.iconCheck4.valid {
+	color: #00b564;
 }
 
 .emailCheck {
-	display: none;
-	margin: 0;
-	padding: 0;
+	visibility: hidden;
+	text-align: left;
+	font-size: 12px;
+	padding-bottom: 10px
 }
 
 .emailCheck.unValid {
-	display: block;
-	text-align: left;
-	font-size: 12px;
+	visibility: visible;
 }
