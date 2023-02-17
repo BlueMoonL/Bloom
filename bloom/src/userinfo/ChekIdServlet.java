@@ -18,9 +18,6 @@ public class ChekIdServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		resp.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
-//		resp.setHeader("Access-Control-Allow-Methods", "GET");
-//		resp.setHeader("Access-Control-Allow-Headers", "*");
 		
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
@@ -40,6 +37,5 @@ public class ChekIdServlet extends HttpServlet {
 		System.out.println(result);
 		PrintWriter pw = resp.getWriter();
 		pw.print(result);
-			
 	}
 }
