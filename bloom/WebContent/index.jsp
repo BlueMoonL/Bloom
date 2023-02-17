@@ -83,18 +83,27 @@
 			<section id="section02">
 				<div class="inner">
 					<figure class="section02_img">
-						<a href="/"> <img src="./img/lineup_003.png" alt="">
+						<img id="flower-image" src="">
 						</a>
 					</figure>
 					<div class="section02_desc">
-						<h2>오늘의 꽃</h2>
-						<span>튤립</span>
-						<p id="floriography">튤립은 영원한 사랑, 불변한 사랑이라는 뜻입니다. 사실 구라입니다. 왜냐면
-							제가 방금 지어냈기때문이죠 하하 대충 이런식으로 꽃의 설명을 왈랄라 적어봅시다 사진도 튤립이 아닙니다. 테스트로
-							암꺼나 넣었습니다. 수고하세요</p>
+						<h2>오늘의 꽃</h2><br>
+						<p>오늘은 <span id="flower-name"></span> 입니다.</p>
+						<p>꽃말은 <span id="flower-mean"></span> 입니다.</p>
 					</div>
 				</div>
 			</section>
+			
+		<script>
+				fetch('http://localhost:8080/bloom/flower')
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					document.getElementById('flower-name').innerText = data.flowNm;
+					document.getElementById('flower-mean').innerText = data.flowLang;
+					document.getElementById('flower-image').setAttribute('src', data.imageUrl);
+				})
+		</script>
 
 			<section id="section03">
 				<div class="inner">
