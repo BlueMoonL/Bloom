@@ -33,7 +33,7 @@ window.addEventListener('scroll', handleScrollEvent);
 
 // 클릭 했을 때 이벤트
 
-function handleClickEvent(index) {z
+function handleClickEvent(index) {
   console.log(scrollmenu[index]);
   scrollmenu.forEach((item, i) => {
     if (i === index) {
@@ -79,42 +79,6 @@ $(document).ready(function($) {
 });*/
 
 
-function clickToSection(index) {
-  switch (index) {
-    case 0:
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    case 1:
-      window.scrollTo({
-        top: 969,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    case 2:
-      window.scrollTo({
-        top: 1938,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    case 3:
-      window.scrollTo({
-        top: 2907,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    default:
-      break;
-  }
-}
-
-
 
 // 글자 클릭 이벤트
 const clickmenu = document.querySelectorAll(".left ul li div a");
@@ -155,4 +119,26 @@ $(document).ready(function($) {
         });
 })
 
+window.addEventListener("wheel", function(e){
+	e.preventDefault();
+	},{passive : false});
 
+var mHtml = $("html");
+var page = 1;
+
+
+mHtml.animate({scrollTop : 0}, 30);
+
+$(window).on("wheel", function(e) {
+	console.log("페이지 : ", page);
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {
+        if(page == 4) return;
+        page++;
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height();
+    mHtml.animate({scrollTop : posTop});
+})
