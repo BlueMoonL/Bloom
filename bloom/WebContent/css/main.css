@@ -5,7 +5,8 @@
 #section01,
 #section02,
 #section03,
-#section04 {
+#section04-1,
+#section04-2 {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -75,7 +76,15 @@
     text-align: center;
 }
 
-#section04 .inner h2 {
+#section04-1 .inner strong {
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+#section04-2 .inner h2 {
     text-align: center;
     font-style: normal;
     font-size: 60px;
@@ -83,7 +92,7 @@
     margin: 10px 0 0;
 }
 
-#section04 .inner left-box {
+#section04-2 .inner left-box {
     display: flex;
     margin-top: 100px;
     margin-left: 100px;
@@ -93,45 +102,45 @@
     text-align: left;
 }
 
-#section04 .inner fieldset {
+#section04-2 .inner fieldset {
     display: flex;
     flex-direction: row;
     margin-top: 100px;
     border: none;
 }
  
-#section04 .team-member {
+#section04-2 .team-member {
     width: 100%;
     background-color: #fff;
     display: flex;
     flex-direction: row;
 }
 
-#section04 .members {
+#section04-2 .members {
     flex: 1;
 }
 
-#section04 .members figure {
+#section04-2 .members figure {
     overflow: hidden;
 }
 
-#section04 .members figure img {
+#section04-2 .members figure img {
     display: block;
     transition: 0.5s;
 }
 
-#section04 .members:hover figure img {
+#section04-2 .members:hover figure img {
     transform: scale(1.1);
 }
 
-#section04 .members img {
+#section04-2 .members img {
     display: block;
     min-width: 200px;
     min-height: 200px;
     padding: 0 10px;
 }
 
-#section04 legend {
+#section04-2 legend {
     margin-top: 50px;
     width: 100%;
     color: #212529;

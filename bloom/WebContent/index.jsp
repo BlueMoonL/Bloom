@@ -4,10 +4,10 @@
 
 <%
 	response.setHeader("Cache-Control", "no-store");
-	response.setHeader("Pragma", "no-cache");
-	response.setDateHeader("Expires", 0);
-	if (request.getProtocol().equals("HTTP/1.1"))
-		response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+if (request.getProtocol().equals("HTTP/1.1"))
+	response.setHeader("Cache-Control", "no-cache");
 %>
 <!DOCTYPE html>
 
@@ -87,7 +87,6 @@
 		</header>
 
 		<main>
-
 			<section id="section01">
 				<div class="inner">
 					<strong>안녕하세요</strong> <strong>블룸에 오신것을 환영합니다.</strong>
@@ -121,44 +120,51 @@
 			</section>
 
 			<section id="section04">
-				<div class="inner">
-					<h2>마음 쑥쑥</h2>
-					<fieldset>
-						<div class="team-member">
-							<div class="members">
-								<figure>
-									<img src="./img/wh.png" alt="">
-									<legend>완희</legend>
-								</figure>
+				<section id="section04-1">
+					<div class="inner">
+						<strong>안녕하세요</strong> <strong>블룸에 오신것을 환영합니다.</strong>
+					</div>
+				</section>
+				<section id="section04-2">
+					<div class="inner">
+						<h2>마음 쑥쑥</h2>
+						<fieldset>
+							<div class="team-member">
+								<div class="members">
+									<figure>
+										<img src="./img/wh.png" alt="">
+										<legend>완희</legend>
+									</figure>
 
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/jy.jpg" alt="">
+										<legend>창우</legend>
+									</figure>
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/cw.jpg" alt="">
+										<legend>주용</legend>
+									</figure>
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/gy.png" alt="">
+										<legend>가영</legend>
+									</figure>
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/hi.png" alt="">
+										<legend>혜인</legend>
+									</figure>
+								</div>
 							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/jy.jpg" alt="">
-									<legend>창우</legend>
-								</figure>
-							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/cw.jpg" alt="">
-									<legend>주용</legend>
-								</figure>
-							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/gy.png" alt="">
-									<legend>가영</legend>
-								</figure>
-							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/hi.png" alt="">
-									<legend>혜인</legend>
-								</figure>
-							</div>
-						</div>
-					</fieldset>
-				</div>
+						</fieldset>
+					</div>
+				</section>
 			</section>
 			<div class="main_side_nav">
 				<ul class="page_nav">

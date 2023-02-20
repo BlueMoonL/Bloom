@@ -10,6 +10,7 @@ $(function () {
 	
 	$(window).on("wheel", function(e) {
 	    if(mHtml.is(":animated")) return;
+		if($(document).scrollTop() > "2907") return;
 	    if(e.originalEvent.deltaY > 0) {
 	        if(page == 4) return;
 	        page++;
