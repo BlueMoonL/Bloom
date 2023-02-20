@@ -31,6 +31,7 @@
 
 <script type="text/javascript" src="./js/side_main.js" defer></script>
 <script type="text/javascript" src="./js/login.js" defer></script>
+<script type="text/javascript" src="./js/logout.js" defer></script>
 <script type="text/javascript" src="./js/join.js" defer></script>
 <script type="text/javascript" src="./js/today-flower.js" defer></script>
 <script
