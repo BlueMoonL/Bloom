@@ -32,6 +32,7 @@
 <script type="text/javascript" src="./js/side_main.js" defer></script>
 <script type="text/javascript" src="./js/login.js" defer></script>
 <script type="text/javascript" src="./js/join.js" defer></script>
+<script type="text/javascript" src="./js/today-flower.js" defer></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -101,18 +102,6 @@
 					</div>
 				</div>
 			</section>
-
-			<script>
-				fetch('http://localhost:8080/bloom/flower')
-					.then(response => response.json())
-					.then(data => {
-						console.log(data);
-						document.getElementById('flower-name').innerText = data.flowNm;
-						document.getElementById('flower-mean').innerText = data.flowLang;
-						document.getElementById('flower-image').setAttribute('src', data.imageUrl);
-					}
-				)
-			</script>
 
 			<section id="section03">
 				<div class="inner">
