@@ -1,5 +1,5 @@
 
-logout = document.getElementById("btn-logout").addEventListener("click", function () {
+var logout = document.getElementById("btn-logout").addEventListener("click", function () {
   fetch('http://localhost:8080/bloom/logout', {
     method: 'POST',
     credentials: 'same-origin' // 세션 쿠키를 전송하기 위해 설정

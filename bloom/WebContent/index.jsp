@@ -77,8 +77,13 @@
 				} else {
 			%>
 			<div class="login">
+<<<<<<< HEAD
 				<li><a href="javascript:void(0)" id="btn-login">로그아웃</a></li>
 				<li><a href="javascript:void(0)" id="btn-signup">마이페이지</a></li>
+=======
+				<li><a href="javascript:void(0)" id="btn-logout">Logout</a></li>
+				<li><a href="javascript:void(0)" id="btn-signup">MyPage</a></li>
+>>>>>>> branch 'master' of https://github.com/BlueMoonL/Bloom.git
 			</div>
 			<%
 				}
