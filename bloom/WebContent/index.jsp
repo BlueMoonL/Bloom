@@ -76,7 +76,7 @@
 				} else {
 			%>
 			<div class="login">
-				<li><a href="javascript:void(0)" id="btn-login">Logout</a></li>
+				<li><a href="javascript:void(0)" id="btn-logout">Logout</a></li>
 				<li><a href="javascript:void(0)" id="btn-signup">MyPage</a></li>
 			</div>
 			<%
