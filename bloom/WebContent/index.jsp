@@ -321,7 +321,7 @@
 					<strong id="join-name">OOO</strong> <span>님, 환영해요!</span>
 				</div>
 				<div class="confirm-subtitle">
-					<span>회원가입이 완료되었습니다.</span>
+					<span id="subtitle">회원가입이 완료되었습니다.</span>
 				</div>
 				<div class="confirm-action">
 					<button type="button" id="confirm-button">닫기</button>

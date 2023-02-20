@@ -29,7 +29,6 @@ public class InsertIDServlet extends HttpServlet{
 		String line;
 		while( (line = reader.readLine()) != null) {
 			sb.append(line);
-			System.out.println(line);
 		}
 		
 		JsonNode nood = mapper.readTree(sb.toString());

@@ -14,13 +14,15 @@ var namePass = false;
 var btn = document.getElementById("join-button");
 //버튼활성화
 function btn_onoff() {
-	if (idPass && pw1Pass && pw2Pass && namePass) {
+//	if (idPass && pw1Pass && pw2Pass && namePass) {
+//		btn.disabled = false;
+//		btn.style.backgroundColor = "#00b564"
+//	} else {
+//		btn.disabled = "disabled";
+//		btn.style.backgroundColor = "#a9a9a9"
+//	}
 		btn.disabled = false;
 		btn.style.backgroundColor = "#00b564"
-	} else {
-		btn.disabled = "disabled";
-		btn.style.backgroundColor = "#a9a9a9"
-	}
 }
 
 var id = document.getElementById("id");
@@ -213,9 +215,12 @@ userEmail.addEventListener("keyup", function (e) {
 	}
 })
 
-let joinBtn = document.getElementById("join-button");
-let confirmClose = document.getElementById("confirm-button");
-let name = document.getElementById("join-name");
+var joinBtn = document.getElementById("join-button");
+var confirmClose = document.getElementById("confirm-button");
+var name = document.getElementById("join-name");
+var name = document.getElementById("subtitle");
+let title = document.querySelectorAll(".confirm-title");
+let subtitleBox = document.querySelectorAll(".confirm-subtitle");
 
 joinBtn.addEventListener("click", e => {
 	fetch("http://localhost:8080/bloom/joinUser", {
@@ -232,10 +237,20 @@ joinBtn.addEventListener("click", e => {
 	})
 		.then((response) => response.text())
 		.then((result) => {
-			signupClose();
-			console.log(id.value)
-			name.innerText = id.value;
-			document.querySelector(".background-confirm").classList.add("confirm-show")
+			if (result == "1") {
+				signupClose();
+				name.innerText = id.value;
+				title.forEach((e) => e.classList.remove("unvalid"))
+				subtitleBox.forEach((e) => e.classList.remove("error-text"))
+				subtitle.innerText = "회원가입이 완료되었습니다.";
+				document.querySelector(".background-confirm").classList.add("confirm-show")
+			} else {
+				signupClose();
+				subtitleBox.forEach((e) => e.classList.add("error-text"))
+				title.forEach((e) => e.classList.add("unvalid"))
+				subtitle.innerText = "회원가입에 실패 했습니다.";
+				document.querySelector(".background-confirm").classList.add("confirm-show")
+			}
 		})
 })
 

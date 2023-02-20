@@ -41,6 +41,10 @@
     text-align: center;
 }
 
+.confirm-title.unvalid {
+    display: none;
+}
+
 .confirm-title strong {
     display: inline-block;
     color: #00b564;
@@ -64,6 +68,10 @@
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
+}
+
+.confirm-subtitle.error-text {
+    font-size: 20px;
 }
 
 
