@@ -256,4 +256,5 @@ joinBtn.addEventListener("click", e => {
 
 confirmClose.addEventListener("click", () => {
 	document.querySelector(".background-confirm").className = "background-confirm";
+	location.reload();
 });

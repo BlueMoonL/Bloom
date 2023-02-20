@@ -1,6 +1,14 @@
 <%@page import="userinfo.loginCheckServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%
+	response.setHeader("Cache-Control", "no-store");
+	response.setHeader("Pragma", "no-cache");
+	response.setDateHeader("Expires", 0);
+	if (request.getProtocol().equals("HTTP/1.1"))
+		response.setHeader("Cache-Control", "no-cache");
+%>
 <!DOCTYPE html>
 
 <html>
@@ -151,36 +159,18 @@
 					</fieldset>
 				</div>
 			</section>
-			<nav>
-				<div id="menu" class="left" style="margin-top: -75px;">
-					<ul data-aos="fade-up" class="leftmenu" id="clickmenu">
-						<li><a href="#section01" class="active"> <span></span>
-						</a>
-							<div>
-								<a href="#section01"> 홈 </a>
-							</div></li>
-						<li><a href="#section02" class> <span></span>
-						</a>
-							<div>
-								<a href="#section02"> 오늘의 꽃 </a>
-							</div></li>
-
-
-						<li><a href="#section03" class> <span></span>
-						</a>
-							<div>
-								<a href="#section03"> 커뮤니티 </a>
-							</div></li>
-
-
-						<li><a href="#section04" class> <span></span>
-						</a>
-							<div>
-								<a href="#section04"> Bloom </a>
-							</div></li>
-					</ul>
-				</div>
-			</nav>
+			<div class="main_side_nav">
+				<ul class="page_nav">
+					<li class="active"><span href="#section01"></span> <a
+						href="#section01">홈</a></li>
+					<li><span href='#section02'></span> <a href="#section02">오늘의
+							꽃</a></li>
+					<li><span href='#section03'></span> <a href="#section03">커뮤니티</a>
+					</li>
+					<li><span href='#section04'></span> <a href="#section04">Bloom</a>
+					</li>
+				</ul>
+			</div>
 		</main>
 
 		<footer id="footer" class="footer">
