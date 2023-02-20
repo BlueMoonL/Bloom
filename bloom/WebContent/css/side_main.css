@@ -1,7 +1,7 @@
 .main_side_nav {
     position: fixed;
     top: 50%;
-    left: 70px;
+    left: 100px;
     transform: translate(0, -50%);
     z-index: 555;
 }

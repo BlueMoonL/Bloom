@@ -58,8 +58,9 @@
 			<div class="inner">
 				<nav class="gnb">
 					<ul class="gnb_menu">
-						<li><a href="javascript:void(0)">Home</a></li>
-						<li><a href="javascript:void(0)">Introduce</a></li>
+						<li><a href="javascript:void(0)">홈</a></li>
+						<li><a href="javascript:void(0)">전문가 찾기</a></li>
+						<li><a href="javascript:void(0)">자가진단</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -69,15 +70,15 @@
 			if (userID == null) {
 			%>
 			<div class="login">
-				<li><a href="javascript:void(0)" id="btn-login">Login</a></li>
-				<li><a href="javascript:void(0)" id="btn-signup">Sign Up</a></li>
+				<li><a href="javascript:void(0)" id="btn-login">로그인</a></li>
+				<li><a href="javascript:void(0)" id="btn-signup">회원가입</a></li>
 			</div>
 			<%
 				} else {
 			%>
 			<div class="login">
-				<li><a href="javascript:void(0)" id="btn-login">Logout</a></li>
-				<li><a href="javascript:void(0)" id="btn-signup">MyPage</a></li>
+				<li><a href="javascript:void(0)" id="btn-login">로그아웃</a></li>
+				<li><a href="javascript:void(0)" id="btn-signup">마이페이지</a></li>
 			</div>
 			<%
 				}
