@@ -126,7 +126,7 @@ window.addEventListener("wheel", function(e){
 var mHtml = $("html");
 var page = 1;
 
-
+  
 mHtml.animate({scrollTop : 0}, 30);
 
 $(window).on("wheel", function(e) {
