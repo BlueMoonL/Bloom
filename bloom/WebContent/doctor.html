@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>doctor</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+	integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="./css/font.css" />
+<link rel="stylesheet" href="./css/Doctor.css" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap"
+	rel="stylesheet" />
+</head>
+<body>
+	<template id="doctor-template">
+		<div id="container">
+			<div id="image">
+				<img src="">
+				<div id="name">
+					<p></p>
+					<span id="dt-name">
+						<div id="explanation">
+							<div id="stars">
+								<i class="fa-solid fa-star"></i>
+							</div>
+						</div>
+					</span>
+				</div>
+				<div id="chat">채팅</div>
+				<div id="call">전화</div>
+			</div>
+		</div>
+	</template>
+</body>
+</html>
+
+<script>
+
+window.addEventListener("load", onload);
+
+function onload(e) {
+  console.log("페이지 로딩 후 호출됩니다.");
+  fetch("http://localhost:8080/bloom/finddoctor")
+    .then((response) => response.json())
+    .then((arr) => {
+      for (var i = 0; i < arr.length; i++) {
+        var name = arr[i].name;
+        var comment = arr[i].comment;
+        var career = arr[i].career;
+        var education = arr[i].education;
+        var image = arr[i].image;
+        var pk = arr[i].pk;
+
+        // 템플릿가져오기
+        const template = document.getElementById("doctor-template");
+
+        // div를 계속생성하기
+        const container = document.createElement("div");
+
+        // inner에 적기
+        container.innerHTML = template.innerHTML;
+        console.log(" url전");
+        const imageUrl = "http://localhost:8080/bloom/dtimage/"+ pk; 
+        // 이미지 URL을 구성합니다.
+  		console.log(imageUrl);
+        fetch(imageUrl)
+          .then((response) => response.blob())
+          .then((blob) => {
+            const imageUrl = URL.createObjectURL(blob);
+            container.querySelector("img").src = imageUrl;
+          })
+          .catch((error) => console.error(error));
+
+        container.querySelector("#name p").innerText = name;
+        //container.querySelector("#stars i").innerText = rating;
+        container.querySelector("#explanation").innerText = comment;
+
+        document.body.appendChild(container);
+      }
+    });
+}
+</script>
