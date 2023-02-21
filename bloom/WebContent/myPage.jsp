@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> <%@ include file="./header.jsp"%>
+pageEncoding="UTF-8"%> 
+<%@ include file="./header.jsp"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,12 +10,19 @@ pageEncoding="UTF-8"%> <%@ include file="./header.jsp"%>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/basic.css" />
     <link rel="stylesheet" href="./css/font.css" />
+    
+    <script type="text/javascript" src="./js/side_main.js" defer></script>
+	<script type="text/javascript" src="./js/login.js" defer></script>
+	<script type="text/javascript" src="./js/logout.js" defer></script>
+	<script type="text/javascript" src="./js/join.js" defer></script>
+	<script type="text/javascript" src="./js/today-flower.js" defer></script>
+	<script src="./js/include.js"></script>
   </head>
   <body>
     <div class="inner">
       <div id="myPage">
         <div id="myPage_header">
-          <label>나의 공간</label>
+          <label>내 정보 수정하기</label>
         </div>
 
         <div id="container">
