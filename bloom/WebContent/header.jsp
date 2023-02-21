@@ -10,7 +10,7 @@
 <body>
 	<header id="header" class="">
 		<h1>
-			<a href="/"> <img src="./img/logo_test.png" alt="">
+			<a href="http://localhost:8080/bloom/index.jsp"> <img src="./img/logo_test.png" alt="">
 			</a>
 		</h1>
 		<div class="inner">
@@ -25,7 +25,7 @@
 
 		<%
 			String userID = (String) session.getAttribute("login");
-		if (userID == null) {
+			if (userID == null) {
 		%>
 		<div class="login">
 			<li><a href="javascript:void(0)" id="btn-login">로그인</a></li>
