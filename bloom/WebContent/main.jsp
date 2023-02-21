@@ -4,7 +4,27 @@
 <main>
 	<section id="section01">
 		<div class="inner">
-			<strong>안녕하세요</strong> <strong>블룸에 오신것을 환영합니다.</strong>
+			<div class="test-title">
+				<div class="title-left">오늘은 이런</div>
+				<div class="title-center">
+					<div class="center-test">&nbsp; 심리검사 &nbsp;</div>
+				</div>
+				<div class="title-right">어떠신가요?</div>
+			</div>
+			<div class="test-list">
+				<div class="test-box">
+					<div class="test-cardview">
+						<img class="test-image" src="https://i.pinimg.com/474x/b7/b7/15/b7b715190586b985db6b5c46997fc54c.jpg">
+						<div class="test-title-box">
+							<div class="test-title">우울척도 검사</div>
+							<div class="test-subtitle-box">
+							<div class="test-subtitle">당신의 우울함을 체크해 보세요</div>
+						</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
