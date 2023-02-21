@@ -15,15 +15,122 @@
 
 }
 
-#section01 .inner strong {
-    display: block;
-    text-align: center;
-    font-size: 80px;
-    font-weight: 500;
-    line-height: 1.3;
+#section01 .inner .test-title {
+	-webkit-box-align: center;
+	align-items: center;
+	display: flex;
 }
 
+#section01 .test-title .title-left {
+	color: rgb(72, 72, 72);
+	font-size: 20px;
+	font-weight: bold;
+}
 
+#section01 .test-title .title-center {
+	position: relative;
+	z-index: 10;
+	width: 90px;
+	border-radius: 10px;
+	height: 5px;
+	background-color: rgba(124, 255, 99, 0.7);
+	top: 10px;
+}
+
+#section01 .title-center .center-test {
+	color: rgb(12, 180, 0);
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -66%);
+}
+
+#section01 .test-title .title-right {
+	color: rgb(72, 72, 72);
+	font-size: 20px;
+	font-weight: bold; 
+}
+
+#section01 .inner .test-list { 
+	display : flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	height: 300px;
+}
+
+#section01 .test-list .test-box {
+	display: flex;
+    padding: 30px 30px 30px 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+#section01 .test-box .test-cardview {
+	cursor: pointer;
+    width: 312px;
+    height: 220px;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 1px 4px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+#section01 .test-cardview .test-image{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 100%;
+    height: 135px;
+    object-fit: fill;
+}
+
+#section01 .test-cardview .test-title-box {
+	height: 80px;
+    padding-bottom: 10px;
+    transform: translate(0%, 10%);
+}
+
+#section01 .test-title-box .test-title {
+	display:flex;
+	width: 85%;
+    height: 20px;
+    margin: 10px 0px 0px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.7px;
+    color: rgb(51, 51, 51);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#section01 .test-title-box .test-subtitle-box {
+	display: flex;
+    flex-direction: column;
+}
+
+#section01 .test-subtitle-box .test-subtitle {
+	width: 230px;
+    height: 16px;
+    margin: 10px 0px 0px 20px;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    color: rgb(102, 102, 102);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 #section02 .inner {
     display: flex;
