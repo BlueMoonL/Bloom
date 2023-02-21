@@ -10,13 +10,13 @@
 <body>
 	<header id="header" class="">
 		<h1>
-			<a href="/"> <img src="./img/logo_test.png" alt="">
+			<a href="http://localhost:8080/bloom/index.jsp"> <img src="./img/logo_test.png" alt="">
 			</a>
 		</h1>
 		<div class="inner">
 			<nav class="gnb">
 				<ul class="gnb_menu">
-					<li><a href="javascript:void(0)">홈</a></li>
+					<li><a href="http://localhost:8080/bloom/index.jsp">홈</a></li>
 					<li><a href="javascript:void(0)">전문가 찾기</a></li>
 					<li><a href="javascript:void(0)">자가진단</a></li>
 				</ul>
@@ -36,7 +36,7 @@
 		%>
 		<div class="logout">
 			<li><a href="javascript:void(0)" id="btn-logout">로그아웃</a></li>
-			<li><a href="javascript:void(0)" id="btn-myPage">마이페이지</a></li>
+			<li><a href="myPage.jsp" id="btn-myPage">마이페이지</a></li>
 		</div>
 		<%
 			}

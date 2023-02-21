@@ -8,13 +8,13 @@
         padding: auto;
       }
       #myPage_header {
-		margin-top: 50%;
+		margin: 100px 0px 100px 0px;
         padding: auto;
       }
       #container {
         display: flex;
         justify-content: space-around;
-        flex-direction: column;
+        flex-direction: row;
         background-position: center;
         height: 50%;
         align-items: stretch;
@@ -31,10 +31,8 @@
         width: auto;
         align-items: center;
       }
-
-      #profile {
+	  #profileLeft {
         display: flex;
-        flex-direction: column;
         background-color: #ffffff;
         border-color: #00b564;
         border-radius: 5px;
@@ -42,9 +40,48 @@
         border-width: 28px 0px 0px;
         box-shadow: #484848 0px 3px 6px 0px;
         color: #484848;
-        font-size: 15px;
-        font-weight: bold;
+        font-size: 18px;
         letter-spacing: -0.7px;
+        padding: 3%;
+        margin-right: 20px;   
+        width: 380px;
+      }
+      #profile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #ffffff;
+        border-color: #00b564;
+        border-radius: 5px;
+        border-style: solid none none;
+        border-width: 28px 0px 0px;
+        box-shadow: #484848 0px 3px 6px 0px;
+        color: #484848;
+        font-size: 18px;
+        letter-spacing: -0.7px;
+        padding: 3%;   
+      }
+      #btn {
+      	width: 300px;
+      	text-align: right;
+      }
+      td {
+      	padding: 5px;
+      	width: 200px;
+      	height: 30px;
+      	border-color: #f1f1f1;
+      	border-style: solid none none;
+		border-width: 1px 0px 0px;
+		text-align: left;
+      }
+      th {
+        padding: 5px;
+      	width: 200px;
+      	height: 30px;
+      	text-align: left;
+      	border-color: #f1f1f1;
+      	border-style: solid none none;
+		border-width: 1px 0px 0px;
       }
       #box-bottom {
         display: flex;
@@ -89,26 +126,27 @@
       }
 
       #user-left {
-        width: 50%;
+      	width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin: 20% 20% 20% 50%;
+        margin-left: 80px;
       }
       #user-right {
-        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin: 20% 0% 20% 20%;
-      }
-	  #title {
-      	margin: 20px;
-      	font-size: 20px;
+        margin: 0% 20% 0% 0%;
       }
       #user {
         display: flex;
         flex-direction: raw;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        
+      }
+      #change {
+      	height: 
       }
       #button-change {
         display: flex;

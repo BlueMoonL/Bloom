@@ -28,50 +28,64 @@ pageEncoding="UTF-8"%>
         </div>
 
         <div id="container">
-          <div id="profile">
-            <div id="title">
-	        	<label>프로필</label>
-            </div>
-
-            <div id="user">
-              <div id="user-left">         
-                <label>ID</label><br/>
-                <label>이름</label> <br/>
-                <label>비밀번호</label> <br/>
-              </div>
-
-              <div id="user-right">
-                    <%
+        	
+        	<div id="profileLeft">
+        		<span></span>
+        	</div>
+        
+          <table id="profile">
+            <tr>
+            	<th>아이디</th>
+            	    <%
 						String userid = (String) session.getAttribute("login");
 						if (userid != null) {
 					%>
-                <label><%= userid %></label><br/>
-					<%
+            	<td><%= userid %></td>
+            		<%
 						}
+            		%>
+            	<td id="btn"></td>
+            <tr>
+            <tr>
+            	<th>이름</th>
+            		<%
 						UserRepository ur = new UserRepository();
 						String userName = ur.findeUser(userid);
 						if (userName != null) {
-					%>                
-                <label><%= userName %></label><br/>
-                	<%
+					%>   
+            	<td><%= userName %></td>
+            		<%
 						}
-                	%>
-                <label>ㅇㅇ</label><br/>
-              </div>
-            </div>
-
-            <div id="button-change">
-              <button id="change">수정하기</button>
-            </div>
-          </div>
+            		%>
+				<td id="btn"></td>
+            <tr>
+            <tr>
+            	<th>비밀번호</th>
+            	<td>**********</td>
+				<td id="btn"><button id="change">수정하기</button></td>
+            <tr>
+             <tr>
+            	<th></th>
+            	<td></td>
+				<td></td>
+            <tr>
+          </table>
+          
         </div>
+        
+        </div>
+        
+        <div id="myPage_header">
+          <label>나의 검사 결과</label>
+        </div>
+        
         <div id="container-second">
           <div id="box-bottom">
             <label>나의</label><br />
             <label>우울 척도는</label><br />
             <label>100점</label><br />
             <div id="button-again">
-              <button id="change">수정하기</button>
+              <button id="change">수정하기</button><br/>
             </div>
           </div>
 
