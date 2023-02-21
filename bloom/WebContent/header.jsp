@@ -17,7 +17,7 @@
 			<nav class="gnb">
 				<ul class="gnb_menu">
 					<li><a href="http://localhost:8080/bloom/index.jsp">홈</a></li>
-					<li><a href="javascript:void(0)">전문가 찾기</a></li>
+					<li><a href="doctor.html">전문가 찾기</a></li>
 					<li><a href="javascript:void(0)">자가진단</a></li>
 				</ul>
 			</nav>
