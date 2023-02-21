@@ -1,11 +1,12 @@
 <%@page import="userinfo.loginCheckServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ include file="./header.jsp"%>
 <%
-	response.setHeader("Cache-Control", "no-store");
+response.setHeader("Cache-Control", "no-store");
 response.setHeader("Pragma", "no-cache");
 response.setDateHeader("Expires", 0);
+
 if (request.getProtocol().equals("HTTP/1.1"))
 	response.setHeader("Cache-Control", "no-cache");
 %>
@@ -29,7 +30,6 @@ if (request.getProtocol().equals("HTTP/1.1"))
 <link rel="stylesheet" href="./css/basic.css">
 <link rel="stylesheet" href="./css/font.css">
 
-<link rel="stylesheet" href="./css/header.css">
 <link rel="stylesheet" href="./css/side_main.css">
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/footer.css">
@@ -42,50 +42,13 @@ if (request.getProtocol().equals("HTTP/1.1"))
 <script type="text/javascript" src="./js/logout.js" defer></script>
 <script type="text/javascript" src="./js/join.js" defer></script>
 <script type="text/javascript" src="./js/today-flower.js" defer></script>
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 </head>
 
 <body>
-
 	<div class="Wrap">
-		<header id="header" class="">
-			<h1>
-				<a href="/"> <img src="./img/logo_test.png" alt="">
-				</a>
-			</h1>
-			<div class="inner">
-				<nav class="gnb">
-					<ul class="gnb_menu">
-						<li><a href="javascript:void(0)">홈</a></li>
-						<li><a href="javascript:void(0)">전문가 찾기</a></li>
-						<li><a href="javascript:void(0)">자가진단</a></li>
-					</ul>
-				</nav>
-			</div>
-
-			<%
-				String userID = (String) session.getAttribute("login");
-			if (userID == null) {
-			%>
-			<div class="login">
-				<li><a href="javascript:void(0)" id="btn-login">로그인</a></li>
-				<li><a href="javascript:void(0)" id="btn-signup">회원가입</a></li>
-			</div>
-			<%
-				} else {
-			%>
-			<div class="logout">
-				<li><a href="javascript:void(0)" id="btn-logout">로그아웃</a></li>
-				<li><a href="javascript:void(0)" id="btn-signup">마이페이지</a></li>
-			</div>
-			<%
-				}
-			%>
-
-		</header>
-
 		<main>
 			<section id="section01">
 				<div class="inner">
@@ -166,6 +129,72 @@ if (request.getProtocol().equals("HTTP/1.1"))
 					</div>
 				</section>
 			</section>
+			
+			<section id="section05">
+				<div class="inner">
+					<div id="myPage_header">
+				        <label>나의 공간</label>
+				    </div>
+				      <div id="container">
+				          <div id="profile">
+				            <div id="user">
+				              <head>
+				                <span style="font-size: 20px; font-weight: bold;" >프로필</span>
+				              </head>
+				            </div>
+				
+				            <div id="user">
+				              <div id="user-left">
+				                <label>아이디</label><br>
+				                <label>이름</label> <br>
+				                <label>비밀번호</label> <br>
+				              </div>
+				
+				              <div id="user-right">
+				                <label>pgy</label><br>
+				                <label>박가영</label><br>
+				                <label>ㅇㅇ</label><br>
+				              </div>
+				            </div>
+				
+				              <div id="button-change">
+				                <button id="change">수정하기</button>
+				              </div>
+				      </div>
+				
+				    </div>
+				   	 <div id="container-second">
+				      <div id="box-bottom">
+				        <label>나의</label><br>
+				        <label>우울 척도는</label><br>
+				        <label>100점</label><br>
+				        <div id="button-again">
+				          <button id="change">수정하기</button>
+				        </div>
+				      </div>
+				
+				      <div id="box-bottom">
+				        <label>나의</label><br>
+				        <label>불안 척도는</label><br>
+				        <label>100점</label><br>
+				        <div id="button-again">
+				          <button id="change">수정하기</button>
+				        </div>
+				      </div>
+				
+				      <div id="box-bottom">
+				        <label>나의</label><br>
+				        <label>???는</label><br>
+				        <label>100점</label><br>
+				        <div id="button-again">
+				          <button id="change">수정하기</button>
+				        </div>
+				      </div>
+				    </div>
+				</div>
+			</section>
+			
+			
 			<div class="main_side_nav">
 				<ul class="page_nav">
 					<li class="active"><span href="#section01"></span> <a
