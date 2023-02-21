@@ -1,3 +1,4 @@
+<%@page import="userinfo.UserRepository"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%> 
 <%@ include file="./header.jsp"%>
@@ -17,31 +18,45 @@ pageEncoding="UTF-8"%>
 	<script type="text/javascript" src="./js/join.js" defer></script>
 	<script type="text/javascript" src="./js/today-flower.js" defer></script>
 	<script src="./js/include.js"></script>
+	
   </head>
   <body>
     <div class="inner">
       <div id="myPage">
         <div id="myPage_header">
-          <label>내 정보 수정하기</label>
+          <label>나의 정보</label>
         </div>
 
         <div id="container">
           <div id="profile">
-            <div id="user">
-              <label>프로필</label>
+            <div id="title">
+	        	<label>프로필</label>
             </div>
 
             <div id="user">
-              <div id="user-left">
-                <label>아이디</label><br />
-                <label>이름</label> <br />
-                <label>비밀번호</label> <br />
+              <div id="user-left">         
+                <label>ID</label><br/>
+                <label>이름</label> <br/>
+                <label>비밀번호</label> <br/>
               </div>
 
               <div id="user-right">
-                <label>pgy</label><br />
-                <label>박가영</label><br />
-                <label>ㅇㅇ</label><br />
+                    <%
+						String userid = (String) session.getAttribute("login");
+						if (userid != null) {
+					%>
+                <label><%= userid %></label><br/>
+					<%
+						}
+						UserRepository ur = new UserRepository();
+						String userName = ur.findeUser(userid);
+						if (userName != null) {
+					%>                
+                <label><%= userName %></label><br/>
+                	<%
+						}
+                	%>
+                <label>ㅇㅇ</label><br/>
               </div>
             </div>
 
