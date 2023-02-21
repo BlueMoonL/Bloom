@@ -14,15 +14,13 @@ var namePass = false;
 var btn = document.getElementById("join-button");
 //버튼활성화
 function btn_onoff() {
-//	if (idPass && pw1Pass && pw2Pass && namePass) {
-//		btn.disabled = false;
-//		btn.style.backgroundColor = "#00b564"
-//	} else {
-//		btn.disabled = "disabled";
-//		btn.style.backgroundColor = "#a9a9a9"
-//	}
+	if (idPass && pw1Pass && pw2Pass && namePass) {
 		btn.disabled = false;
 		btn.style.backgroundColor = "#00b564"
+	} else {
+		btn.disabled = "disabled";
+		btn.style.backgroundColor = "#a9a9a9"
+	}
 }
 
 var id = document.getElementById("id");
@@ -217,8 +215,8 @@ userEmail.addEventListener("keyup", function (e) {
 
 var joinBtn = document.getElementById("join-button");
 var confirmClose = document.getElementById("confirm-button");
-var name = document.getElementById("join-name");
-var name = document.getElementById("subtitle");
+var joinName = document.getElementById("join-name");
+var subtitle = document.getElementById("subtitle");
 let title = document.querySelectorAll(".confirm-title");
 let subtitleBox = document.querySelectorAll(".confirm-subtitle");
 
@@ -239,7 +237,7 @@ joinBtn.addEventListener("click", e => {
 		.then((result) => {
 			if (result == "1") {
 				signupClose();
-				name.innerText = id.value;
+				joinName.innerText = id.value;
 				title.forEach((e) => e.classList.remove("unvalid"))
 				subtitleBox.forEach((e) => e.classList.remove("error-text"))
 				subtitle.innerText = "회원가입이 완료되었습니다.";
