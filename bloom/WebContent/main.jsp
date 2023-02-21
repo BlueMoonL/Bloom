@@ -29,8 +29,8 @@
 
 	<section id="section03">
 		<div class="inner">
-			<form action="./community.html">
-				<button>커뮤니티</button>
+			<form action="./community.jsp">
+				<input id="submit" type="submit" value="커뮤니티">
 			</form>
 		</div>
 	</section>
