@@ -11,12 +11,14 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/basic.css" />
     <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/confirm.css" />
     
     <script type="text/javascript" src="./js/side_main.js" defer></script>
 	<script type="text/javascript" src="./js/login.js" defer></script>
 	<script type="text/javascript" src="./js/logout.js" defer></script>
 	<script type="text/javascript" src="./js/join.js" defer></script>
 	<script type="text/javascript" src="./js/today-flower.js" defer></script>
+	<script type="text/javascript" src="./js/myPage.js" defer></script>
 	<script src="./js/include.js"></script>
 	
   </head>
@@ -62,7 +64,7 @@ pageEncoding="UTF-8"%>
             <tr>
             	<th>비밀번호</th>
             	<td>**********</td>
-				<td id="btn"><button id="change">수정하기</button></td>
+				<td id="btn"><button id="pwChange">수정하기</button></td>
             <tr>
              <tr>
             	<th></th>
@@ -109,5 +111,20 @@ pageEncoding="UTF-8"%>
         </div>
       </div>
     </div>
+    
+    <div class="background-confirm">
+	<div class="confirm-box">
+		<div class="confirm-title">
+			<strong id="join-name">OOO</strong> <span>님, 환영해요!</span>
+		</div>
+		<div class="confirm-subtitle">
+			<span id="subtitle">회원가입이 완료되었습니다.</span>
+		</div>
+		<div class="confirm-action">
+			<button type="button" id="confirm-button">닫기</button>
+		</div>
+	</div>
+</div>
+    
   </body>
 </html>
