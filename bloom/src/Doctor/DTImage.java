@@ -1,4 +1,4 @@
-package userinfo;
+package Doctor;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;

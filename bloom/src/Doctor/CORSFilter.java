@@ -1,4 +1,4 @@
-package userinfo;
+package Doctor;
 
 import java.io.IOException;
 

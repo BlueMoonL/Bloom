@@ -1,5 +1,9 @@
+* {
+	border: 1px solid;
+}
 
-#image {
+
+.image {
 	font-family: 'Noto Sans KR', sans-serif;
 	display: flex;
 	height: 200px;
@@ -7,12 +11,19 @@
 	margin-right: 0px;
 }
 
-#doctor {
+.doctor {
 	display: flex;
-	
 }
 
-#name {
+.container {
+	display: flex;
+	justify-content: center;
+}
+#toptopmargin{
+	margin-top: 1000px;
+}
+
+.name {
 	padding-left: 10px;
 	font-family: 'Noto Sans KR', sans-serif;
 	padding-top: 20px;
@@ -26,7 +37,7 @@
 	justify-content: space-evenly;
 }
 
-#explanation {
+.explanation {
 	font-family: 'Noto Sans KR', sans-serif;
 	color: #868686;
 	display: flex;
@@ -39,24 +50,16 @@
 	flex-direction: column;
 }
 
-#call {
-	font-family: 'Noto Sans KR', sans-serif;
-	color: #6eada9;
-	font-size: 11px;
-	padding-left: 6px;
-	padding-top: 50px;
-	font-weight: bold;
-}
-
-#chat {
+.chat {
 	font-family: 'Noto Sans KR', sans-serif;
 	color: #6eada9;
 	font-size: 11px;
 	padding-top: 50px;
 	font-weight: bold;
+	display: flex;
 }
 
-#stars {
+.stars {
 	padding-top: 5px;
 	font-size: 15px;
 	color: #222222
