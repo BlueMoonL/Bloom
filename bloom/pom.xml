@@ -28,6 +28,13 @@
 	</build>
 
 	<dependencies>
+		<!-- jsonobject 사용 -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20210307</version>
+		</dependency>
+
 		<!-- xmlmapper 사용 -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>

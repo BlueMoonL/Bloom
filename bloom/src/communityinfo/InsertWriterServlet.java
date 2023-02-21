@@ -40,7 +40,7 @@ public class InsertWriterServlet extends HttpServlet {
 			int result = repo.addDetail(conn, community);
 			System.out.println("AutoNo값 : " + result);
 			
-			resp.sendRedirect("./community.html");
+			resp.sendRedirect("./community.jsp");
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

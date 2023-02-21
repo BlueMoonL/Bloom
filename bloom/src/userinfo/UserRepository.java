@@ -49,6 +49,21 @@ public class UserRepository implements IUserRepository {
 			}
 		}
 		return 0;
+	}
+	@Override
+	public String findeUser(String id) throws SQLException {
+		String query = "SELECT name FROM bloom.user WHERE id = ?";
+		try (Connection conn = ConnectionProvider.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(query);) {
+			stmt.setString(1, id);
+			try (ResultSet rs = stmt.executeQuery()) {
+				if (rs.next()) {
+					String result  = rs.getString("name");
+					return result;
+				}
+			}
+		}
+		return null;
 	} 
 }
 
