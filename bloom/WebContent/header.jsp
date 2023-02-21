@@ -40,7 +40,6 @@
 		<%
 			}
 		%>
-
 	</header>
 </body>
 </html>
