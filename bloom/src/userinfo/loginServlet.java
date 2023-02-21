@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -31,7 +33,7 @@ public class loginServlet extends HttpServlet{
 		String line;
 		while( (line = reader.readLine()) != null) {
 			sb.append(line);
-			System.out.println(line);
+			System.out.println("라인" + line);
 		}
 		JsonNode nood = mapper.readTree(sb.toString());
 		String userID = nood.get("userID").asText();
@@ -41,7 +43,7 @@ public class loginServlet extends HttpServlet{
 	
 	 	UserRepository repo = new UserRepository();
 	 	
-	 	int result = -1;
+	 	int result = 0;
 	 	try {
 			result = repo.loginUser(userID, userPW);
 		} catch (SQLException e) {
@@ -54,10 +56,20 @@ public class loginServlet extends HttpServlet{
 	 	if (result == 1) {
 			HttpSession session = req.getSession(true);
 			session.setAttribute("login", userID);
-			pw.print(userID);
+			session.setAttribute("result", result);
+			
+			JSONObject json = new JSONObject(sb.toString());
+			json.put("result", result);
+			
+			pw.print(json.toString());
+			
 			System.out.println("세션 생성, 로그인 완료");
-			resp.sendRedirect("./index.jsp");
-		} 
+		} else {
+			JSONObject json = new JSONObject(sb.toString());
+			json.put("result", result);
+			
+			pw.print(json.toString());
+		}
 		
 	}	
 	
