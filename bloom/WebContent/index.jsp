@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-response.setHeader("Cache-Control", "no-store");
+	response.setHeader("Cache-Control", "no-store");
 response.setHeader("Pragma", "no-cache");
 response.setDateHeader("Expires", 0);
 
@@ -80,7 +80,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 			<section id="section03">
 				<div class="inner">
 					<form action="./community.html">
-						<button>커뮤니티</button>	
+						<button>커뮤니티</button>
 					</form>
 				</div>
 			</section>
@@ -132,10 +132,10 @@ if (request.getProtocol().equals("HTTP/1.1"))
 					</div>
 				</section>
 			</section>
-			
+
 			<div class="main_side_nav" include-html="./side-nav.html"></div>
 		</main>
-		
+
 		<footer id="footer" class="footer" include-html="./footer.html"></footer>
 
 		<div class="background-login">
