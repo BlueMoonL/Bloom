@@ -76,7 +76,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 			<%
 				} else {
 			%>
-			<div class="login">
+			<div class="logout">
 				<li><a href="javascript:void(0)" id="btn-logout">로그아웃</a></li>
 				<li><a href="javascript:void(0)" id="btn-signup">마이페이지</a></li>
 			</div>
