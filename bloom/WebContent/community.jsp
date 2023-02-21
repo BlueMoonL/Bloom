@@ -1,6 +1,16 @@
 <%@page import="userinfo.loginCheckServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%
+	response.setHeader("Cache-Control", "no-store");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+
+if (request.getProtocol().equals("HTTP/1.1"))
+	response.setHeader("Cache-Control", "no-cache");
+%>    
+
 <!DOCTYPE html>
 <html>
 
@@ -33,8 +43,8 @@
 	<%@ include file="./header.jsp"%>
 
 	<div class="Wrap">
-		<main class="p-4 flex-auto flex flex-wrap w-full ">
-			<div class="w-4/4 p-4 h-full">
+		<main class="p-4 flex-auto flex flex-wrap w-full cen">
+			<div class="w-4/4 p-4 h-full h-down">
 				<h1 class="text-2xl font-medium text-center text-gray-900">커뮤니티
 				</h1>
 					<form action="communitywrite.jsp">
@@ -50,18 +60,19 @@
 		<footer id="footer" class="footer" include-html="./footer.html"></footer>
 
 		<template id="community-temp">
-			<article class="w-1/3 p-4">
+			<article class="w-1/3 p-4 p-l">
 				<a class="hDZGkQ">
 					<div class="text-lg font-bold font-medium text-gray-900">TEST</div>
-					<div class="text-gray-700">TEST</div>
+					<div class="text-gray-700 block">TEST</div>
 				</a>
+				<br>
 				<div class="footerlog">
 					<div class="reactions">
 						<img id="empathy" class="empathy" src="./img/heart.png" alt="공감">
 						<span> "명이 공감"</span> <span></span>
 					</div>
 					<div class="reactions">
-						<div class="nickname">비공개</div>
+						<div class="nickname">닉네임</div>
 					</div>
 				</div>
 			</article>
