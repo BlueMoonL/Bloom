@@ -22,7 +22,6 @@
 				</ul>
 			</nav>
 		</div>
-
 		<%
 			String userID = (String) session.getAttribute("login");
 		if (userID == null) {
