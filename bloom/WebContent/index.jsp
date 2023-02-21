@@ -1,7 +1,6 @@
 <%@page import="userinfo.loginCheckServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="./header.jsp"%>
 <%
 response.setHeader("Cache-Control", "no-store");
 response.setHeader("Pragma", "no-cache");
@@ -48,6 +47,8 @@ if (request.getProtocol().equals("HTTP/1.1"))
 </head>
 
 <body>
+	<%@ include file="./header.jsp"%>
+
 	<div class="Wrap">
 		<main>
 			<section id="section01">
@@ -210,20 +211,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 			</div>
 		</main>
 
-		<footer id="footer" class="footer">
-			<div class="footer_logo">
-				<a href="#!"> <img src="./img/logo_test.png" alt="">
-				</a>
-			</div>
-			<div class="address">
-				<ul>
-					<li>서울시 강남구 삼성동 1234 우 : 123-1234</li>
-					<li>TEL : 031-123-4567</li>
-					<li>Email : email@domain.com</li>
-				</ul>
-				<div class="copy">&copy;COPYRIGHT 블룸 ALL RIGHTS RESERVED</div>
-			</div>
-		</footer>
+		<footer id="footer" class="footer" include-html="./footer.html"></footer>
 
 		<div class="background-login">
 			<div class="login-box">
