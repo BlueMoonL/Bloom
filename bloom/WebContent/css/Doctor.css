@@ -15,12 +15,13 @@
 	display: flex;
 }
 
+
 .container {
 	display: flex;
 	justify-content: center;
 }
-#toptopmargin{
-	margin-top: 1000px;
+#topmargin{
+margin-top: 100px;
 }
 
 .name {
