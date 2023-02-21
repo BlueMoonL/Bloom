@@ -18,7 +18,6 @@
 <link rel="stylesheet" href="./css/basic.css">
 <link rel="stylesheet" href="./css/font.css">
 
-<!-- <link rel="stylesheet" href="./css/header.css"> -->
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/footer.css">
 <link rel="stylesheet" href="./css/community.css">
@@ -38,7 +37,7 @@
 			<div class="w-4/4 p-4 h-full">
 				<h1 class="text-2xl font-medium text-center text-gray-900">커뮤니티
 				</h1>
-					<form action="communitywrite.html">
+					<form action="communitywrite.jsp">
 						<input id="submit" type="submit" value="글쓰기">
 					</form>
 				<br>
