@@ -17,8 +17,8 @@ if (loginClose != null) {
 var loginBtn = document.getElementById("loginBtn"); //로그인 창안에서 로그인 버튼
 var userID = document.getElementById("userID");
 var userPW = document.getElementById("userPW");
-//로그인 창에서 로그인 버튼을 눌렀을 때
 
+//로그인 창에서 로그인 버튼을 눌렀을 때
 if (loginBtn != null) {
 	loginBtn.addEventListener("click", function(e) {
 		fetch("http://localhost:8080/bloom/login", {
