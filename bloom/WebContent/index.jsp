@@ -77,8 +77,9 @@ if (request.getProtocol().equals("HTTP/1.1"))
 
 			<section id="section03">
 				<div class="inner">
-					<h2>안녕하세요</h2>
-					<h2>블룸에 오신것을 환영합니다.</h2>
+					<form action="./community.html">
+						<button>커뮤니티</button>	
+					</form>
 				</div>
 			</section>
 
