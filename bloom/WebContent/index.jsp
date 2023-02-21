@@ -1,6 +1,14 @@
 <%@page import="userinfo.loginCheckServlet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%
+response.setHeader("Cache-Control", "no-store");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+
+if (request.getProtocol().equals("HTTP/1.1"))
+	response.setHeader("Cache-Control", "no-cache");
+%>
 <!DOCTYPE html>
 
 <html>
@@ -21,61 +29,28 @@
 <link rel="stylesheet" href="./css/basic.css">
 <link rel="stylesheet" href="./css/font.css">
 
-<link rel="stylesheet" href="./css/header.css">
 <link rel="stylesheet" href="./css/side_main.css">
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/footer.css">
 <link rel="stylesheet" href="./css/login.css">
 <link rel="stylesheet" href="./css/join.css">
+<link rel="stylesheet" href="./css/confirm.css">
 
 <script type="text/javascript" src="./js/side_main.js" defer></script>
 <script type="text/javascript" src="./js/login.js" defer></script>
+<script type="text/javascript" src="./js/logout.js" defer></script>
 <script type="text/javascript" src="./js/join.js" defer></script>
+<script type="text/javascript" src="./js/today-flower.js" defer></script>
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 </head>
 
 <body>
+	<%@ include file="./header.jsp"%>
 
 	<div class="Wrap">
-		<header id="header" class="">
-			<h1>
-				<a href="/"> <img src="./img/logo_test.png" alt="">
-				</a>
-			</h1>
-			<div class="inner">
-				<nav class="gnb">
-					<ul class="gnb_menu">
-						<li><a href="javascript:void(0)">Home</a></li>
-						<li><a href="javascript:void(0)">Introduce</a></li>
-					</ul>
-				</nav>
-			</div>
-
-			<%
-				String userID = (String) session.getAttribute("login");
-			if (userID == null) {
-			%>
-			<div class="login">
-				<li><a href="javascript:void(0)" id="btn-login">Login</a></li>
-				<li><a href="javascript:void(0)" id="btn-signup">Sign Up</a></li>
-			</div>
-			<%
-				} else {
-			%>
-			<div class="login">
-				<li><a href="javascript:void(0)" id="btn-login">Logout</a></li>
-				<li><a href="javascript:void(0)" id="btn-signup">MyPage</a></li>
-			</div>
-			<%
-				}
-			%>
-
-		</header>
-
 		<main>
-
 			<section id="section01">
 				<div class="inner">
 					<strong>안녕하세요</strong> <strong>블룸에 오신것을 환영합니다.</strong>
@@ -101,145 +76,110 @@
 				</div>
 			</section>
 
-			<script>
-				fetch('http://localhost:8080/bloom/flower')
-				.then(response => response.json())
-				.then(data => {
-					console.log(data);
-					document.getElementById('flower-name').innerText = data.flowNm;
-					document.getElementById('flower-mean').innerText = data.flowLang;
-					document.getElementById('flower-image').setAttribute('src', data.imageUrl);
-				})
-		</script>
-
 			<section id="section03">
 				<div class="inner">
-					<h2>안녕하세요</h2>
-					<h2>블룸에 오신것을 환영합니다.</h2>
+					<form action="./community.html">
+						<button>커뮤니티</button>	
+					</form>
 				</div>
 			</section>
 
 			<section id="section04">
-				<div class="inner">
-					<h2>마음 쑥쑥</h2>
-					<fieldset>
-						<div class="team-member">
-							<div class="members">
-								<figure>
-									<img src="./img/wh.png" alt="">
-									<legend>완희</legend>
-								</figure>
+				<section id="section04-1">
+					<div class="inner">
+						<strong>안녕하세요</strong> <strong>블룸에 오신것을 환영합니다.</strong>
+					</div>
+				</section>
+				<section id="section04-2">
+					<div class="inner">
+						<h2>마음 쑥쑥</h2>
+						<fieldset>
+							<div class="team-member">
+								<div class="members">
+									<figure>
+										<img src="./img/wh.png" alt="">
+										<legend>완희</legend>
+									</figure>
 
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/jy.jpg" alt="">
+										<legend>창우</legend>
+									</figure>
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/cw.jpg" alt="">
+										<legend>주용</legend>
+									</figure>
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/gy.png" alt="">
+										<legend>가영</legend>
+									</figure>
+								</div>
+								<div class="members">
+									<figure>
+										<img src="./img/hi.png" alt="">
+										<legend>혜인</legend>
+									</figure>
+								</div>
 							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/jy.jpg" alt="">
-									<legend>주용</legend>
-								</figure>
-							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/cw.jpg" alt="">
-									<legend>창우</legend>
-								</figure>
-							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/gy.png" alt="">
-									<legend>가영</legend>
-								</figure>
-							</div>
-							<div class="members">
-								<figure>
-									<img src="./img/hi.png" alt="">
-									<legend>혜인</legend>
-								</figure>
-							</div>
-						</div>
-					</fieldset>
-				</div>
+						</fieldset>
+					</div>
+				</section>
 			</section>
-			<nav>
-				<div id="menu" class="left" style="margin-top: -75px;">
-					<ul data-aos="fade-up" class="leftmenu" id="clickmenu">
-						<li><a href="#section01" class="active"> <span></span>
-						</a>
-							<div>
-								<a href="#section01"> 홈 </a>
-							</div></li>
-						<li><a href="#section02" class> <span></span>
-						</a>
-							<div>
-								<a href="#section02"> 오늘의 꽃 </a>
-							</div></li>
-
-
-						<li><a href="#section03" class> <span></span>
-						</a>
-							<div>
-								<a href="#section03"> 커뮤니티 </a>
-							</div></li>
-
-
-						<li><a href="#section04" class> <span></span>
-						</a>
-							<div>
-								<a href="#section04"> Bloom </a>
-							</div></li>
-					</ul>
-				</div>
-			</nav>
+			
+			<div class="main_side_nav">
+				<ul class="page_nav">
+					<li class="active"><span href="#section01"></span> <a
+						href="#section01">홈</a></li>
+					<li><span href='#section02'></span> <a href="#section02">오늘의
+							꽃</a></li>
+					<li><span href='#section03'></span> <a href="#section03">커뮤니티</a>
+					</li>
+					<li><span href='#section04'></span> <a href="#section04">Bloom</a>
+					</li>
+				</ul>
+			</div>
 		</main>
 
-		<footer id="footer" class="footer">
-			<div class="footer_logo">
-				<a href="#!"> <img src="./img/logo_test.png" alt="">
-				</a>
-			</div>
-			<div class="address">
-				<ul>
-					<li>서울시 강남구 삼성동 1234 우 : 123-1234</li>
-					<li>TEL : 031-123-4567</li>
-					<li>Email : email@domain.com</li>
-				</ul>
-				<div class="copy">&copy;COPYRIGHT 블룸 ALL RIGHTS RESERVED</div>
-			</div>
-		</footer>
+		<footer id="footer" class="footer" include-html="./footer.html"></footer>
 
-		<div class="bahttp://localhost:8080/bloom/index.html">
-			<div class="background-login">
-				<div class="login-box">
-					<div class="login-header">
-						<div class="close">
-							<i class="fa-solid fa-xmark" id="login-close"></i>
-						</div>
+		<div class="background-login">
+			<div class="login-box">
+				<div class="login-header">
+					<div class="close">
+						<i class="fa-solid fa-xmark" id="login-close"></i>
 					</div>
-					<div class="login-title">
-						<img src="./img/logo_test.png" />
-						<h2>우리들의 마음속 꽃 한송이</h2>
-					</div>
+				</div>
+				<div class="login-title">
+					<img src="./img/logo_test.png" />
+					<h2>우리들의 마음속 꽃 한송이</h2>
+				</div>
 
-					<div class="inputs">
-						<div class="login-subtitle">아이디</div>
-						<div class="input-wrapper">
-							<input name="login_id" type="text" id="userID">
-						</div>
-						<div class="login-subtitle">비밀번호</div>
-						<div class="input-wrapper">
-							<input name="login_pwd" type="password" id="userPW">
-						</div>
+				<div class="inputs">
+					<div class="login-subtitle">아이디</div>
+					<div class="input-wrapper">
+						<input name="login_id" type="text" id="userID">
 					</div>
+					<div class="login-subtitle">비밀번호</div>
+					<div class="input-wrapper">
+						<input name="login_pwd" type="password" id="userPW">
+					</div>
+				</div>
 
-					<div class="footer">
-						<div class="login-action">
-							<button type="button" id="loginBtn">로그인</button>
-						</div>
-						<div class="register-action">
-							<div class="flex">
-								<div class="register">회원가입</div>
-								<span class="bar">|</span>
-								<div class="desc">비밀번호 찾기</div>
-							</div>
+				<div class="footer">
+					<div class="login-action">
+						<button type="button" id="loginBtn">로그인</button>
+					</div>
+					<div class="register-action">
+						<div class="flex">
+							<div class="register">회원가입</div>
+							<span class="bar">|</span>
+							<div class="desc">비밀번호 찾기</div>
 						</div>
 					</div>
 				</div>
@@ -308,12 +248,26 @@
 					</div>
 					<div class="footer">
 						<div class="join-action">
-							<button type="submit" id="join-button" disabled>가입하기</button>
+							<button type="button" id="join-button" disabled>가입하기</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</form>
+
+		<div class="background-confirm">
+			<div class="confirm-box">
+				<div class="confirm-title">
+					<strong id="join-name">OOO</strong> <span>님, 환영해요!</span>
+				</div>
+				<div class="confirm-subtitle">
+					<span id="subtitle">회원가입이 완료되었습니다.</span>
+				</div>
+				<div class="confirm-action">
+					<button type="button" id="confirm-button">닫기</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 

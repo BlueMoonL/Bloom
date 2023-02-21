@@ -1,158 +1,93 @@
-const scrollmenu = document.querySelectorAll(".left ul li > a");
 
 
-// 스크롤 내릴때 이벤트
+$(function () {
+	
+	// 휠 슬라이드
+	var mHtml = $("html");
+	var page = 1;
+	  
+	mHtml.animate({scrollTop : 0}, 30);
+	
+	$(window).on("wheel", function(e) {
+	    if(mHtml.is(":animated")) return;
+		if($(document).scrollTop() > "2907") return;
+	    if(e.originalEvent.deltaY > 0) {
+	        if(page == 4) return;
+	        page++;
+	    } else if(e.originalEvent.deltaY < 0) {
+	        if(page == 1) return;
+	        page--;
+	    }
+	    var posTop =(page - 1) * $(window).height();
+		console.log("페이지 : ", page);
+	    mHtml.animate({scrollTop : posTop});
+	});
 
-function handleScrollEvent() {
-  console.log(scrollmenu);
-  console.log(window.scrollX, window.scrollY);
-  if (window.scrollY < 869 || window.scrollY == 0) {
-    scrollmenu[0].classList.add('active');
-    scrollmenu[1].classList.remove('active');
-    scrollmenu[2].classList.remove('active');
-    scrollmenu[3].classList.remove('active');
-  } else if (window.scrollY >= 869 && window.scrollY < 1800) {
-    scrollmenu[0].classList.remove('active');
-    scrollmenu[1].classList.add('active')
-    scrollmenu[2].classList.remove('active')
-    scrollmenu[3].classList.remove('active')
-  } else if (window.scrollY >= 1800 && window.scrollY < 2700) {
-    scrollmenu[0].classList.remove('active');
-    scrollmenu[1].classList.remove('active')
-    scrollmenu[2].classList.add('active')
-    scrollmenu[3].classList.remove('active')
-  } else if (window.scrollY >= 2700 && window.scrollY < 3600) {
-    scrollmenu[0].classList.remove('active');
-    scrollmenu[1].classList.remove('active')
-    scrollmenu[2].classList.remove('active')
-    scrollmenu[3].classList.add('active')
-  }
-}
+	function pageChange(section) {
+		if (section == "#section01") {
+			page = 1;
+			console.log("페이지 변경: " + page);
+		} else if(section == "#section02") {
+			page = 2;
+			console.log("페이지 변경: " + page);
+		} else if(section == "#section03") {
+			page = 3;
+			console.log("페이지 변경: " + page);
+		} else if(section == "#section04") {
+			page = 4;
+			console.log("페이지 변경: " + page);
+		}
+	}
+	
+	//클릭했을때 이동
+    $('.main_side_nav .page_nav li a').click(function () {
+        $('html, body').css({"transition-delay":"0.03s"});
+        // 딜레이 0.03 먹이고
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
 
-window.addEventListener('scroll', handleScrollEvent);
+		let section = $.attr(this, 'href');
+		pageChange(section);
+		
+        return false;
+    });
 
-// 클릭 했을 때 이벤트
+	$('.main_side_nav .page_nav li span').click(function () {
+        $('html, body').css({"transition-delay":"0.03s"});
+        // 딜레이 0.03 먹이고
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
 
-function handleClickEvent(index) {z
-  console.log(scrollmenu[index]);
-  scrollmenu.forEach((item, i) => {
-    if (i === index) {
-      item.classList.add('active');
-    } else {
-      item.classList.remove('active');
-    }
-  });
-}
+		let section = $.attr(this, 'href');
+		pageChange(section);
+		
+        return false;
+    });
 
-$(document).ready(function($) {
+	//슬라이드 했을때 작대기 애니메이션
+    $(window).scroll(function () {
 
-        $(".left ul li > a").click(function(event){         
+        var height = $(document).scrollTop();
+        var hz1 = $("#section01").offset().top;
+        var hz2 = $("#section02").offset().top;
+        var hz3 = $("#section03").offset().top;
+        var hz4 = $("#section04").offset().top;
+		let section = $.attr(this, 'href');
+		
+        $('.page_nav li').removeClass('active');
 
-                event.preventDefault();
-				let yPos = $(this.hash).offset().top;
-				console.log("y좌표값:", yPos);
-                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-        });
-})
+        if (page == 1) {
+            $('.page_nav li:nth-child(1)').addClass('active');
 
-$(document).ready(function($) {
+        } else if (page == 2) {
+            $('.page_nav li:nth-child(2)').addClass('active');
+        } else if (page == 3) {
+            $('.page_nav li:nth-child(3)').addClass('active');
 
-        $(".left ul li > a").scroll(function(event){         
-
-                event.preventDefault();
-				let yPos = $(this.hash).offset().top;
-				console.log("y좌표값:", yPos);
-                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-        });
-})
-
-/*scrollmenu.forEach((item, index) => {
-  item.addEventListener("click", function (e) {
-    handleClickEvent(index);
-  });
-});*/
-
-/*scrollmenu.forEach(function (menu, index) {
-  menu.onclick = function () {
-    clickToSection(index);
-  };
-});*/
-
-
-function clickToSection(index) {
-  switch (index) {
-    case 0:
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    case 1:
-      window.scrollTo({
-        top: 969,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    case 2:
-      window.scrollTo({
-        top: 1938,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    case 3:
-      window.scrollTo({
-        top: 2907,
-        left: 0,
-        behavior: 'smooth'
-      });
-      break;
-    default:
-      break;
-  }
-}
-
-
-
-// 글자 클릭 이벤트
-const clickmenu = document.querySelectorAll(".left ul li div a");
-
-function ClickEvent(index) {
-  console.log(clickmenu[index]);
-  clickmenu.forEach((item, i) => {
-    if (i === index) {
-      item.classList.add('active');
-    } else {
-      item.classList.remove('active');
-    }
-  });
-}
-
-clickmenu.forEach((item, index) => {
-  item.addEventListener("click", function (e) {
-    ClickEvent(index);
-  });
+        } else if (page == 4) {
+            $('.page_nav li:nth-child(4)').addClass('active');
+        }
+    });
 });
-
-/*
-clickmenu.forEach(function (menu, index) {
-  menu.onclick = function () {
-    clickToSection(index);
-  };
-});
-*/
-
-$(document).ready(function($) {
-
-        $(".left ul li div a").click(function(event){         
-
-                event.preventDefault();
-				let yPos = $(this.hash).offset().top;
-				console.log("y좌표값:", yPos);
-                $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-        });
-})
-
-
