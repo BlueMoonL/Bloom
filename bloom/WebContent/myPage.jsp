@@ -11,7 +11,6 @@ pageEncoding="UTF-8"%>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/basic.css" />
     <link rel="stylesheet" href="./css/font.css" />
-    <link rel="stylesheet" href="./css/confirm.css" />
     
     <script type="text/javascript" src="./js/side_main.js" defer></script>
 	<script type="text/javascript" src="./js/login.js" defer></script>
@@ -115,10 +114,12 @@ pageEncoding="UTF-8"%>
     <div class="background-confirm">
 	<div class="confirm-box">
 		<div class="confirm-title">
-			<strong id="join-name">OOO</strong> <span>님, 환영해요!</span>
+			<span>비밀번호 변경</span>
 		</div>
 		<div class="confirm-subtitle">
-			<span id="subtitle">회원가입이 완료되었습니다.</span>
+		<input type="password" name="pw1" id="pw1" maxlength="20" placeholder="현재 비밀번호" required><br>
+		<input type="password" name="pw1" id="pw1" maxlength="20" placeholder="새 비밀번호" required><br>
+		<input type="password" name="pw1" id="pw1" maxlength="20" placeholder="새비밀번호 확인" required><br>
 		</div>
 		<div class="confirm-action">
 			<button type="button" id="confirm-button">닫기</button>
