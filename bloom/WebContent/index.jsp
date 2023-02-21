@@ -133,18 +133,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 				</section>
 			</section>
 			
-			<div class="main_side_nav">
-				<ul class="page_nav">
-					<li class="active"><span href="#section01"></span> <a
-						href="#section01">홈</a></li>
-					<li><span href='#section02'></span> <a href="#section02">오늘의
-							꽃</a></li>
-					<li><span href='#section03'></span> <a href="#section03">커뮤니티</a>
-					</li>
-					<li><span href='#section04'></span> <a href="#section04">Bloom</a>
-					</li>
-				</ul>
-			</div>
+			<div class="main_side_nav" include-html="./side-nav.html"></div>
 		</main>
 		
 		<footer id="footer" class="footer" include-html="./footer.html"></footer>
