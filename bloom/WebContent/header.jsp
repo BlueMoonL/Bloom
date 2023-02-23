@@ -10,7 +10,7 @@
 <body>
 	<header id="header" class="">
 		<h1>
-			<a href="/"> <img src="./img/logo_test.png" alt="">
+			<a href="http://localhost:8080/bloom/index.jsp"> <img src="./img/logo_test.png" alt="">
 			</a>
 		</h1>
 		<div class="inner">

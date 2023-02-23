@@ -117,12 +117,15 @@ pageEncoding="UTF-8"%>
 			<span>비밀번호 변경</span>
 		</div>
 		<div class="confirm-subtitle">
-		<input type="password" name="pw1" id="pw1" maxlength="20" placeholder="현재 비밀번호" required><br>
-		<input type="password" name="pw1" id="pw1" maxlength="20" placeholder="새 비밀번호" required><br>
-		<input type="password" name="pw1" id="pw1" maxlength="20" placeholder="새비밀번호 확인" required><br>
+		<label id="pwlabel">안전한 비밀번호로 내정보를 보호하세요.</label><br>
+		<br><br>		
+		<input type="password" id="pwInput" maxlength="20" placeholder="현재 비밀번호" required><br>
+		<input type="password" id="pwInput" maxlength="20" placeholder="새 비밀번호" required><br>
+		<input type="password" id="pwInput" maxlength="20" placeholder="새 비밀번호 확인" required><br>
 		</div>
 		<div class="confirm-action">
-			<button type="button" id="confirm-button">닫기</button>
+			<button type="button" id="confirm-button">취소</button>
+			<button type="button" id="pw-change-button">확인</button>
 		</div>
 	</div>
 </div>
