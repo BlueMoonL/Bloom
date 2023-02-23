@@ -30,45 +30,48 @@ pageEncoding="UTF-8"%>
 
         <div id="container">
         	
-        	<div id="profileLeft">
-        		<span></span>
-        	</div>
+<!--         	<div id="profileLeft"> -->
+<!--         		<span></span> -->
+<!--         	</div> -->
         
           <table id="profile">
             <tr>
-            	<th>아이디</th>
+            	<th rowspan="10" class="profileBoxLeft">asdf</th>
+            	<th rowspan="10" class="profileBoxLeft"></th>
+            	<th class="profileBoxRight">아이디</th>
             	    <%
 						String userid = (String) session.getAttribute("login");
 						if (userid != null) {
 					%>
-            	<td><%= userid %></td>
+            	<td class="profileBoxRight"><%= userid %></td>
             		<%
 						}
             		%>
-            	<td id="btn"></td>
+            	<td class="btn"></td>
             <tr>
             <tr>
-            	<th>이름</th>
+            	<th class="profileBoxRight" >이름</th>
             		<%
 						UserRepository ur = new UserRepository();
 						String userName = ur.findeUser(userid);
 						if (userName != null) {
 					%>   
-            	<td><%= userName %></td>
+            	<td class="profileBoxRight"><%= userName %></td>
             		<%
 						}
             		%>
 				<td id="btn"></td>
             <tr>
             <tr>
-            	<th>비밀번호</th>
-            	<td>**********</td>
-				<td id="btn"><button id="pwChange">수정하기</button></td>
+            	<th class="profileBoxRight">비밀번호</th>
+            	<td class="profileBoxRight">**********</td>
+				<td id="btn"><button id="pwChange" >수정하기</button></td>
+				
             <tr>
              <tr>
-            	<th></th>
-            	<td></td>
-				<td></td>
+            	<th class="profileBoxRight"></th>
+            	<td class="profileBoxRight"></td>
+				<td ></td>
             <tr>
           </table>
           
@@ -124,8 +127,8 @@ pageEncoding="UTF-8"%>
 		<input type="password" class="pwChange" id="newPw2" maxlength="20" placeholder="새 비밀번호 확인" required><br>
 		</div>
 		<div class="confirm-action">
-			<button type="button" id="confirm-button">취소</button>
 			<button type="button" id="pw-change-button">확인</button>
+			<button type="button" id="confirm-button">취소</button>
 		</div>
 	</div>
 </div>

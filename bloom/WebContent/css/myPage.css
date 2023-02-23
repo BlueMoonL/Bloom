@@ -55,10 +55,11 @@ body {
 	letter-spacing: -0.7px;
 	padding: 3%;
 	margin-right: 20px;
-	width: 380px;
+	width: 450px;
 }
 
 #profile {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -75,13 +76,19 @@ body {
 }
 
 #btn {
+	width: 120px;
+	text-align: center;
+}
+.profileBoxLeft {
+	padding: 5px;
 	width: 300px;
-	text-align: right;
+	height: 30px;
+	text-align: left;
 }
 
-td {
+.profileBoxRight {
 	padding: 5px;
-	width: 200px;
+	width: 280px;
 	height: 30px;
 	border-color: #f1f1f1;
 	border-style: solid none none;
@@ -94,9 +101,6 @@ th {
 	width: 200px;
 	height: 30px;
 	text-align: left;
-	border-color: #f1f1f1;
-	border-style: solid none none;
-	border-width: 1px 0px 0px;
 }
 
 #box-bottom {
@@ -120,6 +124,7 @@ th {
 }
 
 #change {
+	
 	align-items: center;
 	background-color: #00b564;
 	border-width: 0px;
@@ -154,8 +159,17 @@ th {
 	margin-bottom: 50px;
 }
 
-#change {
-	height:
+#pwChange {
+	align-items: center;
+	background-color: #00b564;
+	border-width: 0px;
+	border-radius: 5px;
+	box-shadow: #484848 0px 3px 6px 0px;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	height: 30px;
+	width: 100px;
 }
 
 #button-change {
@@ -281,7 +295,6 @@ th {
 	padding: 7px;
 	margin: 10px;	
 }
-
 
 
 
