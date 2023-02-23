@@ -119,9 +119,9 @@ pageEncoding="UTF-8"%>
 		<div class="confirm-subtitle">
 		<label id="pwlabel">안전한 비밀번호로 내정보를 보호하세요.</label><br>
 		<br><br>		
-		<input type="password" id="pwInput" maxlength="20" placeholder="현재 비밀번호" required><br>
-		<input type="password" id="pwInput" maxlength="20" placeholder="새 비밀번호" required><br>
-		<input type="password" id="pwInput" maxlength="20" placeholder="새 비밀번호 확인" required><br>
+		<input type="password" class="pwChange" id="pw1" maxlength="20" placeholder="현재 비밀번호" required><br>
+		<input type="password" class="pwChange" id="newPw1" maxlength="20" placeholder="새 비밀번호" required><br>
+		<input type="password" class="pwChange" id="newPw2" maxlength="20" placeholder="새 비밀번호 확인" required><br>
 		</div>
 		<div class="confirm-action">
 			<button type="button" id="confirm-button">취소</button>

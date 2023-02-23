@@ -64,6 +64,16 @@ public class UserRepository implements IUserRepository {
 			}
 		}
 		return null;
+	}
+	@Override
+	public int changePw(String id, String pw) throws SQLException{
+		String query = "UPDATE bloom.user set pw = ? where id = ?";
+		try (Connection conn = ConnectionProvider.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(query);) {
+			stmt.setString(1, pw);
+			stmt.setString(2, id);
+			return stmt.executeUpdate();
+		}
 	} 
 }
 

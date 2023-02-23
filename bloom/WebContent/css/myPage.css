@@ -275,7 +275,7 @@ th {
 	padding: 7px;
 	margin-bottom: 60px;
 }
-#pwInput {
+.pwChange {
 	border: solid;
 	border-width: 0.5px;
 	padding: 7px;
