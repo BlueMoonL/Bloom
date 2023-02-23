@@ -25,7 +25,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
 	integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 <link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/basic.css">
@@ -38,6 +38,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 <link rel="stylesheet" href="./css/footer.css">
 <link rel="stylesheet" href="./css/confirm.css">
 
+<script type="text/javascript" src="./js/main.js" defer></script>
 <script type="text/javascript" src="./js/side_main.js" defer></script>
 <script type="text/javascript" src="./js/login.js" defer></script>
 <script type="text/javascript" src="./js/join.js" defer></script>
@@ -47,6 +48,8 @@ if (request.getProtocol().equals("HTTP/1.1"))
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 </head>
 
 <body>
