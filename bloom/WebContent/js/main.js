@@ -1,12 +1,3 @@
-$('.test-list').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  variableWidth: true
-});
-
 //$(document).ready(function(){
 //  $('.test-list').slick({
 //	dots: true,
@@ -18,3 +9,12 @@ $('.test-list').slick({
 //    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
 //  });
 //});
+$('.test-list').slick({
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true,
+  prevArrow: $('.prev-btn'),
+  nextArrow: $('.next-btn')
+});
