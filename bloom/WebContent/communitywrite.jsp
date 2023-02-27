@@ -43,7 +43,10 @@
 						<br> <label for="title">제목:</label> <input type="text" id="title" name="title"><br> <label
 							for="content">내용:</label>
 						<textarea id="detail" name="detail"></textarea>
-						<br> <input id="submit" type="submit" value="글쓰기">
+						<div class="buttons">
+						<input id="submit" type="submit" value="글쓰기">
+						<input id="cancel" type="button" name="submit-btn" value="취소">
+						</div>
 					</form>
 				</div>
 
