@@ -33,6 +33,7 @@ public class DTImage extends HttpServlet {
 
 		String url = "jdbc:mysql://192.168.0.113/bloom";
 
+		
 		String user = "team2";
 		String password = "team2";
 		Connection conn = null;
