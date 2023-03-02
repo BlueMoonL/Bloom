@@ -1,0 +1,37 @@
+.inner .self-test-list {
+	display: flex;
+	flex-flow: column wrap;
+	gap: 20px;
+}
+
+.self-test-list .self-test-box {
+	border: 1px solid rgb(213, 213, 213);
+	border-radius: 8px;
+	padding: 12px;
+	position: relative;
+	cursor: pointer;
+}
+
+.self-test-box .test-title {
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	padding: 3px 6px;
+	width: 150px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: rgb(249, 241, 182);
+	border-radius: 0px 0px 30px;
+}
+
+.self-test-box .test-subtitle {
+	
+}
+
+.self-test-box .test-description {
+	
+}
+
+.self-test-box .test-img {
+	
+}
