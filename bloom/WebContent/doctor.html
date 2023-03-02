@@ -19,10 +19,9 @@
 
 <link
 	href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap"
-	rel="stylesheet" />
+	rel="stylesheet" rel="stylesheet" href="./css/side_main.css" />
 </head>
 <body>
-
 	<header id="header" class="">
 		<h1>
 			<a href="./index.html"> <img src="./img/logo_test.png" alt="">
@@ -44,7 +43,7 @@
 
 
 	<div id="topmargin"></div>
-
+	<div class="main_side_nav" include-html="./side-nav.html"></div>
 	<template id="doctor-template">
 		<section class="container">
 			<div class="image">
@@ -56,15 +55,15 @@
 					<span class="dt-name"></span>
 				</header>
 				<main>
-					<div class="chat">채팅/전화</div>
+					<div class="chat">☎ 채팅/전화</div>
 					<div class="explanation"></div>
-					<span class="stars">
-						<i class="fa-solid fa-star"></i>
+					<span class="stars"> 5.0   <i class="fa-solid fa-star"></i>
 					</span>
 				</main>
 			</div>
 		</section>
 	</template>
+	<footer id="footer" class="footer" include-html="./footer.html"></footer>
 </body>
 </html>
 
@@ -112,7 +111,7 @@ function onload(e) {
 
         let topmargin = document.getElementById("topmargin");
         //document.body.appendChild(container);
-        topmargin.appendChild(container);
+        topmargin.append(container);
       }
     });
 }

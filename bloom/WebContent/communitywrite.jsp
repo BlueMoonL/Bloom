@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="./css/communitywriter.css">
 	
 
+
 	<script src="./js/include.js"></script>
 	<script src="./js/communitywriter.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

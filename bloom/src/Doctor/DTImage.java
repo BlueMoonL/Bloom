@@ -31,10 +31,10 @@ public class DTImage extends HttpServlet {
 		String dbName = split[split.length - 1];
 		System.out.println(dbName);
 
-		String url = "jdbc:mysql://localhost:3306/bloom";
+		String url = "jdbc:mysql://192.168.0.113/bloom";
 
-		String user = "root";
-		String password = "root";
+		String user = "team2";
+		String password = "team2";
 		Connection conn = null;
 
 		try {
