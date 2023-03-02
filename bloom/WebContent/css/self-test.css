@@ -1,16 +1,12 @@
-* {
-	border: 1px solid;
-}
-
 .background-self-test {
-	height: 90vh;
+	height: 100vh;
 	display: flex;
-	margin-top: 90px;
 	align-items: center;
 }
 
 .background-self-test .inner {
 	display: flex;
+	padding-top: 90px;
 	justify-content: center;
 	align-items: center;
 }

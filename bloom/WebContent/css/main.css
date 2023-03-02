@@ -4,6 +4,7 @@
 #section01, #section02, #section03, #section04-1, #section04-2 {
 	height: 100vh;
 	display: flex;
+	padding-top: 90px;
 	flex-direction: column;
 	justify-content: center;
 	gap: 0;
@@ -66,7 +67,7 @@
 
 #section01 .inner .prev-btn {
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 15%;
 	transform: translate(0%, -50%);
 	z-index: 999;
@@ -76,7 +77,7 @@
 
 #section01 .inner .next-btn {
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	right: 15%;
 	transform: translate(0%, -50%);
 	z-index: 999;
