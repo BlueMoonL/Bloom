@@ -53,7 +53,7 @@
 	width: 120px;
 	font-size: 14px;
 	font-weight: bold;
-	background-color: rgb(211, 238, 192);
+	background-color: rgb(250, 214, 203);
 	border-radius: 8px 0px 30px;
 	z-index: 1;
 }
@@ -69,7 +69,7 @@
 	width: 120px;
 	font-size: 14px;
 	font-weight: bold;
-	background-color: rgb(250, 214, 203);
+	background-color: rgb(211, 238, 192);
 	border-radius: 8px 0px 30px;
 	z-index: 1;
 }

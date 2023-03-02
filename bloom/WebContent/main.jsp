@@ -21,9 +21,9 @@
 							<img class="test-image"
 								src="./img/test1.png">
 							<div class="test-title-box">
-								<div class="test-title">우울척도 검사</div>
+								<div class="test-title">BDI 우울척도검사</div>
 								<div class="test-subtitle-box">
-									<div class="test-subtitle">당신의 우울함을 체크해 보세요</div>
+									<div class="test-subtitle">내 기분 측정, 묻지마 상담 대신 쓰세요!</div>
 								</div>
 							</div>
 						</div>
@@ -33,9 +33,9 @@
 							<img class="test-image"
 								src="./img/test2.png">
 							<div class="test-title-box">
-								<div class="test-title">우울척도 검사</div>
+								<div class="test-title">BAI 불안척도검사</div>
 								<div class="test-subtitle-box">
-									<div class="test-subtitle">당신의 우울함을 체크해 보세요</div>
+									<div class="test-subtitle">당신의 불안함을 체크해 보세요</div>
 								</div>
 							</div>
 						</div>
@@ -45,9 +45,9 @@
 							<img class="test-image"
 								src="./img/test3.png">
 							<div class="test-title-box">
-								<div class="test-title">우울척도 검사</div>
+								<div class="test-title">null</div>
 								<div class="test-subtitle-box">
-									<div class="test-subtitle">당신의 우울함을 체크해 보세요</div>
+									<div class="test-subtitle">null</div>
 								</div>
 							</div>
 						</div>
@@ -57,9 +57,9 @@
 							<img class="test-image"
 								src="./img/test4.png">
 							<div class="test-title-box">
-								<div class="test-title">우울척도 검사</div>
+								<div class="test-title">null</div>
 								<div class="test-subtitle-box">
-									<div class="test-subtitle">당신의 우울함을 체크해 보세요</div>
+									<div class="test-subtitle">null</div>
 								</div>
 							</div>
 						</div>
