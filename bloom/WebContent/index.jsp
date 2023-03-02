@@ -31,18 +31,13 @@ if (request.getProtocol().equals("HTTP/1.1"))
 <link rel="stylesheet" href="./css/basic.css">
 <link rel="stylesheet" href="./css/font.css">
 
-<link rel="stylesheet" href="./css/login.css">
-<link rel="stylesheet" href="./css/join.css">
 <link rel="stylesheet" href="./css/side_main.css">
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/footer.css">
-<link rel="stylesheet" href="./css/confirm.css">
+
 
 <script type="text/javascript" src="./js/main.js" defer></script>
 <script type="text/javascript" src="./js/side_main.js" defer></script>
-<script type="text/javascript" src="./js/login.js" defer></script>
-<script type="text/javascript" src="./js/join.js" defer></script>
-<script type="text/javascript" src="./js/logout.js" defer></script>
 <script type="text/javascript" src="./js/today-flower.js" defer></script>
 <script src="./js/include.js"></script>
 
