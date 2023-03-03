@@ -1,3 +1,5 @@
+<%@page import="userinfo.TestResult"%>
+<%@page import="java.util.List"%>
 <%@page import="userinfo.UserRepository"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%> 
@@ -18,6 +20,7 @@ pageEncoding="UTF-8"%>
 	<script type="text/javascript" src="./js/join.js" defer></script>
 	<script type="text/javascript" src="./js/today-flower.js" defer></script>
 	<script type="text/javascript" src="./js/myPage.js" defer></script>
+	<script type="text/javascript" src="./js/printMyPage.js" defer></script>
 	<script src="./js/include.js"></script>
 	
   </head>
@@ -82,12 +85,14 @@ pageEncoding="UTF-8"%>
         <div id="myPage_header">
           <label>나의 검사 결과</label>
         </div>
-        
+       
         <div id="container-second">
           <div id="box-bottom">
             <label>나의</label><br />
             <label>우울 척도는</label><br />
-            <label>100점</label><br />
+			
+			<label id="status1"></label><br />	
+           
             <div id="button-again">
               <button id="change">수정하기</button><br/>
             </div>
@@ -96,7 +101,7 @@ pageEncoding="UTF-8"%>
           <div id="box-bottom">
             <label>나의</label><br />
             <label>불안 척도는</label><br />
-            <label>100점</label><br />
+            <label id="status2"></label><br />	
             <div id="button-again">
               <button id="change">수정하기</button>
             </div>
