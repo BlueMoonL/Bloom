@@ -1,7 +1,7 @@
 /* * {
     outline: 1px solid #333;
 } */
-#section01, #section02, #section03, #section04-1, #section04-2 {
+#section00, #section01, #section02, #section03, #section04-1, #section04-2 {
 	height: 100vh;
 	display: flex;
 	padding-top: 90px;
@@ -9,13 +9,36 @@
 	justify-content: center;
 	gap: 0;
 }
+#section00-1 strong {
+	padding-left: 100px;
+	display: block;
+	text-align: left;
+	font-size: 70px;
+	font-weight: 500;
+	line-height: 1.3;
+}
+#section00-1 point{
+	text-align: left;
+	color: #35AD64;
+	font-size: 70px;
+	font-weight: 500;
+	line-height: 1.3;
+}
+#section00-1 main{
+	padding-left: 100px;
+	padding-top: 50px;
+	text-align: left;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.8;
+}
 
 #section01 .background-test {
 	display: flex;
 	width: 100%;
 	height: 500px;
     align-items: center;
-	background-color: rgb(213, 248, 203);
+//	background-color: rgb(213, 248, 203);
 }
 
 #section01 .inner .test-title {
@@ -36,19 +59,19 @@
 	width: 90px;
 	border-radius: 10px;
 	height: 5px;
-	background-color: rgba(124, 255, 99, 0.7);
+	//background-color: rgba(124, 255, 99, 0.7);
 	top: 10px;
 }
 
 #section01 .title-center .center-test {
 	color: #35AD64;
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -66%);
+	transform: translate(-40%, -45%);
 }
 
 #section01 .test-title .title-right {
@@ -65,24 +88,25 @@
 	height: 300px;
 }
 
-#section01 .inner .prev-btn {
-	position: absolute;
-	top: 55%;
-	left: 15%;
+#section01 .background-test .prev-btn {
 	transform: translate(0%, -50%);
 	z-index: 999;
 	font-size: 60px;
-	color: #c0c0c0;
+	color: #35AD64;
+	justify-content: flex-start;
+    padding-left: 20%;
+    margin-top: 50px;
 }
 
-#section01 .inner .next-btn {
-	position: absolute;
-	top: 55%;
-	right: 15%;
+#section01 .background-test .next-btn {
 	transform: translate(0%, -50%);
 	z-index: 999;
 	font-size: 60px;
-	color: #c0c0c0;
+	color: #35AD64;
+	display: flex;
+    justify-content: flex-end;
+    padding-right: 16%;
+    margin-top: 50px;
 }
 
 #section01 .test-list .test-box {
@@ -205,31 +229,6 @@
 	line-height: 14px;
 	text-align: center;
 }
-
-#section04-1 .inner strong {
-	padding-left: 100px;
-	display: block;
-	text-align: left;
-	font-size: 70px;
-	font-weight: 500;
-	line-height: 1.3;
-}
-#section04-1 .inner point{
-	text-align: left;
-	color: #35AD64;
-	font-size: 70px;
-	font-weight: 500;
-	line-height: 1.3;
-}
-#section04-1 .inner main{
-	padding-left: 100px;
-	padding-top: 50px;
-	text-align: left;
-	font-size: 20px;
-	font-weight: 500;
-	line-height: 1.8;
-}
-
 #section04-2 .inner h2 {
 	text-align: center;
 	font-style: normal;
