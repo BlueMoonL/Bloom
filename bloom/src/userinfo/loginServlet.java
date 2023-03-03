@@ -69,6 +69,7 @@ public class loginServlet extends HttpServlet{
 			JSONObject json = new JSONObject(sb.toString());
 			json.put("result", result);
 			
+			
 			pw.print(json.toString());
 		}
 		
