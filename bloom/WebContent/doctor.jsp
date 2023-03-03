@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,25 +24,8 @@
 	rel="stylesheet" rel="stylesheet" href="./css/side_main.css" />
 </head>
 <body>
-	<header id="header" class="">
-		<h1>
-			<a href="./index.html"> <img src="./img/logo_test.png" alt="">
-			</a>
-		</h1>
-		<div class="inner">
-			<nav class="gnb">
-				<ul class="gnb_menu">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="#!">Hospital</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="login">
-			<li><a href="#!">Login</a></li>
-			<li><a href="#!">Sign Up</a></li>
-		</div>
-	</header>
-
+	<%@ include file="./header.jsp"%>
+	<div class="inner"></div>
 
 	<div id="topmargin"></div>
 	<div class="main_side_nav" include-html="./side-nav.html"></div>
@@ -57,7 +42,7 @@
 				<main>
 					<div class="chat">☎ 채팅/전화</div>
 					<div class="explanation"></div>
-					<span class="stars"> 5.0   <i class="fa-solid fa-star"></i>
+					<span class="stars"> 5.0 <i class="fa-solid fa-star"></i>
 					</span>
 				</main>
 			</div>

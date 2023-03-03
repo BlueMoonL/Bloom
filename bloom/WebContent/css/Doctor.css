@@ -8,6 +8,7 @@
 	height: 200px;
 	margin-bottom: 20px;
 	margin-right: 0px;
+	justify-content: center;
 }
 
 .doctor {
@@ -17,9 +18,14 @@
 .container {
 	display: flex;
 	border: 1px solid;
+	border-color : gray;
+	border-radius: 10px 10px 10px 10px;
 	display: inline-block;
 	justify-content: center;
-	margin-right: 10px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	margin-top : 15px;
+	padding: 15px;
 }
 
 #topmargin>div {
