@@ -5,7 +5,19 @@
 <head>
 <meta charset="UTF-8">
 <title>header</title>
+
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/basic.css">
+<link rel="stylesheet" href="./css/font.css">
+
 <link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/login.css">
+<link rel="stylesheet" href="./css/join.css">
+<link rel="stylesheet" href="./css/confirm.css">
+
+<script type="text/javascript" src="./js/login.js" defer></script>
+<script type="text/javascript" src="./js/join.js" defer></script>
+<script type="text/javascript" src="./js/logout.js" defer></script>
 </head>
 <body>
 	<header id="header" class="">
@@ -18,7 +30,7 @@
 				<ul class="gnb_menu">
 					<li><a href="http://localhost:8080/bloom/index.jsp">홈</a></li>
 					<li><a href="doctor.html">전문가 찾기</a></li>
-					<li><a href="javascript:void(0)">자가진단</a></li>
+					<li><a href="self-test.jsp">자가진단</a></li>
 					<li><a href="community.jsp">커뮤니티</a></li>
 				</ul>
 			</nav>
