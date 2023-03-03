@@ -30,7 +30,7 @@
 				<ul class="gnb_menu">
 					<li><a href="http://localhost:8080/bloom/index.jsp">홈</a></li>
 					<li><a href="doctor.html">전문가 찾기</a></li>
-					<li><a href="self-test.jsp">자가진단</a></li>
+					<li><a href="self-test-list.jsp">자가진단</a></li>
 					<li><a href="community.jsp">커뮤니티</a></li>
 				</ul>
 			</nav>
