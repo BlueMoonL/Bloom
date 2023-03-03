@@ -22,47 +22,29 @@
 	rel="stylesheet" rel="stylesheet" href="./css/side_main.css" />
 </head>
 <body>
-	<header id="header" class="">
-		<h1>
-			<a href="./index.html"> <img src="./img/logo_test.png" alt="">
-			</a>
-		</h1>
-		<div class="inner">
-			<nav class="gnb">
-				<ul class="gnb_menu">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="#!">Hospital</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="login">
-			<li><a href="#!">Login</a></li>
-			<li><a href="#!">Sign Up</a></li>
-		</div>
-	</header>
-
-
-	<div id="topmargin"></div>
-	<div class="main_side_nav" include-html="./side-nav.html"></div>
-	<template id="doctor-template">
-		<section class="container">
-			<div class="image">
-				<img src="">
-			</div>
-			<div class="element">
-				<header class="name">
-					<p></p>
-					<span class="dt-name"></span>
-				</header>
-				<main>
-					<div class="chat">☎ 채팅/전화</div>
-					<div class="explanation"></div>
-					<span class="stars"> 5.0   <i class="fa-solid fa-star"></i>
-					</span>
-				</main>
-			</div>
-		</section>
-	</template>
+	<div class="inner">
+		<div id="topmargin"></div>
+		<div class="main_side_nav" include-html="./side-nav.html"></div>
+		<template id="doctor-template">
+			<section class="container">
+				<div class="image">
+					<img src="">
+				</div>
+				<div class="element">
+					<header class="name">
+						<p></p>
+						<span class="dt-name"></span>
+					</header>
+					<main>
+						<div class="chat">☎ 채팅/전화</div>
+						<div class="explanation"></div>
+						<span class="stars"> 5.0 <i class="fa-solid fa-star"></i>
+						</span>
+					</main>
+				</div>
+			</section>
+		</template>
+	</div>
 	<footer id="footer" class="footer" include-html="./footer.html"></footer>
 </body>
 </html>

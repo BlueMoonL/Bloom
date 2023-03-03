@@ -1,13 +1,9 @@
-* {
-	
-}
-
 .image {
 	font-family: 'Noto Sans KR', sans-serif;
 	display: flex;
-	height: 200px;
-	margin-bottom: 20px;
-	margin-right: 0px;
+	height: 120px;
+	margin: 10px;
+    justify-content: center;
 }
 
 .doctor {
@@ -17,9 +13,15 @@
 .container {
 	display: flex;
 	border: 1px solid;
+	border-color: #D3D3D3;
+	border-radius: 20px;
+	box-shadow: #484848 0px 1.5px 3px 0px;
+	width: 280px;
+	height: 320px;
 	display: inline-block;
 	justify-content: center;
-	margin-right: 10px;
+	margin: 30px;
+	padding: 10px;
 }
 
 #topmargin>div {
@@ -28,7 +30,7 @@
 
 #topmargin {
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 200px;
 }
 
 .name {
@@ -41,7 +43,7 @@
 	font-weight: bolder;
 	flex-direction: column;
 	align-content: stretch;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 .explanation {
@@ -51,17 +53,21 @@
 	font-size: 12px;
 	height: 100px;
 	width: 200px;
-	align-content: flex-start;
 	justify-content: center;
 	flex-wrap: wrap;
 	flex-direction: column;
+	align-items: center;
 }
-
+.element {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .chat {
 	font-family: 'Noto Sans KR', sans-serif;
 	color: #6eada9;
 	font-size: 11px;
-	padding-top: 50px;
+	padding-top: 10px;
 	font-weight: bold;
 	display: flex;
 }

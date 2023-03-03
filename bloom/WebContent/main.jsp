@@ -4,15 +4,13 @@
 <main>
 	<section id="section00">
 		<div class="inner">
-		<section id="section00-1">
-			<strong>안녕하세요.</strong> <strong><point>당신</point>의 <point>마음</point>을
-				진단해드립니다.</strong>
+			<strong>안녕하세요.</strong> <strong>당신의 <point>마음</point>을
+				<point>진단</point>해드립니다.</strong>
 			<main>
 				Bloom은 우리 모두의 건강과 행복을 위해 노력합니다.<br> 우울증은 현대인이라면 누구나 겪을 수 있는
 				건강문제 중 하나로, 정확한 진단과 치료가 중요합니다.<br> 비대면 검사를 통해 자신의 우울증 정도를 측정하고,
 				예방과 치료를 위해 전문의와의 상담을 연결해드립니다.
 			</main>
-			</section>
 		</div>
 	</section>
 	<section id="section01">
@@ -111,18 +109,6 @@
 	</section>
 
 	<section id="section04">
-		<section id="section04-1">
-			<div class="inner">
-				<strong>안녕하세요.</strong> <strong><point>당신</point>의 <point>마음</point>을
-					진단해드립니다.</strong>
-				<main>
-					Bloom은 우리 모두의 건강과 행복을 위해 노력합니다.<br> 우울증은 현대인이라면 누구나 겪을 수 있는
-					건강문제 중 하나로, 정확한 진단과 치료가 중요합니다.<br> 비대면 검사를 통해 자신의 우울증 정도를
-					측정하고, 예방과 치료를 위해 전문의와의 상담을 연결해드립니다.
-				</main>
-			</div>
-		</section>
-		<section id="section04-2">
 			<div class="inner">
 				<h2>마음 쑥쑥</h2>
 				<fieldset>
@@ -162,7 +148,6 @@
 				</fieldset>
 			</div>
 		</section>
-	</section>
 
 	<div class="main_side_nav" include-html="./side-nav.html"></div>
 </main>

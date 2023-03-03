@@ -1,7 +1,4 @@
-
-
-$(function () {
-	
+$(function () {	
 	// 휠 슬라이드
 	var mHtml = $("html");
 	var page = 1;
@@ -10,9 +7,10 @@ $(function () {
 	
 	$(window).on("wheel", function(e) {
 	    if(mHtml.is(":animated")) return;
-		if($(document).scrollTop() > "2907") return;
+		console.log($(window).height());
+		if($(document).scrollTop() > "3827") return;
 	    if(e.originalEvent.deltaY > 0) {
-	        if(page == 4) return;
+	        if(page == 5) return;
 	        page++;
 	    } else if(e.originalEvent.deltaY < 0) {
 	        if(page == 1) return;
@@ -24,17 +22,20 @@ $(function () {
 	});
 
 	function pageChange(section) {
-		if (section == "#section01") {
+		if (section =="#section00") {
 			page = 1;
 			console.log("페이지 변경: " + page);
-		} else if(section == "#section02") {
+		} else if (section == "#section01") {
 			page = 2;
 			console.log("페이지 변경: " + page);
-		} else if(section == "#section03") {
+		} else if(section == "#section02") {
 			page = 3;
 			console.log("페이지 변경: " + page);
-		} else if(section == "#section04") {
+		} else if(section == "#section03") {
 			page = 4;
+			console.log("페이지 변경: " + page);
+		} else if(section == "#section04") {
+			page = 5;
 			console.log("페이지 변경: " + page);
 		}
 	}
@@ -70,6 +71,8 @@ $(function () {
     $(window).scroll(function () {
 
         var height = $(document).scrollTop();
+
+        var hz0 = $("#section00").offset().top;
         var hz1 = $("#section01").offset().top;
         var hz2 = $("#section02").offset().top;
         var hz3 = $("#section03").offset().top;
@@ -77,17 +80,17 @@ $(function () {
 		let section = $.attr(this, 'href');
 		
         $('.page_nav li').removeClass('active');
-
-        if (page == 1) {
-            $('.page_nav li:nth-child(1)').addClass('active');
-
-        } else if (page == 2) {
+	
+		if (page == 1) {
+			$('.page_nav li:nth-child(1)').addClass('active');
+		} else if (page == 2) {
             $('.page_nav li:nth-child(2)').addClass('active');
         } else if (page == 3) {
             $('.page_nav li:nth-child(3)').addClass('active');
-
         } else if (page == 4) {
             $('.page_nav li:nth-child(4)').addClass('active');
+        } else if (page == 5) {
+            $('.page_nav li:nth-child(5)').addClass('active');
         }
     });
 });
