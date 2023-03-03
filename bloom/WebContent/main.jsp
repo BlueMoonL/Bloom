@@ -2,24 +2,37 @@
 	pageEncoding="UTF-8"%>
 
 <main>
+	<section id="section00">
+		<div class="inner">
+		<section id="section00-1">
+			<strong>안녕하세요.</strong> <strong><point>당신</point>의 <point>마음</point>을
+				진단해드립니다.</strong>
+			<main>
+				Bloom은 우리 모두의 건강과 행복을 위해 노력합니다.<br> 우울증은 현대인이라면 누구나 겪을 수 있는
+				건강문제 중 하나로, 정확한 진단과 치료가 중요합니다.<br> 비대면 검사를 통해 자신의 우울증 정도를 측정하고,
+				예방과 치료를 위해 전문의와의 상담을 연결해드립니다.
+			</main>
+			</section>
+		</div>
+	</section>
 	<section id="section01">
 		<div class="background-test">
+			<div class="prev-btn">
+				<i class="fas fa-light fa-angle-left"></i>
+			</div>
 			<div class="inner">
 				<div class="test-title">
-					<div class="title-left">오늘은 이런</div>
+					<div class="title-left">오늘 당신의</div>
 					<div class="title-center">
-						<div class="center-test">&nbsp; 심리검사 &nbsp;</div>
+						<div class="center-test">&nbsp;마음 &nbsp;</div>
 					</div>
-					<div class="title-right">어떠신가요?</div>
+					<div class="title-right">은 어떤가요?</div>
 				</div>
-				<div class="prev-btn">
-					<i class="fas fa-light fa-angle-left"></i>
-				</div>
+
 				<div class="test-list">
 					<div class="test-box">
 						<div class="test-cardview">
-							<img class="test-image"
-								src="./img/test1.png">
+							<img class="test-image" src="./img/test1.png">
 							<div class="test-title-box">
 								<div class="test-title">BDI 우울척도검사</div>
 								<div class="test-subtitle-box">
@@ -30,8 +43,7 @@
 					</div>
 					<div class="test-box">
 						<div class="test-cardview">
-							<img class="test-image"
-								src="./img/test2.png">
+							<img class="test-image" src="./img/test2.png">
 							<div class="test-title-box">
 								<div class="test-title">BAI 불안척도검사</div>
 								<div class="test-subtitle-box">
@@ -42,8 +54,7 @@
 					</div>
 					<div class="test-box">
 						<div class="test-cardview">
-							<img class="test-image"
-								src="./img/test3.png">
+							<img class="test-image" src="./img/test3.png">
 							<div class="test-title-box">
 								<div class="test-title">null</div>
 								<div class="test-subtitle-box">
@@ -54,8 +65,7 @@
 					</div>
 					<div class="test-box">
 						<div class="test-cardview">
-							<img class="test-image"
-								src="./img/test4.png">
+							<img class="test-image" src="./img/test4.png">
 							<div class="test-title-box">
 								<div class="test-title">null</div>
 								<div class="test-subtitle-box">
@@ -65,9 +75,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="next-btn">
-					<i class="fas fa-light fa-angle-right"></i>
-				</div>
+
+			</div>
+			<div class="next-btn">
+				<i class="fas fa-light fa-angle-right"></i>
 			</div>
 		</div>
 	</section>
@@ -102,7 +113,13 @@
 	<section id="section04">
 		<section id="section04-1">
 			<div class="inner">
-				<strong>안녕하세요</strong> <strong>블룸에 오신것을 환영합니다.</strong>
+				<strong>안녕하세요.</strong> <strong><point>당신</point>의 <point>마음</point>을
+					진단해드립니다.</strong>
+				<main>
+					Bloom은 우리 모두의 건강과 행복을 위해 노력합니다.<br> 우울증은 현대인이라면 누구나 겪을 수 있는
+					건강문제 중 하나로, 정확한 진단과 치료가 중요합니다.<br> 비대면 검사를 통해 자신의 우울증 정도를
+					측정하고, 예방과 치료를 위해 전문의와의 상담을 연결해드립니다.
+				</main>
 			</div>
 		</section>
 		<section id="section04-2">
