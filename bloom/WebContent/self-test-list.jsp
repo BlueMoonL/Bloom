@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/basic.css">
 <link rel="stylesheet" href="./css/font.css">
-<link rel="stylesheet" href="./css/self-test.css">
+<link rel="stylesheet" href="./css/self-test-list.css">
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
