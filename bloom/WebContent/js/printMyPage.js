@@ -12,7 +12,27 @@ function print(e) {
           status2 = obj.score + "점";
         }
       });
-      document.getElementById("status1").innerText = status1;
-      document.getElementById("status2").innerText = status2;
+      document.getElementById("BDIscore").innerText = status1;
+      document.getElementById("BAIscore").innerText = status2;
     });
 }
+
+var BDIchange = document.getElementById("BDIchange");
+BDIchange.addEventListener("click", () => {
+  var result = window.confirm("수정 하시겠습니까?");
+  if(result == true){
+
+  } else {
+    
+  }
+});
+
+var BAIchange = document.getElementById("BAIchange");
+BAIchange.addEventListener("click", () => {
+  var result = window.confirm("수정 하시겠습니까?");
+  if(result == true){
+
+  } else {
+    
+  }
+});
