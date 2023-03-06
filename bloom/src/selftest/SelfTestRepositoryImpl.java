@@ -9,7 +9,7 @@ import java.util.List;
 
 import dbutil.ConnectionProvider;
 
-public class TestRepositoryImpl implements TestRepository {
+public class SelfTestRepositoryImpl implements SelfTestRepository {
 
 	@Override
 	public List<String> selectBDI() throws SQLException {
