@@ -183,13 +183,15 @@
 
 #section02 .inner {
 	display: flex;
-    gap: 30px;
     align-items: center;
 }
 
 #section02 .inner .section02_img {
-	flex: 1;
-	height: 700px;
+	display: flex;
+    flex: 1;
+    height: 700px;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #section02 .inner .section02_img img {
@@ -201,6 +203,10 @@
 	flex: 1;
 	text-align: center;
 	padding: 50px 0;
+	border: 1px solid;
+	border-radius: 20px;
+	box-shadow: #484848 0px 1.5px 3px 0px;
+	border-color: #D3D3D3;
 }
 
 #section02 .inner h2 {
@@ -210,7 +216,6 @@
 }
 
 #section02 .inner span {
-	display: block;
 	font-size: 30px;
 	font-weight: 500;
 	margin: 0 0 20px 0;
