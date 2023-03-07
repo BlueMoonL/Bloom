@@ -29,7 +29,7 @@
 
 				<div class="test-list">
 					<div class="test-box">
-						<div class="test-cardview">
+						<div class="test-cardview" id="bdi-test">
 							<img class="test-image" src="./img/test1.png">
 							<div class="test-title-box">
 								<div class="test-title">BDI 우울척도검사</div>
@@ -40,7 +40,7 @@
 						</div>
 					</div>
 					<div class="test-box">
-						<div class="test-cardview">
+						<div class="test-cardview" id="bai-test">
 							<img class="test-image" src="./img/test2.png">
 							<div class="test-title-box">
 								<div class="test-title">BAI 불안척도검사</div>

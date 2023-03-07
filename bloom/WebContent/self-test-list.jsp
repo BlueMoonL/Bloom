@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./css/font.css">
 <link rel="stylesheet" href="./css/self-test-list.css">
 
+<script type="text/javascript" src="./js/self-test-list.js" defer></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -24,7 +25,7 @@
 	<div class="background-self-test">
 		<div class="inner">
 			<div class=self-test-list>
-				<div class=self-test-box>
+				<div class=self-test-box id="bdi-test">
 					<div class="test-title1">BDI 우울척도검사</div>
 					<div class="test-img-box">
 						<img
