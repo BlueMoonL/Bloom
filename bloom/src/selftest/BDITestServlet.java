@@ -37,6 +37,7 @@ public class BDITestServlet extends HttpServlet {
 			String json = mapper.writeValueAsString(list);
 			
 			PrintWriter pw = resp.getWriter();
+			System.out.println("json");
 			pw.print(json);
 			pw.flush();
 			

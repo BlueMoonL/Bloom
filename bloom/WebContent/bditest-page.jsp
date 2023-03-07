@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="./css/self-test-list.css">
 <link rel="stylesheet" href="./css/bditest.css">
 
+<script type="text/javascript" src="./js/bditest.js" defer></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
