@@ -5,6 +5,7 @@ public class TestResult {
 	private int userNo;
 	private int testNo;
 	private int score;
+	
 	public int getNo() {
 		return no;
 	}
@@ -36,6 +37,7 @@ public class TestResult {
 		this.testNo = testNo;
 		this.score = score;
 	}
+	public TestResult() {}
 	@Override
 	public String toString() {
 		return "TestResult [no=" + no + ", userNo=" + userNo + ", testNo=" + testNo + ", score=" + score + "]";

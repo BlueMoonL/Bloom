@@ -1,0 +1,97 @@
+#topmargin>div {
+	display: inline-block;
+}
+
+#topmargin {
+	text-align: center;
+	margin-top: 200px;
+}
+
+.image {
+	display: flex;
+	flex-direction: column; width : 120px;
+	margin: 10px 0px 10px 20px;
+	justify-content: center;
+	width: 120px;
+}
+
+.teacher {
+	font-size: 10px;
+}
+
+.doctor {
+	display: flex;
+}
+
+.element {
+	width: auto;
+}
+
+.container {
+	width: 500px;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid;
+	border-color: #D3D3D3;
+	border-radius: 20px;
+	box-shadow: #484848 0px 1.5px 3px 0px;
+	margin: 30px;
+	padding: 10px;
+}
+
+.name {
+	display: flex;
+	font-size: 18px;
+	flex-direction: row;
+	font-weight: bolder;
+	text-align: left;
+	padding: 20px 0px 31px 10px;
+}
+
+#doctorName {
+	color: #2E2E2E;
+}
+
+#designation {
+	margin-left: 10px;
+	color: #35AD64;
+}
+
+.who {
+	color: #868686;
+	display: flex;
+	font-size: 14px;
+	justify-content: center;
+	text-align: left;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.who .education {
+	margin: 5px;
+	text-align: right;
+}
+
+.who .career {
+	margin: 5px;
+	text-align: right;
+}
+
+.who .explanation {
+	text-align: left;
+}
+
+.chatbtn {
+	font-weight: bolder;
+	border: 1px solid;
+	border-color: #D3D3D3;
+	border-radius: 5px;
+	margin: 5px;
+	background-color: white;
+}
+
+.chatbtn:hover {
+	color: white;
+	background-color: #35AD64;
+}

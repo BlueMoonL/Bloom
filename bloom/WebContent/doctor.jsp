@@ -1,104 +1,48 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ include file="./header.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<!DOCTYPE html>
-<title>doctor</title>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-	integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<title>전문가 찾기</title>
+<link rel="stylesheet" href="./css/myPage.css" />
+<link rel="stylesheet" href="./css/common.css" />
+<link rel="stylesheet" href="./css/basic.css" />
+<link rel="stylesheet" href="./css/font.css" />
+<link rel="stylesheet" href="./css/doctor.css" />
 
-<link rel="stylesheet" href="./css/Doctor.css?version=1" />
-<link rel="stylesheet" href="./css/common.css">
-<link rel="stylesheet" href="./css/basic.css">
-<link rel="stylesheet" href="./css/font.css">
-<link rel="stylesheet" href="./css/header.css">
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="./css/footer.css">
-
-<link
-	href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Gowun+Dodum&display=swap"
-	rel="stylesheet" rel="stylesheet" href="./css/side_main.css" />
+<script type="text/javascript" src="./js/side_main.js" defer></script>
+<script type="text/javascript" src="./js/login.js" defer></script>
+<script type="text/javascript" src="./js/logout.js" defer></script>
+<script type="text/javascript" src="./js/join.js" defer></script>
+<script type="text/javascript" src="./js/today-flower.js" defer></script>
+<script type="text/javascript" src="./js/myPage.js" defer></script>
+<script type="text/javascript" src="./js/showDoctor.js" defer></script>
+<script src="./js/include.js"></script>
 </head>
 <body>
-	<%@ include file="./header.jsp"%>
-	<div class="inner"></div>
-
-	<div id="topmargin"></div>
-	<div class="main_side_nav" include-html="./side-nav.html"></div>
-	<template id="doctor-template">
-		<section class="container">
-			<div class="image">
-				<img src="">
-			</div>
-			<div class="element">
-				<header class="name">
-					<p></p>
-					<span class="dt-name"></span>
-				</header>
-				<main>
-					<div class="chat">☎ 채팅/전화</div>
-					<div class="explanation"></div>
-					<span class="stars"> 5.0 <i class="fa-solid fa-star"></i>
-					</span>
-				</main>
-			</div>
-		</section>
-	</template>
-	<footer id="footer" class="footer" include-html="./footer.html"></footer>
+	<div class="inner">
+		<div id="topmargin"></div>
+		<template id="doctor-template">
+			<section class="container">
+				<div class="image">
+					<img src="">
+				</div>
+				<div class="element">
+					<header class="name">
+						<p></p>
+						<span class="dt-name"></span>
+					</header>
+					<main class="whoDoctor">
+						<div class="chat">☎ 채팅/전화</div>
+						<div class="explanation"></div>
+						<span class="stars"> 5.0 <i class="fa-solid fa-star"></i>
+						</span>
+					</main>
+				</div>
+			</section>
+		</template>
+	</div>
 </body>
 </html>
-
-
-<script>
-
-window.addEventListener("load", onload);
-
-function onload(e) {
-  console.log("페이지 로딩 후 호출됩니다.");
-  fetch("http://localhost:8080/bloom/finddoctor")
-    .then((response) => response.json())
-    .then((arr) => {
-      for (var i = 0; i < arr.length; i++) {
-
-        var name = arr[i].name;
-        var comment = arr[i].comment;
-        var career = arr[i].career;
-        var education = arr[i].education;
-        var image = arr[i].image;
-        var pk = arr[i].pk;
-
-        // 템플릿가져오기
-        const template = document.getElementById("doctor-template");
-
-        // div를 계속생성하기
-        const container = document.createElement("div");
-
-        // inner에 적기
-        container.innerHTML = template.innerHTML;
-        console.log(" url전");
-        const imageUrl = "http://localhost:8080/bloom/dtimage/"+ pk; 
-        // 이미지 URL을 구성합니다.
-  		console.log(imageUrl);
-        fetch(imageUrl)
-          .then((response) => response.blob())
-          .then((blob) => {
-            const imageUrl = URL.createObjectURL(blob);
-            container.querySelector("img").src = imageUrl;
-          })
-          .catch((error) => console.error(error));
-
-        container.querySelector(".name p").innerText =name;
-        //container.querySelector("#stars i").innerText = rating;
-        container.querySelector(".explanation").innerText =comment;
-
-        let topmargin = document.getElementById("topmargin");
-        //document.body.appendChild(container);
-        topmargin.append(container);
-      }
-    });
-}
-</script>
