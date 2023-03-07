@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>BDI 테스트</title>
@@ -19,35 +20,41 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
 	<%@ include file="./header.jsp"%>
 
 	<div class="background-bdi">
 		<div class="inner">
-			<div class="grid-table">
-				<div class="item">1.</div>
-				<div class="question1">
-					<p>문제1</p>
-					<input type="radio" name="score1" class="radiobtn1">
-				</div>
-				<div class="question2">
-					<p>문제2</p>
-					<input type="radio" name="score1" class="radiobtn2">
-				</div>
-				<div class="question3">
-					<p>문제3</p>
-					<input type="radio" name="score1" class="radiobtn3">
-				</div>
-				<div class="question4">
-					<p>문제4</p>
-					<input type="radio" name="score1" class="radiobtn4">
-				</div>
-			</div>
+			<section id="bdi-container" class="bdi-con"></section>
 		</div>
 	</div>
+
+	<template id="showBDI-temp">
+		<div class="grid-table">
+			<div class="item">1.</div>
+			<div class="question1">
+				<p>문제1</p>
+				<input type="radio" name="score1" class="radiobtn1">
+			</div>
+			<div class="question2">
+				<p>문제2</p>
+				<input type="radio" name="score1" class="radiobtn2">
+			</div>
+			<div class="question3">
+				<p>문제3</p>
+				<input type="radio" name="score1" class="radiobtn3">
+			</div>
+			<div class="question4">
+				<p>문제4</p>
+				<input type="radio" name="score1" class="radiobtn4">
+			</div>
+		</div>
+	</template>
 
 	<%@ include file="./login-modal.jsp"%>
 
 	<%@ include file="./join-modal.jsp"%>
 </body>
+
 </html>
