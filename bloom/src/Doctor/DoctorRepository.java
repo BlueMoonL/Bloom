@@ -42,7 +42,7 @@ public class DoctorRepository implements IDoctorRepository {
 				d.setName(rs.getString(1));
 				d.setComment(rs.getString(2));
 				d.setCareer(rs.getString(3));
-				d.setEsducation(rs.getString(4));
+				d.seteducation(rs.getString(4));
 				d.setImage(rs.getBlob(5));
 				d.setPk(rs.getInt(6));
 				list.add(d);

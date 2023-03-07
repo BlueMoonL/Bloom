@@ -34,9 +34,11 @@ function onload(e) {
           })
           .catch((error) => console.error(error));
 
-        container.querySelector(".name p").innerText =name;
+        container.querySelector(".name p").innerText = name;
+		container.querySelector(".education").innerText = education;
+		container.querySelector(".career").innerText = career;
         //container.querySelector("#stars i").innerText = rating;
-        container.querySelector(".explanation").innerText =comment;
+        container.querySelector(".explanation").innerText = comment;
 
         let topmargin = document.getElementById("topmargin");
         //document.body.appendChild(container);

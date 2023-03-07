@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.background-bdi {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.background-bdi .inner {
+	display: flex;
+	padding-top: 90px;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner .grid-table {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-inline: 2px solid #aaa;
+	border-top: 2px solid #aaa;
+	justify-content: center;
+}
+
+.grid-table .item {
+	display: flex;
+	grid-row: span 4;
+	border-bottom: 2px solid #aaa;
+	text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.question1, .question2, .question3{
+	display: flex;
+	justify-content: space-between;
+	border-left: 2px solid #aaa;
+	border-bottom: 2px solid #aaa;
+	padding: 10px 20px;
+}
+
+.question4 {
+	display: flex;
+	justify-content: space-between;
+	border-left: 2px solid #aaa;
+	border-bottom: 2px solid #aaa;
+	padding: 10px 20px;
+}
+
+.radiobtn1, .radiobtn2, .radiobtn3, .radiobtn4 {
+	margin-left: 15px;
+}

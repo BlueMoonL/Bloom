@@ -6,16 +6,16 @@ public class Doctors {
 	String name;
 	String comment;
 	String career;
-	String esducation;
+	String education;
 	Blob image;
 	int pk;
 
-	public Doctors(String name, String comment, String career, String esducation, Blob image, int pk) {
+	public Doctors(String name, String comment, String career, String education, Blob image, int pk) {
 		super();
 		this.name = name;
 		this.comment = comment;
 		this.career = career;
-		this.esducation = esducation;
+		this.education = education;
 		this.image = image;
 		this.pk = pk;
 	}
@@ -56,12 +56,12 @@ public class Doctors {
 		this.career = career;
 	}
 
-	public String getEsducation() {
-		return esducation;
+	public String geteducation() {
+		return education;
 	}
 
-	public void setEsducation(String esducation) {
-		this.esducation = esducation;
+	public void seteducation(String education) {
+		this.education = education;
 	}
 
 	public Blob getImage() {

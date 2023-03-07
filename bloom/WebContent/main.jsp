@@ -85,16 +85,15 @@
 		<div class="inner">
 			<figure class="section02_img">
 				<img id="flower-image" src="">
-				</a>
 			</figure>
 			<div class="section02_desc">
 				<h2>오늘의 꽃</h2>
 				<br>
 				<p>
-					오늘은 <span id="flower-name"></span> 입니다.
+					오늘은  <span id="flower-name"></span> 입니다.
 				</p>
 				<p>
-					꽃말은 <span id="flower-mean"></span> 입니다.
+					꽃말은  <span id="flower-mean"></span> 입니다.
 				</p>
 			</div>
 		</div>

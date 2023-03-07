@@ -90,20 +90,18 @@ pageEncoding="UTF-8"%>
           <div id="box-bottom">
             <label>나의</label><br />
             <label>우울 척도는</label><br />
-			
-			<label id="status1"></label><br />	
-           
+			<label id="BDIscore"></label><br />	
             <div id="button-again">
-              <button id="change">수정하기</button><br/>
+              <button id="BDIchange">수정하기</button><br/>
             </div>
           </div>
 
           <div id="box-bottom">
             <label>나의</label><br />
             <label>불안 척도는</label><br />
-            <label id="status2"></label><br />	
+            <label id="BAIscore"></label><br />	
             <div id="button-again">
-              <button id="change">수정하기</button>
+              <button id="BAIchange">수정하기</button>
             </div>
           </div>
 
