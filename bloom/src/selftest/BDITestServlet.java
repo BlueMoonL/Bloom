@@ -16,11 +16,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @WebServlet("/BDI")
 public class BDITestServlet extends HttpServlet {
 
-	SelfTestServiceImpl repo;
+	SelfTestServiceImpl service;
 	
 	@Override
 	public void init() throws ServletException {
-		repo = new SelfTestServiceImpl(new SelfTestRepositoryImpl());
+		service = new SelfTestServiceImpl(new SelfTestRepositoryImpl());
 	}
 
 	@Override
@@ -29,20 +29,13 @@ public class BDITestServlet extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 
-		try {
-			List<String> list;
-			list = repo.showBDI();
-			
-			ObjectMapper mapper = new ObjectMapper();
-			String json = mapper.writeValueAsString(list);
-			
-			PrintWriter pw = resp.getWriter();
-			pw.print(json);
-			
-//			req.getRequestDispatcher("./bditest-page.jsp").forward(req,resp);
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		List<String> list;
+		list = service.showBDI();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String json = mapper.writeValueAsString(list);
+		
+		PrintWriter pw = resp.getWriter();
+		pw.print(json);
 	}
 }

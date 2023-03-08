@@ -5,9 +5,10 @@ import java.util.List;
 
 public interface SelfTestRepository {
 	
-	List<String> selectBDI() throws SQLException;
-	List<String> selectBAI() throws SQLException;
-	int insertUsersTest();
-	int insertUserTestAnswer();
-	int insertTestResult();
+	int selectUserNo(String userId);
+	List<String> selectBDI();
+	List<String> selectBAI();
+	int insertUsersTest(UsersTest user);
+	int[] insertUserTestAnswer(List<UserTestAnswer> testList);
+	int insertTestResult(TestResult result);
 }
