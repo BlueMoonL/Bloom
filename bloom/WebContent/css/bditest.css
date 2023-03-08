@@ -4,19 +4,20 @@
 /* 	height: 100vh; */
 	display: flex;
 	align-items: center;
-	padding-top: 90px;
+	padding-block: 90px;
 }
 
 .background-bdi .inner {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
 .background-bdi .inner .bdi-con {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 10px 10px;
+	padding: 90px 10px;
 	flex-direction: column;
 }
 
@@ -63,7 +64,7 @@
   border-radius: 50%;
   width: 1.25em;
   height: 1.25em;
-  transition: border 0.2s ease-in-out;
+  transition: border 0.15s ease-in-out;
 }
 
 [type="radio"]:checked {
@@ -105,4 +106,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.submit-btn {
+	width: 35%;
+    height: 48px;
+    border: none;
+    background-color: #00b564;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    outline: none;
+    border-radius: 12px;
 }

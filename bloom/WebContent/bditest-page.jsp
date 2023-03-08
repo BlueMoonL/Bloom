@@ -25,11 +25,12 @@
 <body>
 	<%@ include file="./header.jsp"%>
 
-	<div class="background-bdi">
-		<div class="inner">
-			<section id="bdi-container" class="bdi-con"></section>
+		<div class="background-bdi">
+			<div class="inner">
+				<section id="bdi-container" class="bdi-con"></section>
+				<input type="submit" value="테스트 완료" class="submit-btn" id="submit-btn">
+			</div>
 		</div>
-	</div>
 
 	<template id="showBDI-temp">
 		<div class="grid-table">
@@ -58,7 +59,3 @@
 	<%@ include file="./join-modal.jsp"%>
 </body>
 </html>
-
-<script>
-
-</script>
