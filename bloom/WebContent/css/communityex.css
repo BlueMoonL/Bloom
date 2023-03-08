@@ -2,13 +2,13 @@
 	margin-top: 100px;
 }
 
-
 .flex-wrap {
 	flex-wrap: nowrap;
 }
 
 .w-full {
 	width: auto;
+	padding-left: 120px;
 }
 
 .h-full {
@@ -29,8 +29,8 @@
 ::-webkit-scrollbar {
 	/* display: none; */
 	overflow-x: scroll; /* 가로 스크롤 활성화 */
-  overflow-y: hidden; /* 세로 스크롤 비활성화 */
-  }
+	overflow-y: hidden; /* 세로 스크롤 비활성화 */
+}
 
 .articlebox .background {
 	background-image: url('../img/postit2.png');
@@ -39,7 +39,6 @@
 	width: 220px;
 	height: 250px;
 }
-
 
 .articlebox .user-text {
 	display: flex;
