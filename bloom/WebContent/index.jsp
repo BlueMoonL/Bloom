@@ -34,11 +34,13 @@ if (request.getProtocol().equals("HTTP/1.1"))
 <link rel="stylesheet" href="./css/side_main.css">
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/footer.css">
+<link rel="stylesheet" href="./css/communityex.css">
 
 
 <script type="text/javascript" src="./js/main.js" defer></script>
 <script type="text/javascript" src="./js/side_main.js" defer></script>
 <script type="text/javascript" src="./js/today-flower.js" defer></script>
+<script type="text/javascript" src="./js/communityex.js"></script>
 <script src="./js/include.js"></script>
 
 <script

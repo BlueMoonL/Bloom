@@ -9,7 +9,8 @@
 
 .image {
 	display: flex;
-	flex-direction: column; width : 120px;
+	flex-direction: column;
+	width: 120px;
 	margin: 10px 0px 10px 20px;
 	justify-content: center;
 	width: 120px;
@@ -31,10 +32,10 @@
 	width: 500px;
 	display: flex;
 	justify-content: space-between;
-	border: 1px solid;
+	border: 0.5px solid;
 	border-color: #D3D3D3;
 	border-radius: 20px;
-	box-shadow: #484848 0px 1.5px 3px 0px;
+	background-color: white;
 	margin: 30px;
 	padding: 10px;
 }
@@ -88,7 +89,7 @@
 	border-color: #D3D3D3;
 	border-radius: 5px;
 	margin: 5px;
-	background-color: white;
+	background-color: #F9F9F9;
 }
 
 .chatbtn:hover {

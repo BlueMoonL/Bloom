@@ -1,0 +1,71 @@
+.h-down {
+	margin-top: 100px;
+}
+
+.flex-wrap {
+	flex-wrap: nowrap;
+}
+
+.w-full {
+	width: auto;
+	padding-left: 120px;
+}
+
+.h-full {
+	height: 50%;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.articlebox {
+	padding: 0.5rem;
+	border-image: initial;
+	scroll-behavior: smooth;
+	transition: 0.5s;
+}
+
+.articlebox:hover{
+	transform: scale(1.1);
+}
+
+::-webkit-scrollbar {
+	/* display: none; */
+	overflow-x: scroll; /* 가로 스크롤 활성화 */
+	overflow-y: hidden; /* 세로 스크롤 비활성화 */
+}
+
+.articlebox .background {
+	background-image: url('../img/postit2.png');
+	background-size: cover;
+	background-color: rgba(255, 255, 255, 0);
+	width: 220px;
+	height: 250px;
+}
+
+.articlebox .user-text {
+	display: flex;
+	flex-direction: column;
+	font-size: 15px;
+	height: 100%;
+	padding-top: 17px;
+}
+
+.user-title {
+	color: rgba(17, 24, 39, 1);
+	font-weight: 500;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.user-detail {
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-align: start;
+	padding-left: 10px;
+}
