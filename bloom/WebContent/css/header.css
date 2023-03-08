@@ -1,60 +1,84 @@
+#header .inner_head {
+	width: 1300px;
+}
+
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 90px;
-    padding: 0 100px;
-    display: flex;
-    gap: 60px;
-    justify-content: space-between;
-    background: #fff;
-    align-items: center;
-    border-bottom: 3px solid #35AD64;
-    z-index: 300;
-    transition: 0.4s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	padding: 30px 0px 10px 100px;
+	display: flex;
+	gap: 100px;
+	justify-content: space-between;
+	background-color: #F9F9F9;
+	align-items: flex-end;
+	z-index: 300;
+	transition: 0.4s;
+	margin-left: 100px;
+	margin-right: 100px;
+	border-bottom: solid 1px;
+	border-bottom-color: #ADB5BD;
 }
 
 #header h1 a {
-    display: block;
+	display: block;
 }
 
 #header h1 img {
-    min-width: 150px;
+	min-width: 100px;
 }
 
-#header .inner .gnb {
-    height: 90px;
+#header .inner_head .gnb .gnb_menu1 {
+	padding-top: 10px;
+	height: 40px;
+	display: flex;
+	gap: 60px;
+	justify-content: flex-end;
+	margin-right: 20px;
+	padding-right: 50px;
 }
 
-#header .inner .gnb .gnb_menu {
-    display: flex;
-    gap: 60px;
-    justify-content: flex-start;
+#header .gnb_menu li>a {
+	display: block;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	transition: 0.4s;
+	line-height: 90px;
+	width: max-content;
 }
 
-#header .login, #header .logout {
-    display: flex;
-    gap: 60px;
-    justify-content: flex-end;
-    height: 90px;
+#header .inner_head .gnb .gnb_menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 120px;
+	gap: 180px;
+	height: 50px;
+	gap: 200px;
 }
-#header li>a {
-    display: block;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    transition: 0.4s;
-    line-height: 90px;
 
-    width: max-content;
+#header .gnb_menu li>a {
+	display: block;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: max-content;
+}
+
+#header .gnb_menu1 {
+	font-size: 17px;
 }
 
 #header li>a:hover {
-    color: #28a745;
+	color: #35AD64;
 }
 
 #header hr {
-    height: 10px;
-    background-color: #35AD64;
+	height: 10px;
+	background-color: #9FDEBD;
 }

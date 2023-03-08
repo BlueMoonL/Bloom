@@ -6,10 +6,12 @@ body {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none
+	user-select: none;
+	background-color: #F9F9F9;
 }
 
 #section00, #section01, #section02, #section03, #section04-2 {
+	background-color: #F9F9F9;
 	height: 100vh;
 	display: flex;
 	padding-top: 90px;
