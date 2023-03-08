@@ -24,6 +24,11 @@
 	padding: 0.5rem;
 	border-image: initial;
 	scroll-behavior: smooth;
+	transition: 0.5s;
+}
+
+.articlebox:hover{
+	transform: scale(1.1);
 }
 
 ::-webkit-scrollbar {
