@@ -1,6 +1,14 @@
 /* * {
     outline: 1px solid #333;
 } */
+
+body {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
 #section00, #section01, #section02, #section03, #section04-2 {
 	height: 100vh;
 	display: flex;
@@ -234,6 +242,14 @@
 	font-size: 10px;
 	line-height: 14px;
 	text-align: center;
+}
+
+#section03 .inner {
+	display: flex;
+	align-items: center;
+	width: 1327px;
+	animation: slide 10s linear infinite;
+	overflow: scroll;
 }
 
 #section04 .inner h2 {
