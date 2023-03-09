@@ -46,13 +46,15 @@ window.addEventListener("load", onload);
 function onload(e) {
   console.log("페이지 로딩 후 호출됩니다.");
 
-  fetch("http://localhost:8080/bloom/community?")
+  fetch("http://localhost:8080/bloom/mypage/community?")
     .then((resp) => resp.json())
     .then((arr) => {
       console.log(arr);
 
+	
       let container = document.getElementById("posiit");
-
+	  
+			
       let template = document.getElementById("community-temp");
 
       // 아래의 기능을 배열만큼 반복하기위해 forEach문을 사용 ()안의 요소가 하나씩 하나씩 만들어진다.

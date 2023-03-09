@@ -9,4 +9,5 @@ public interface IUserRepository {
 	String findeUser(String id) throws SQLException;
 	int changePw(String id, String pw) throws SQLException;
 	List<TestResult> testResult(String id, String pw) throws SQLException;
+	int whatMyNo(String id);
 }

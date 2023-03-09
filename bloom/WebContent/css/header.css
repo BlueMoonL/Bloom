@@ -8,7 +8,7 @@
 	left: 0;
 	right: 0;
 	height: auto;
-	padding: 30px 0px 10px 100px;
+	padding: 20px 0px 5px 100px;
 	display: flex;
 	gap: 100px;
 	justify-content: space-between;
@@ -16,8 +16,7 @@
 	align-items: flex-end;
 	z-index: 300;
 	transition: 0.4s;
-	margin-left: 100px;
-	margin-right: 100px;
+	margin: 0px 100px 0px 100px;
 	border-bottom: solid 1px;
 	border-bottom-color: #ADB5BD;
 }

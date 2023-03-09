@@ -127,13 +127,5 @@ public class CommunityService implements ICommunityRepository {
 			}
 		}
 		return null;
-	}
-
-
-
-
-
-
-
-	
+	}	
 }

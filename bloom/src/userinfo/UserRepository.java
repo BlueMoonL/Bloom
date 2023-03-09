@@ -106,5 +106,23 @@ public class UserRepository implements IUserRepository {
 			}
 		}
 		
-	} 
+	}
+
+	@Override
+	public int whatMyNo(String id) {
+		String query = "SELECT no FROM bloom.user WHERE id = ?";
+		try (Connection conn = ConnectionProvider.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(query);) {
+			stmt.setString(1, id);
+			try (ResultSet rs = stmt.executeQuery()) {
+				if (rs.next()) {
+					return rs.getInt("no");
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
+
 }

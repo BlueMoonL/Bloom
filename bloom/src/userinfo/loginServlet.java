@@ -33,15 +33,13 @@ public class loginServlet extends HttpServlet{
 		String line;
 		while( (line = reader.readLine()) != null) {
 			sb.append(line);
-			//System.out.println("라인" + line);
 		}
 		JsonNode nood = mapper.readTree(sb.toString());
 		String userID = nood.get("userID").asText();
 		String userPW = nood.get("userPW").asText();
-		//System.out.println(userID);
-		//System.out.println(userPW);
 	
 	 	UserRepository repo = new UserRepository();
+	 	int userNo = repo.whatMyNo(userID);
 	 	
 	 	int result = 0;
 	 	try {
@@ -49,14 +47,12 @@ public class loginServlet extends HttpServlet{
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	 	//System.out.println(result);
 	 	PrintWriter pw = resp.getWriter();
-	 	//pw.print(result);
 	 	
 	 	if (result == 1) {
 			HttpSession session = req.getSession(true);
 			session.setAttribute("login", userID);
-			session.setAttribute("password", userPW);
+			session.setAttribute("userNo", userNo);
 			session.setAttribute("result", result);
 			
 			JSONObject json = new JSONObject(sb.toString());

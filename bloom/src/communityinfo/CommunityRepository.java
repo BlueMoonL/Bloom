@@ -14,12 +14,13 @@ public class CommunityRepository implements ICommunityService {
 
 	@Override
 	public int addDetail(Connection conn, Community community) {
-		String sql = "INSERT INTO bloom.community (title, detail) VALUES (?, ?);";
+		String sql = "INSERT INTO bloom.community (userNo, title, detail) VALUES (?, ?, ?);";
 		try (PreparedStatement pstmt = conn.prepareStatement
 				(sql, Statement.RETURN_GENERATED_KEYS)) {
+			pstmt.setInt(1, community.getUserNo());
+			pstmt.setString(2, community.getTitle());
+			pstmt.setString(3, community.getDetail());
 			
-			pstmt.setString(1, community.getTitle());
-			pstmt.setString(2, community.getDetail());
 
 			int result = pstmt.executeUpdate();
 			if (result == 1) {
@@ -104,6 +105,25 @@ public class CommunityRepository implements ICommunityService {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException("삭제 작업 중 예외 발생", e);
+		}
+	}
+
+	@Override
+	public List<Community> readWithMyNo(int no) {
+		String sql = "SELECT * FROM bloom.community WHERE userNo = ?";
+		try (Connection conn = ConnectionProvider.getConnection();
+				PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			pstmt.setInt(1, no);
+			List<Community> list = new ArrayList<>();
+			try (ResultSet rs = pstmt.executeQuery()) {				
+				while (rs.next()) {
+					list.add(resultMapping(rs));
+				}
+			} 
+			return list;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException("조회 작업 중 예외 발생", e);
 		}
 	}
 
