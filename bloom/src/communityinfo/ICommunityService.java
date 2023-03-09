@@ -8,6 +8,8 @@ public interface ICommunityService {
 	
 	List<Community> select(Connection conn);
 	
+	List<Community> readWithMyNo(int no);
+	
 	Community selectByNo(Connection conn, int no);
 	
 	int update(Connection conn, Community community);

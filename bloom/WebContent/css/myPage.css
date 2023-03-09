@@ -66,6 +66,45 @@ body {
 	width: 70px;
 }
 
+#myPage .container-postit {
+	display: grid;
+	padding: 0px 20px 0px 20px;
+	background-color: white;
+	justify-content: start;
+	align-items: center;
+	grid-template-columns: 200px 770px;
+	border-top: 0.5px solid;
+	border-bottom: 0.5px solid;
+	border-color: #D3D3D3;
+}
+
+#myPage .container-postit-item .br {
+	display: inline-block;
+	content: " ";
+	padding: 0 2px;
+}
+
+#myPage .container-postit .container-item {
+	display: flex;
+	align-items: center;
+	padding: 20px 20px;
+	border-bottom: 0.5px solid;
+	border-color: #D3D3D3;
+}
+
+.container-postit-item {
+	display: inline-block;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-color: #D3D3D3;
+	padding: 20px 20px;
+	border-bottom: 0.5px solid;
+	border-color: #D3D3D3;
+	align-items: center;
+}
+
 .container-third {
 	margin: 15px;
 	width: 1010px;
@@ -194,9 +233,15 @@ body {
 	margin-bottom: 60px;
 }
 
-.pwChange { //
-	모달창안 border: solid;
+.pwChange {
+	border: solid;
 	border-width: 0.5px;
 	padding: 7px;
 	margin: 10px;
+}
+
+br {
+	display: inline-block;
+	content: " ";
+	padding: 0 2px;
 }

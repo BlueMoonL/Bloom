@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dbutil.ConnectionProvider;
 
@@ -20,7 +21,9 @@ public class InsertWriterServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
-		
+		HttpSession session = req.getSession();
+		int userNo = (int) session.getAttribute("userNo");
+		System.out.println("인서트 유져 노 " + userNo);
 		String title = req.getParameter("title");
 		String detail = req.getParameter("detail");
 		
@@ -30,7 +33,7 @@ public class InsertWriterServlet extends HttpServlet {
 		CommunityRepository repo = new CommunityRepository();
 		
 		Community community = new Community();
-		
+		community.setUserNo(userNo);
 		community.setTitle(title);
 		community.setDetail(detail);
 		

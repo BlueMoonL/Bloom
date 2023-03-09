@@ -91,15 +91,20 @@
 		</div>
 	</div>
 	<div id="myPage">
-		<div class="container-third">
+		<div class="container-postit" id="posiit">
 			<div class="container-item">나의 포스트잇</div>
-			<div class="container-item"></div>
-			<div class="container-item"></div>
+			<div class="container-item">&nbsp;</div>
+			<template id="community-temp">
+					<div class="container-postit-item"></div>
+					<div class="container-postit-item"></div>
+			</template>
+
+
 		</div>
 	</div>
 	<div id="myPage">
 		<div class="container-third">
-			<div class="container-item">나의 상담 신청</div>
+			<div class="container-item">나의 상담내역</div>
 			<div class="container-item"></div>
 			<div class="container-item"></div>
 		</div>

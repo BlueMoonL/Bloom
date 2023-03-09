@@ -99,15 +99,15 @@
 	line-height: normal;
 }
 
-.idCheck {
+.idCheck, .QnACheck {
 	color: rgb(102, 102, 102);
 }
 
-.idCheck.valid {
+.idCheck.valid, .QnACheck.valid {
 	color: #00b564;
 }
 
-.idCheckResult {
+.idCheckResult, .QnACheck {
 	visibility: hidden;
 	text-align: left;
 	font-size: 12px;
@@ -194,13 +194,21 @@
 	color: #00b564;
 }
 
-.emailCheck {
+.emailCheck, .QnACheck {
 	visibility: hidden;
 	text-align: left;
 	font-size: 12px;
 	padding-bottom: 10px
 }
 
-.emailCheck.unValid {
+.emailCheck.unValid, .QnACheck.unValid {
 	visibility: visible;
+}
+
+.iconCheck5 {
+	color: rgb(102, 102, 102);
+}
+
+.iconCheck5.valid {
+	color: #00b564;
 }
