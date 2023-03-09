@@ -56,7 +56,6 @@ public class loginServlet extends HttpServlet{
 	 	if (result == 1) {
 			HttpSession session = req.getSession(true);
 			session.setAttribute("login", userID);
-			session.setAttribute("password", userPW);
 			session.setAttribute("result", result);
 			
 			JSONObject json = new JSONObject(sb.toString());
