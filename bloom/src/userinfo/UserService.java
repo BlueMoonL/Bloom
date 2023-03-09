@@ -6,9 +6,9 @@ public class UserService implements IUserService {
 		this.repo = repo;
 	}
 	@Override
-	public int addUser(String id, String pw, String name, String email) {
+	public int addUser(String id, String pw, String name, String qna, String email) {
 		try {
-			return repo.addUser(id, pw, name, email);
+			return repo.addUser(id, pw, name, qna, email);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return 0;

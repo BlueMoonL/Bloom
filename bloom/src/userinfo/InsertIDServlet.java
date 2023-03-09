@@ -35,6 +35,7 @@ public class InsertIDServlet extends HttpServlet{
 		String id = nood.get("id").asText();
 	 	String pw = nood.get("pw1").asText();
 	 	String name = nood.get("userName").asText();
+	 	String qna = nood.get("qna").asText();
 	 	String email = nood.get("userEmail").asText();
 		
 	 	System.out.println("아이디 : " + id);
@@ -45,7 +46,7 @@ public class InsertIDServlet extends HttpServlet{
 		UserRepository repo = new UserRepository();
 	 	IUserService service = new UserService(repo);
 		
-	 	int result = service.addUser(id, pw, name, email);
+	 	int result = service.addUser(id, pw, name, qna, email);
 	 	
 		PrintWriter printWriter = resp.getWriter();
 		printWriter.print(result);
