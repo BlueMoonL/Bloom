@@ -1,4 +1,3 @@
-
 var checkedGroups = [];
 
 window.addEventListener("load", function testLoad(e) {
@@ -49,42 +48,46 @@ window.addEventListener("load", function testLoad(e) {
 		})
 });
 
+function nocheckOpen() {
+	 document.querySelector(".background-nocheck").className = "background-nocheck nocheck-show";
+}
+
 var submit = document.getElementById("submit-btn")
 submit.addEventListener("click", e => {
 	
-	let checkedIndexes = {};
+//	let checkedIndexes = {};
+	let checkedIndexes = [];
 	let testNo = 1;
 	
-//	for (let group of checkedGroups) {
-//		
-//		let radios = document.querySelectorAll(`input[type=radio][name=${group}]`);
-//		let indexes = [];
-//		
-//		for (let i = 0; i < radios.length; i++) {
-//			if (radios[i].checked) {
-//				indexes.push(i);
-//			}
-//		}
-//		
-//		checkedIndexes[group] = indexes;
-//	}
-
 	for (let group of checkedGroups) {
 		
 		let radios = document.querySelectorAll(`input[type=radio][name=${group}]`);
-		let indexes = [];
+		let indexes;
 		
 		for (let i = 0; i < radios.length; i++) {
 			
 			if (radios[i].checked) {
-				indexes.push(i);
+				indexes = i;
 			}
 		}
 		
-		checkedIndexes[group] = indexes;
+//		checkedIndexes[group] = indexes;
+		checkedIndexes.push(indexes);
 	}
 	
-	fetch("http://localhost:8080/bloom/BDIComplete", {
+	console.log(checkedIndexes);
+	console.log(checkedIndexes.length);
+	
+	let isNull = false;
+	
+	if(checkedIndexes.length != 21) {
+		isNull = true
+	}
+	
+	if (isNull) {
+		nocheckOpen();
+	} else {
+		fetch("http://localhost:8080/bloom/BDIComplete", {
 		  method: "POST",
 		  headers: {
 			    "Content-Type": "application/json",
@@ -96,6 +99,8 @@ submit.addEventListener("click", e => {
 		})
 		.then((resp) => resp)
 		.then((respNum) => {
-			location.reload();
+			isNull = false;
+			location.href = "./myPage.jsp";
 		})
+	}
 });

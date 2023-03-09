@@ -43,22 +43,18 @@ public class BDICompleteServlet extends HttpServlet {
 		JsonNode bdiScoreNode = node.get("BDIScore");
 		List<Integer> BDIScore = new ArrayList<>();
 		Iterator iter = bdiScoreNode.elements();
+//		int index = 1;
 		while (iter.hasNext()) {
 
 			String elem = iter.next().toString();
-			char num = elem.charAt(1);
-
 			System.out.println(elem);
-			if (num == 0) {
-				BDIScore.add(-1);
-			} else {
-				BDIScore.add(Character.getNumericValue(num));
-			}
-		}
+			int num = Integer.parseInt(elem);
+//			char num = elem.charAt(1);
+//			index += 2;
+			
+//			System.out.println(num);
 
-		System.out.println(testNo);
-		for (int i : BDIScore) {
-			System.out.println(i);
+			BDIScore.add(num);
 		}
 
 		HttpSession session = req.getSession();
@@ -70,7 +66,7 @@ public class BDICompleteServlet extends HttpServlet {
 		int[] inputAnswer = service.inputUserTestAnswer(userNo, BDIScore);
 
 		int inputResult = service.inputTestResult(userNo, testNo, BDIScore);
-		
+
 		PrintWriter pw = resp.getWriter();
 		pw.println(inputTest);
 		pw.println(inputAnswer);

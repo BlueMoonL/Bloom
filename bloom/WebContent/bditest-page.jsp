@@ -16,8 +16,10 @@
 <link rel="stylesheet" href="./css/font.css">
 <link rel="stylesheet" href="./css/self-test-list.css">
 <link rel="stylesheet" href="./css/bditest.css">
+<link rel="stylesheet" href="./css/nocheck.css">
 
 <script type="text/javascript" src="./js/bditest.js" defer></script>
+<script type="text/javascript" src="./js/nocheck.js" defer></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -53,7 +55,9 @@
 			</div>
 		</div>
 	</template>
-
+	
+	<%@ include file="./nocheck-modal.jsp" %>
+	
 	<%@ include file="./login-modal.jsp"%>
 
 	<%@ include file="./join-modal.jsp"%>
