@@ -18,6 +18,7 @@
 <script type="text/javascript" src="./js/login.js" defer></script>
 <script type="text/javascript" src="./js/join.js" defer></script>
 <script type="text/javascript" src="./js/logout.js" defer></script>
+
 </head>
 <body>
 	<header id="header" class="">
