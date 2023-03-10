@@ -249,9 +249,11 @@ body {
 #section03 .inner {
 	display: flex;
 	align-items: center;
-	width: 1327px;
-	animation: slide 10s linear infinite;
-	overflow: scroll;
+	width: 1225px;
+	height: 312px;
+	transform: translate(0, 0);
+	overflow: hidden;
+	margin: 0 10px;
 }
 
 #section04 .inner h2 {

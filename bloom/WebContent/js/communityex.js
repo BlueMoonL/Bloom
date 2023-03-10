@@ -16,19 +16,20 @@ function onload(e) {
     scrollLeft = slider.scrollLeft;
   });
 
-  slider.addEventListener("mouseleave", () => {
+ slider.addEventListener("mouseleave", () => {
     isMouseDown = false;
     slider.classList.remove("active");
   });
 
-  slider.addEventListener("mouseup", () => {
+  slider.addEventListener("mouseup", (e) => {
     isMouseDown = false;
     slider.classList.remove("active");
+    console.log("x축" + slider.scrollLeft);
+    console.log(startX);
   });
 
   slider.addEventListener("mousemove", (e) => {
     if (!isMouseDown) return;
-
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
     const walk = (x - startX) * 1;
@@ -36,11 +37,19 @@ function onload(e) {
 
     setTimeout(() => {
       slider.style.transition = "transform 0.2s ease-out 10s";
-      slider.style.transform = "translateX(-20px)";
-    });
+    }, 100);
 
-    console.log(slider.scrollLeft);
-    
+    console.log("길이" + slider.scrollLeft);
+  });
+
+  $(".community-next").on("click", function () {
+    isMouseDown = false;
+    $(slider).animate({ scrollLeft: "+=1180" }, 500);
+  });
+
+  $(".community-prev").on("click", function () {
+    isMouseDown = false;
+    $(slider).animate({ scrollLeft: "-=1180" }, 500);
   });
 
   fetch("http://localhost:8080/bloom/community?")

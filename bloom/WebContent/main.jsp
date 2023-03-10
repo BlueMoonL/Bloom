@@ -100,12 +100,16 @@
 	</section>
 
 	<section id="section03">
-		<div class="inner drag">
-			<div class="slide">
-				<section id="community-container"
-					class="w-full h-full flex flex-wrap"></section>
-			</div>
+		<div class="community-prev">
+			<i class="fas fa-light fa-angle-left"></i>
 		</div>
+		<div class="inner drag">
+			<section id="community-container" class="section-community"></section>
+		</div>
+		<div class="community-next">
+			<i class="fas fa-light fa-angle-right"></i>
+		</div>
+
 		<template id="community-temp">
 			<article class="articlebox">
 				<div class="background">
