@@ -28,6 +28,9 @@ function onload(e) {
         let pdetail = Headingtitle.nextElementSibling;
         pdetail.innerText = element.detail;
 
+		let userNo = p.querySelector(".reactions div");
+		userNo.innerText = element.name;
+
         container.append(p);
       });
 
