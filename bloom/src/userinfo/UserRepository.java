@@ -86,12 +86,11 @@ public class UserRepository implements IUserRepository {
 
 	// 아이디 비밀번호로 pk값 찾아서 테스트 결과 찾고 리스트에 담는다
 	@Override
-	public List<TestResult> testResult(String id, String pw) throws SQLException {
-		String query = "SELECT * FROM bloom.testresult WHERE userNo = (SELECT no FROM bloom.user WHERE id = ? and pw = ?)";
+	public List<TestResult> testResult(String id) throws SQLException {
+		String query = "SELECT * FROM bloom.testresult WHERE userNo = (SELECT no FROM bloom.user WHERE id = ?)";
 		try(Connection conn = ConnectionProvider.getConnection();
 				PreparedStatement stmt = conn.prepareStatement(query);) {
 			stmt.setString(1, id);
-			stmt.setString(2, pw);
 			try (ResultSet rs = stmt.executeQuery()) {
 				List<TestResult> list = new ArrayList<TestResult>();
 				while(rs.next()) {

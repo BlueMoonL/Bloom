@@ -8,6 +8,6 @@ public interface IUserRepository {
 	int loginUser(String id, String pw) throws SQLException;
 	String findeUser(String id) throws SQLException;
 	int changePw(String id, String pw) throws SQLException;
-	List<TestResult> testResult(String id, String pw) throws SQLException;
+	List<TestResult> testResult(String id) throws SQLException;
 	int whatMyNo(String id);
 }

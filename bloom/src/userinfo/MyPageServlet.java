@@ -23,13 +23,13 @@ public class MyPageServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(true);
 		String id = (String) session.getAttribute("login");
-		String pw = (String) session.getAttribute("password");
 		
 		ObjectMapper mapper = new ObjectMapper();
 		
 		PrintWriter print = resp.getWriter();
 		try {
-			List<TestResult> list = ur.testResult(id, pw);
+			List<TestResult> list = ur.testResult(id);
+			System.out.println("리스트 " + list.toString());
 			String json = mapper.writeValueAsString(list);
 			print.print(json);
 			
