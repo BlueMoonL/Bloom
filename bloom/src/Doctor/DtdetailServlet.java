@@ -1,8 +1,7 @@
-package selftest;
+package Doctor;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,29 +12,32 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@WebServlet("/BDI")
-public class BDITestServlet extends HttpServlet {
-
-	SelfTestServiceImpl service;
-	
-	@Override
-	public void init() throws ServletException {
-		service = new SelfTestServiceImpl(new SelfTestRepositoryImpl());
-	}
+@WebServlet("/dtdetail/*")
+public class DtdetailServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
-
-		List<String> list;
-		list = service.showBDI();
-		
+		resp.setHeader("Content-Type", "application/json; charset=utf-8");
+		DtdetailRepository dt = new DtdetailRepository();
+		List<Dtdetail> detaillist = null;
 		ObjectMapper mapper = new ObjectMapper();
-		String json = mapper.writeValueAsString(list);
-		
-		PrintWriter pw = resp.getWriter();
-		pw.print(json);
+		Dtdetail d = new Dtdetail();
+
+		try {
+
+			detaillist = dt.showDetail(d.getPk());
+			String json = mapper.writeValueAsString(detaillist);
+			System.out.println(json);
+
+			PrintWriter pw = resp.getWriter();
+			pw.println(json);
+
+			pw.flush();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 }

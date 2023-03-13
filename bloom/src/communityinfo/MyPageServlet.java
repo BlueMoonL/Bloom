@@ -1,4 +1,4 @@
-package selftest;
+package communityinfo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,32 +10,41 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@WebServlet("/BDI")
-public class BDITestServlet extends HttpServlet {
+import userinfo.UserRepository;
 
-	SelfTestServiceImpl service;
-	
+@WebServlet("/mypage/community")
+public class MyPageServlet extends HttpServlet {
+	private CommunityRepository cr;
+	private UserRepository ur;
 	@Override
 	public void init() throws ServletException {
-		service = new SelfTestServiceImpl(new SelfTestRepositoryImpl());
+		cr = new CommunityRepository();
+		ur = new UserRepository();
 	}
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		HttpSession session = req.getSession();
+		String userId = (String) session.getAttribute("login");
+		System.out.println("마이페이지에서 id :" + userId);
+		int userNo = ur.whatMyNo(userId);
+		System.out.println(userNo);
 
-		req.setCharacterEncoding("UTF-8");
-		resp.setCharacterEncoding("UTF-8");
-
-		List<String> list;
-		list = service.showBDI();
+		List<Community> list = cr.readWithMyNo(userNo);
+		System.out.println("마이페이지에서 id로 자기가 쓴 커뮤니티 조회" + list);
 		
 		ObjectMapper mapper = new ObjectMapper();
 		String json = mapper.writeValueAsString(list);
 		
 		PrintWriter pw = resp.getWriter();
 		pw.print(json);
+		pw.flush();
 	}
+	
+	
 }

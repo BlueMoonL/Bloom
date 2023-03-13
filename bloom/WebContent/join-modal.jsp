@@ -46,6 +46,17 @@
 				</div>
 				<span class="nameCheck">2~6자의 한글을 사용하세요.</span>
 			</div>
+			
+			<div class="join-subtitle">질문: 내가 좋아하는 캐릭터는?</div>
+			<div class="input-wrapper">
+				<div class="horizontal">
+					<input type="text" name="QnA" id="QnA" maxlength="45"
+						placeholder="답변을 입력하세요" required> <i
+						class="iconCheck5 fa-sharp fa-solid fa-check"></i>
+				</div>
+				<span class="QnACheck">특수문자x</span>
+			</div>
+			
 			<div class="email-horizontal">
 				<div class="join-subtitle">이메일</div>
 				<div class="emailchoice">(선택)</div>
@@ -57,6 +68,7 @@
 				</div>
 				<span class="emailCheck">올바른 이메일을 사용하세요.</span>
 			</div>
+			
 		</div>
 		<div class="footer">
 			<div class="join-action">

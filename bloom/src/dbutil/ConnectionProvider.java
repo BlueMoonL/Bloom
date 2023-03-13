@@ -15,5 +15,12 @@ public class ConnectionProvider {
 	public static Connection getConnection() throws SQLException {
 		return DriverManager.getConnection("jdbc:mysql://192.168.0.113/bloom", "team2", "team2");
 	}
-
+	
+	public static void closeConnection(Connection conn) {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

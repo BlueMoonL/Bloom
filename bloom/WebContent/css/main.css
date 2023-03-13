@@ -1,7 +1,17 @@
 /* * {
     outline: 1px solid #333;
 } */
+
+body {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #F9F9F9;
+}
+
 #section00, #section01, #section02, #section03, #section04-2 {
+	background-color: #F9F9F9;
 	height: 100vh;
 	display: flex;
 	padding-top: 90px;
@@ -234,6 +244,16 @@
 	font-size: 10px;
 	line-height: 14px;
 	text-align: center;
+}
+
+#section03 .inner {
+	display: flex;
+	align-items: center;
+	width: 1225px;
+	height: 312px;
+	transform: translate(0, 0);
+	overflow: hidden;
+	margin: 0 10px;
 }
 
 #section04 .inner h2 {

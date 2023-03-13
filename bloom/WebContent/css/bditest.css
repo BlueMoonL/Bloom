@@ -1,36 +1,44 @@
 @charset "UTF-8";
 
 .background-bdi {
-	height: 100vh;
+/* 	height: 100vh; */
 	display: flex;
 	align-items: center;
+	padding-block: 90px;
 }
 
 .background-bdi .inner {
 	display: flex;
-	padding-top: 90px;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
 
-.inner .grid-table {
+.background-bdi .inner .bdi-con {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 90px 10px;
+	flex-direction: column;
+}
+
+.grid-table {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	border-inline: 2px solid #aaa;
-	border-top: 2px solid #aaa;
+	grid-template-columns: 150px 550px;
+	border: 2px solid #aaa;
 	justify-content: center;
+	margin: 10px 10px;
+	border-radius: 12px;
 }
 
 .grid-table .item {
 	display: flex;
 	grid-row: span 4;
-	border-bottom: 2px solid #aaa;
 	text-align: center;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
 
-.question1, .question2, .question3{
+.question1, .question2, .question3 {
 	display: flex;
 	justify-content: space-between;
 	border-left: 2px solid #aaa;
@@ -42,10 +50,71 @@
 	display: flex;
 	justify-content: space-between;
 	border-left: 2px solid #aaa;
-	border-bottom: 2px solid #aaa;
 	padding: 10px 20px;
 }
 
 .radiobtn1, .radiobtn2, .radiobtn3, .radiobtn4 {
 	margin-left: 15px;
+}
+
+[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: border 0.15s ease-in-out;
+}
+
+[type="radio"]:checked {
+  border: 0.4em solid #28a745;
+}
+
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted #28a745;
+}
+
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+[type="radio"]:disabled {
+  background-color: lightgray;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type="radio"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Global CSS */
+/* fieldset { */
+/*   display: flex; */
+/*   justify-content: center; */
+/*   border: none; */
+/*   margin: 0; */
+/*   padding: 40px 20px; */
+/* } */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.submit-btn {
+	width: 35%;
+    height: 48px;
+    border: none;
+    background-color: #00b564;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    outline: none;
+    border-radius: 12px;
 }

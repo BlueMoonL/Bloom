@@ -1,8 +1,3 @@
-
-
-window.location = 'http://localhost:8080/bloom/doctorditail.jsp?pk='+ pk;
-
-
 window.addEventListener("load", onload);
 
 function onload(e) {
@@ -44,9 +39,6 @@ function onload(e) {
 		container.querySelector(".career").innerText = career;
         container.querySelector(".explanation").innerText = comment;
         let topmargin = document.getElementById("topmargin");
-
-		var d = container.querySelector(".chatbtn");
-		d.addEventListener("click", click);
         topmargin.append(container);
       }
     });

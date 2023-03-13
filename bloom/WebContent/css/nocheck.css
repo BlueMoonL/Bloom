@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.background-nocheck {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: -1;
+	opacity: 0;
+}
+
+.nocheck-show {
+	z-index: 1000;
+	opacity: 1;
+	transition: all 0.5s;
+}
+
+.nocheck-box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color: rgb(255, 255, 255);
+	width: 376px;
+	border-radius: 6px;
+	padding: 32px 32px 32px;
+	box-shadow: rgb(0, 0, 0/ 20%) 0px 3px 3px 3px;
+	transform: translate(-50%, -20%);
+}
+
+.nocheck-show .nocheck-box {
+	transform: translate(-50%, -50%);
+	transition: all 0.5s;
+}
+
+.close {
+	position: absolute;
+	color: rgb(170, 170, 170);
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.description-box {
+	width: 100%;
+	transition: border-bottom 0.15s ease-in 0s;
+}
+
+.description-box .nocheck-description {
+	color: black;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+}
+
+.nocheck-close-action {
+	display: flex;
+	justify-content: center;
+}
+
+.nocheck-box button {
+	width: 40%;
+	height: 35px;
+	margin-top: 24px;
+	border: none;
+	background-color: #00b564;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	font-size: 16px;
+	outline: none;
+	border-radius: 12px;
+}

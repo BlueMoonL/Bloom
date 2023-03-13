@@ -1,5 +1,4 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-<script type="text/javascript" src="./js/findPW.js" defer></script>
 
 <div class="background-login">
 	<div class="login-box">
@@ -16,24 +15,20 @@
 		<div class="inputs">
 			<div class="login-subtitle">아이디</div>
 			<div class="input-wrapper">
-				<input name="login_id" type="text" id="userID">
+				<input name="userID" type="text" id="userID">
 			</div>
-			<div class="login-subtitle">비밀번호</div>
+			<div class="login-subtitle">질문 답변</div>
 			<div class="input-wrapper">
-				<input name="login_pwd" type="password" id="userPW">
+				<input name="answer" type="text" id="answer">
 			</div>
 		</div>
 
 		<div class="footer">
 			<div class="login-action">
-				<button type="button" id="loginBtn">로그인</button>
+				<button type="button" id="findBtn">찾기</button>
 			</div>
 			<div class="register-action">
-				<div class="flex">
-					<div class="register">회원가입</div>
-					<span class="bar">|</span>
-					<div class="desc" id="find" >비밀번호 찾기</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>

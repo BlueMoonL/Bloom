@@ -11,14 +11,15 @@ import dbutil.ConnectionProvider;
 
 public class UserRepository implements IUserRepository {
 	@Override
-	public int addUser(String id, String pw, String name, String email) throws SQLException {
-		String query = "INSERT INTO bloom.user (id, pw, name, email) VALUES (?, ?, ?, ?)";
+	public int addUser(String id, String pw, String name, String qna, String email) throws SQLException {
+		String query = "INSERT INTO bloom.user (id, pw, name, qna, email) VALUES (?, ?, ?, ?, ?)";
 		try (Connection conn = ConnectionProvider.getConnection();
 				PreparedStatement stmt = conn.prepareStatement(query);) {
 			stmt.setString(1, id);
 			stmt.setString(2, pw);
 			stmt.setString(3, name);
-			stmt.setString(4, email);
+			stmt.setString(4, qna);
+			stmt.setString(5, email);
 
 			return stmt.executeUpdate();
 		}
@@ -105,5 +106,23 @@ public class UserRepository implements IUserRepository {
 			}
 		}
 		
-	} 
+	}
+
+	@Override
+	public int whatMyNo(String id) {
+		String query = "SELECT no FROM bloom.user WHERE id = ?";
+		try (Connection conn = ConnectionProvider.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(query);) {
+			stmt.setString(1, id);
+			try (ResultSet rs = stmt.executeQuery()) {
+				if (rs.next()) {
+					return rs.getInt("no");
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
+
 }

@@ -17,10 +17,11 @@ var idPass = false;
 var pw1Pass = false;
 var pw2Pass = false;
 var namePass = false;
+var QnAPass = false;
 var btn = document.getElementById("join-button");
 
 function btn_onoff() {
-	if (idPass && pw1Pass && pw2Pass && namePass) {
+	if (idPass && pw1Pass && pw2Pass && namePass && QnAPass) {
 		btn.disabled = false;
 		btn.style.backgroundColor = "#00b564"
 	} else {
@@ -79,6 +80,43 @@ if (id != null) {
 	});
 }
 
+// 질문 JS 만드는거
+var QnA = document.getElementById("QnA"); // 답변 텍스트 입력한거
+var QnAIcon = document.querySelectorAll(".iconCheck5"); // 아이콘
+var QnACheck = document.querySelectorAll(".QnACheck"); // 안내창 
+var QnALength = /^[a-zA-Z0-9ㄱ-ㅎㅏ-ㅣ가-힣]{0,45}$/; // 길이 문자열 다
+
+function removeQnAExpression(e) {
+	QnACheck.forEach((e) => e.classList.remove("unValid"));
+}
+if (QnA != null) {
+	QnA.addEventListener("load", removeQnAExpression);
+	QnA.addEventListener("keyup", function (e) {
+		if (QnA.value == "") {
+			QnA.style.borderColor = "#a9a9a9"
+			QnAIcon.forEach((e) => e.classList.remove("valid"))
+			QnACheck.forEach((e) => e.classList.remove("unValid"));
+			QnAPass = false;
+			btn_onoff();
+		} else {
+			if (QnALength.test(QnA.value)) {
+				QnA.style.borderColor = "#00b564"
+				QnAIcon.forEach((e) => e.classList.add("valid"))
+				QnACheck.forEach((e) => e.classList.remove("unValid"));
+				QnAPass = true;
+			} else {
+				QnA.style.borderColor = "#a9a9a9"
+				QnAIcon.forEach((e) => e.classList.remove("valid"))
+				QnACheck.forEach((e) => e.classList.add("unValid"));
+				QnAPass = false;
+			}
+			btn_onoff();
+		}
+	});
+} else {
+
+}
+ 
 
 var pw1 = document.getElementById("pw1");
 var pw2 = document.getElementById("pw2");
@@ -165,6 +203,7 @@ if (pw2 != null) {
 	pw2.addEventListener("keyup", secondPwResult);	
 }
 
+// 이름
 var nameReg = /^[가-힣]{2,6}$/;
 var userName = document.getElementById("userName");
 let nameIcon = document.querySelectorAll(".iconCheck3");
@@ -247,6 +286,7 @@ if (joinBtn != null) {
 		           "id" : id.value,
 		           "pw1" : pw1.value,
 		           "userName" : userName.value,
+				   "qna" : QnA.value,
 		           "userEmail" : userEmail.value
 			})
 		})
