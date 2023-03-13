@@ -8,11 +8,11 @@ public class Conncetion {
 	public static void main(String[] args) {
 		// 데이터베이스 서버에 접속(연결)을 원함.
 		// 주소
-		String url = "jdbc:mysql://localhost:3306";
+		String url = "jdbc:mysql://192.168.0.113/bloom";
 		// 아이디
-		String id = "root";
+		String id = "team2";
 		// 비밀번호
-		String password = "root";
+		String password = "team2";
 		
 		// 드라이버 적재(클래스 로드)
 		try {

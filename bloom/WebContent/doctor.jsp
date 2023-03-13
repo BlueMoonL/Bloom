@@ -35,8 +35,8 @@
 		<template id="doctor-template">
 			<section class="container">
 				<div class="image">
-					<img src="">
-					<button class="chatbtn">상담신청</button>
+					<img src=""> <a>
+				<button class="chatbtn" onclick="location.href='doctordetail.jsp?pk=' + pk">상담신청</button>
 				</div>
 				<div class="element">
 					<header class="name">
