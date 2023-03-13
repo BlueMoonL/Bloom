@@ -28,7 +28,7 @@ public class Doctors {
 		this.pk = pk;
 	}
 
-	Doctors() {
+	public Doctors() {
 	}
 	
 	

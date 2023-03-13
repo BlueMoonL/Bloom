@@ -1,0 +1,35 @@
+.Simplification {
+	display: inline-block;
+}
+
+.profile {
+	display: inline-block;
+	width: auto;
+	height: auto;
+}
+
+.name {
+	display: inline-block;
+	width: auto;
+	height: auto;
+}
+
+.photo {
+	display: inline-block;
+	width: 100px
+	height: 100px;
+}
+
+.schedule {
+	width: auto;
+	height: auto;
+}
+
+.profile {
+	display: inline-block;
+	height: auto;
+}
+
+.inner {
+	border: 1px solid black;
+}

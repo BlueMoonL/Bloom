@@ -45,6 +45,8 @@ public class DTImage extends HttpServlet {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, Integer.parseInt(dbName));
 			ResultSet rs = stmt.executeQuery();
+			
+			
 
 			byte[] imgBytes = null;
 
@@ -64,6 +66,7 @@ public class DTImage extends HttpServlet {
 				OutputStream out = resp.getOutputStream();
 				ImageIO.write((BufferedImage) image, "png", out);
 				out.close();
+				bais.close();
 			}
 
 		} catch (SQLException e) {
