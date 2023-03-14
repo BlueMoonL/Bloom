@@ -40,12 +40,16 @@ public class CommunityRepository implements ICommunityService {
 
 	@Override
 	public List<Community> select(Connection conn) {
-		String sql = "SELECT * FROM bloom.community;";
+		String sql = "SELECT community.*, user.name\r\n" + 
+				"FROM community\r\n" + 
+				"INNER JOIN user ON community.userNo = user.no;";
 		try (PreparedStatement pstmt = conn.prepareStatement(sql);
 						ResultSet rs = pstmt.executeQuery();) {
 			List<Community> list = new ArrayList<>();
 			while (rs.next()) {
 				list.add(resultMapping(rs));
+				System.out.println("조인 셀렉문" + list);
+				
 			}
 			return list;
 		} catch (SQLException e) {
@@ -56,8 +60,10 @@ public class CommunityRepository implements ICommunityService {
 
 	private Community resultMapping(ResultSet rs) throws SQLException {
 		Community community = new Community();
+		community.setUserNo(rs.getInt("userNo"));
 		community.setTitle(rs.getString("title"));
 		community.setDetail(rs.getString("detail"));
+		community.setName(rs.getString("name"));
 		return community;
 	}
 

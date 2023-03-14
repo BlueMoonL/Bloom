@@ -72,7 +72,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 						<span> "명이 공감"</span> <span></span>
 					</div>
 					<div class="reactions">
-						<div class="nickname">닉네임</div>
+						<div class="nickname">비공개</div>
 					</div>
 				</div>
 			</article>

@@ -125,17 +125,17 @@ if (request.getProtocol().equals("HTTP/1.1"))
 
 .help .story .header {
 	display: flex;
-	-webkit-box-pack: justify; justify-content : space-between; padding :
-	5px 10px 10px; border-bottom : 1px solid rgb( 221, 221, 221); color :
-	rgb( 68, 68, 68); -webkit-box-align : center; align-items : flex-start;
-	flex-direction: column;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
 	padding: 5px 10px 10px;
 	border-bottom: 1px solid rgb(221, 221, 221);
 	color: rgb(68, 68, 68);
 	-webkit-box-align: center;
 	align-items: flex-start;
 }
+.help .story .header .nickname{
+	padding-left: 800px;
+}
+
 
 .help .story .main {
 	border-bottom: 1px solid rgb(221, 221, 221);
