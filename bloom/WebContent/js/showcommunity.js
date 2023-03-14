@@ -24,6 +24,10 @@ function onload(e) {
           Headingtitle.innerText = element.title;
           console.log(element.title);
 
+		  let nickname = p.querySelector(".story .header .nickname")
+		  nickname.innerText = "작성자 :  " +  element.name;
+		  console.log(element.name);
+
           let pdetail = p.querySelector(".story .main div");
           pdetail.innerText = element.detail;
           console.log(element.detail);

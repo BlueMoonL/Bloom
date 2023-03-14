@@ -210,6 +210,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 				<div class="story card">
 					<div class="header">
 						<div class="title">TEST</div>
+						<div class="nickname">TEST</div>
 					</div>
 					
 					<div class="main">
