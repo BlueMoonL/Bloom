@@ -5,6 +5,15 @@ public class Community {
 	private int userNo;
 	private String title;
 	private String detail;
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public Community() {}
 	
@@ -79,7 +88,8 @@ public class Community {
 
 	@Override
 	public String toString() {
-		return "Community [no=" + no + ", userNo=" + userNo + ", title=" + title + ", detail=" + detail + "]";
+		return "Community [no=" + no + ", userNo=" + userNo + ", title=" + title + ", detail=" + detail + ", name="
+				+ name + "]";
 	}
 
 }
