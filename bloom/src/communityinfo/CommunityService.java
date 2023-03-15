@@ -22,7 +22,7 @@ public class CommunityService implements ICommunityRepository {
 			conn.setAutoCommit(false);
 			int key = service.addDetail(conn, community);
 			conn.commit();
-			
+
 			community.setNo(key);
 			return community;
 		} catch (RuntimeException | SQLException e) {
@@ -73,7 +73,7 @@ public class CommunityService implements ICommunityRepository {
 			conn.setAutoCommit(false);
 			service.update(conn, community);
 			conn.commit();
-			
+
 			return community;
 		} catch (RuntimeException | SQLException e) {
 			if (conn != null) {
@@ -96,19 +96,19 @@ public class CommunityService implements ICommunityRepository {
 	}
 
 	@Override
-	public Community delete(int no) {
+	public int delete(int no) {
 		Connection conn = null;
 		try {
 			conn = ConnectionProvider.getConnection();
 			conn.setAutoCommit(false);
 			Community community = service.selectByNo(conn, no);
 			if (community != null) {
-			service.delete(conn, no);
+				service.delete(conn, no);
 			}
 			conn.commit();
-			
-			return community;
-				
+
+			return -1;
+
 		} catch (RuntimeException | SQLException e) {
 			if (conn != null) {
 				try {
@@ -126,6 +126,6 @@ public class CommunityService implements ICommunityRepository {
 				}
 			}
 		}
-		return null;
-	}	
+		return no;
+	}
 }

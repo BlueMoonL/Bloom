@@ -132,10 +132,10 @@ if (request.getProtocol().equals("HTTP/1.1"))
 	-webkit-box-align: center;
 	align-items: flex-start;
 }
-.help .story .header .nickname{
+
+.help .story .header .nickname {
 	padding-left: 800px;
 }
-
 
 .help .story .main {
 	border-bottom: 1px solid rgb(221, 221, 221);
@@ -162,6 +162,8 @@ if (request.getProtocol().equals("HTTP/1.1"))
 	border-radius: 4px;
 	cursor: pointer;
 	margin-right: 20px;
+	display: flex;
+	align-items: center;
 }
 
 .help .submit .remove {
@@ -194,7 +196,9 @@ if (request.getProtocol().equals("HTTP/1.1"))
 					</div>
 					<div class="submit">
 						<div id="replace" class="replace">수정</div>
-						<div id="remove" class="remove">삭제</div>
+						<form action="./showcommunitydelete" method="post">
+							<input type="submit" id="remove" class="remove" value="삭제">
+						</form>
 					</div>
 				</div>
 				<section id="showcommunity-container"></section>
@@ -212,7 +216,7 @@ if (request.getProtocol().equals("HTTP/1.1"))
 						<div class="title">TEST</div>
 						<div class="nickname">TEST</div>
 					</div>
-					
+
 					<div class="main">
 						<div class="main_content">TEST</div>
 					</div>
@@ -229,11 +233,6 @@ if (request.getProtocol().equals("HTTP/1.1"))
 
 	replace.addEventListener("click", function() {
 		console.log("수정 클릭");
-	});
-
-	// 삭제 이벤트
-	remove.addEventListener("click", function() {
-		console.log("삭제 클릭");
 	});
 
 	// 뒤로가기 이벤트

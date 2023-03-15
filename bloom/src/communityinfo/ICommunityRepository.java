@@ -9,5 +9,5 @@ public interface ICommunityRepository {
 	
 	Community update(Community community);
 	
-	Community delete(int no);
+	int delete(int no);
 }
